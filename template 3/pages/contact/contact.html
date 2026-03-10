@@ -1,0 +1,12 @@
+<div id="contact-hero-component"></div>
+<div id="form-component"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('contact-hero-component', 'pages/contact/components/contact-hero.html'),
+            loadComponent('form-component', 'pages/contact/components/form.html')
+        ]);
+        initReveal();
+    })();
+</script>

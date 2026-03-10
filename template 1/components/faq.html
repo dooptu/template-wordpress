@@ -1,0 +1,176 @@
+<!-- FAQ -->
+    <section class="section-padding faq-area" id="faq">
+        <div class="container faq-container">
+            <div class="title-wrapper">
+                <h2 class="section-title">Câu Hỏi <span>Thường Gặp</span></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item active">
+                    <button class="faq-question">PTEC có nhận thiết kế thi công trọn gói không? <span
+                            class="faq-icon"></span></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Có, PTEC chuyên cung cấp dịch vụ Design & Build, giúp tiết kiệm
+                            chi phí và rút ngắn thời gian lên đến 30%.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Chính sách bảo hành công trình thế nào? <span
+                            class="faq-icon"></span></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Bảo hành kết cấu 05 năm, bảo hành chống thấm, MEP 12-24 tháng, hỗ
+                            trợ 24/7 với đội ngũ kỹ thuật viên chuyên nghiệp.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Khu vực hoạt động chính của PTEC? <span
+                            class="faq-icon"></span></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Trụ sở tại Bến Cát, Bình Dương. Thi công mạnh tại các KCN Bình
+                            Dương, Đồng Nai, Bình Phước, và mở rộng toàn miền Nam.</div>
+                    </div>
+                </div>
+                <div class="faq-item"> <!-- Added more for content -->
+                    <button class="faq-question">PTEC sử dụng công nghệ gì để đảm bảo chất lượng? <span
+                            class="faq-icon"></span></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Sử dụng BIM, IoT và phần mềm quản lý dự án để giám sát, giảm lỗi
+                            và tối ưu hóa nguồn lực.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Thời gian thi công trung bình cho một nhà xưởng? <span
+                            class="faq-icon"></span></button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Từ 3-6 tháng tùy quy mô, với cam kết hoàn thành đúng hạn hoặc sớm
+                            hơn.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<style>
+/* ==========================================================================
+           12. FAQ
+           ========================================================================== */
+        .faq-container {
+            max-width: 1000px;
+            /* Larger */
+            margin: 0 auto;
+            padding: 40px;
+            /* Added */
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+            /* Added spacing */
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 25px 0;
+            /* Increased */
+            background: none;
+            border: none;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            /* Larger */
+            font-weight: 700;
+            color: var(--color-black);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #FF3333;
+        }
+
+        /* Updated */
+        .faq-icon {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            /* Larger */
+        }
+
+        .faq-icon::before,
+        .faq-icon::after {
+            content: '';
+            position: absolute;
+            background: var(--color-black);
+            transition: 0.3s;
+        }
+
+        .faq-icon::before {
+            top: 11px;
+            left: 0;
+            width: 25px;
+            height: 3px;
+            /* Thicker */
+        }
+
+        .faq-icon::after {
+            top: 0;
+            left: 11px;
+            width: 3px;
+            height: 25px;
+        }
+
+        .faq-item.active .faq-icon::after {
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+
+        .faq-item.active .faq-icon::before {
+            background: #FF3333;
+        }
+
+        /* Updated */
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 20px 0 30px;
+            color: #666;
+        }
+
+        /* Added more FAQs for content */
+</style>
+
+<script>
+// FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const answer = item.querySelector('.faq-answer');
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = '0';
+                }
+            });
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = '0';
+                    });
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+        });
+</script>

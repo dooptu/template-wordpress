@@ -1,0 +1,61 @@
+<section class="section-padding contact-form-liquid glow-bg glow-bg-left" style="background: var(--color-white);">
+    <div class="container">
+        <div class="liquid-card reveal-liquid"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 80px; border-radius: 48px; border-color: rgba(230,0,0,0.1);">
+            <div class="contact-info">
+                <h2 style="font-size: 3rem; font-weight: 900; margin-bottom: 30px; line-height: 1.1;">KHỞI TẠO <br><span
+                        class="high-text-gradient">LIÊN KẾT</span></h2>
+                <p style="color: var(--color-text-muted); margin-bottom: 50px; font-size: 1.1rem;">PTEC luôn sẵn sàng
+                    lắng nghe và đưa ra giải pháp tối ưu cho dự án của bạn.</p>
+
+                <div style="display: flex; flex-direction: column; gap: 40px;">
+                    <div style="display: flex; gap: 20px; align-items: center;">
+                        <div
+                            style="width: 50px; height: 50px; background: var(--color-primary-soft); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.2rem;">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p
+                                style="font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                                Email Trực Tuyến</p>
+                            <p style="color: var(--color-text-muted); font-weight: 600;">info@ptec.vn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form onsubmit="event.preventDefault(); alert('Tin nhắn của bạn đã được gửi thành công!');"
+                    style="display: flex; flex-direction: column; gap: 25px;">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; opacity: 0.6;">Họ
+                            và Tên</label>
+                        <input type="text" placeholder="Nhập tên của bạn"
+                            style="padding: 16px 24px; border-radius: 12px; border: 1px solid #eee; background: #fcfcfc; outline: none; transition: 0.3s;"
+                            onfocus="this.style.borderColor='var(--color-primary)'"
+                            onblur="this.style.borderColor='#eee'">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; opacity: 0.6;">Số
+                            Điện Thoại</label>
+                        <input type="tel" placeholder="Nhập số điện thoại"
+                            style="padding: 16px 24px; border-radius: 12px; border: 1px solid #eee; background: #fcfcfc; outline: none; transition: 0.3s;"
+                            onfocus="this.style.borderColor='var(--color-primary)'"
+                            onblur="this.style.borderColor='#eee'">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; opacity: 0.6;">Nội
+                            dung tư vấn</label>
+                        <textarea placeholder="PTEC có thể giúp gì cho bạn?" rows="5"
+                            style="padding: 16px 24px; border-radius: 12px; border: 1px solid #eee; background: #fcfcfc; outline: none; resize: none; transition: 0.3s;"
+                            onfocus="this.style.borderColor='var(--color-primary)'"
+                            onblur="this.style.borderColor='#eee'"></textarea>
+                    </div>
+                    <button type="submit" class="btn-pill"
+                        style="justify-content: center; width: 100%; border-radius: 12px; height: 60px; font-size: 1rem;">Gửi
+                        Thông Tin Ngay</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

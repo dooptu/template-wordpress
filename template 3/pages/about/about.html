@@ -1,0 +1,18 @@
+<div id="about-hero-component"></div>
+<div id="founder-component"></div>
+<div id="values-component"></div>
+<div id="history-component"></div>
+<div id="team-component"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('about-hero-component', 'pages/about/components/about-hero.html'),
+            loadComponent('founder-component', 'pages/about/components/founder.html'),
+            loadComponent('values-component', 'pages/about/components/values.html'),
+            loadComponent('history-component', 'pages/about/components/history.html'),
+            loadComponent('team-component', 'pages/about/components/team.html')
+        ]);
+        initReveal();
+    })();
+</script>

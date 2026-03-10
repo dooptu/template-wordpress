@@ -1,0 +1,246 @@
+:root {
+    --color-primary: #E60000;
+    --color-primary-soft: rgba(230, 0, 0, 0.05);
+    --color-black: #0A0A0A;
+    --color-black-soft: #141414;
+    --color-white: #ffffff;
+    --color-bg: #f8f9fa;
+    --color-text: #1a1a1a;
+    --color-text-muted: #555555;
+
+    /* Glow & Waves Tokens */
+    --radius-organic: 32px;
+    --radius-button: 12px;
+    --shadow-sharp: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 0 40px rgba(230, 0, 0, 0.15);
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --font-main: 'Be Vietnam Pro', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+/* Glow Backgrounds */
+.glow-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-bg::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--color-primary-soft) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glow-bg-right::before {
+    top: -10%;
+    right: -10%;
+}
+
+.glow-bg-left::before {
+    bottom: -10%;
+    left: -10%;
+}
+
+/* Floating Blobs */
+.blob-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    background: var(--color-primary-soft);
+    filter: blur(60px);
+    border-radius: 50%;
+    animation: blob-float 20s infinite alternate;
+}
+
+@keyframes blob-float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(50px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Staggered Waves */
+.wave-multi {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+
+.wave-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.wave-layer path {
+    animation: wave-move 15s infinite linear;
+}
+
+.wave-layer-1 {
+    opacity: 0.3;
+}
+
+.wave-layer-1 path {
+    animation-duration: 25s;
+}
+
+.wave-layer-2 {
+    opacity: 0.5;
+}
+
+.wave-layer-2 path {
+    animation-duration: 18s;
+    animation-direction: reverse;
+}
+
+.wave-layer-3 {
+    opacity: 1;
+}
+
+.wave-layer-3 path {
+    animation-duration: 12s;
+}
+
+@keyframes wave-move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Liquid Utilities Refined */
+.liquid-card {
+    background: var(--color-white);
+    border-radius: var(--radius-organic);
+    padding: 40px;
+    box-shadow: var(--shadow-sharp);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.liquid-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary-soft);
+}
+
+.btn-pill {
+    padding: 14px 32px;
+    border-radius: var(--radius-button);
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-smooth);
+    border: none;
+}
+
+.btn-pill:hover {
+    background: var(--color-black);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Liquid Image Reveal */
+.liquid-img-wrap {
+    position: relative;
+    border-radius: var(--radius-organic);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.liquid-img-wrap:hover {
+    border-radius: 40% 60% 30% 70% / 60% 30% 70% 40%;
+}
+
+.liquid-accordion .accordion-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 24px 0;
+}
+
+.high-text-gradient {
+    background: linear-gradient(135deg, var(--color-primary), #990000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .liquid-card {
+        padding: 30px;
+    }
+
+    .wave-layer {
+        height: 60px;
+    }
+}

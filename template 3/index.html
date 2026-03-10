@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTEC | Kinetic Tech</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="floating-widgets-placeholder"></div>
+    <div class="scroll-progress"></div>
+
+    <header id="header-placeholder"></header>
+
+    <main id="main-content">
+        <!-- Components will be loaded here -->
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script>
+        // SPA Logic
+        async function loadComponent(id, path) {
+            try {
+                const response = await fetch(path);
+                const html = await response.text();
+                const container = document.getElementById(id);
+                if (container) {
+                    container.innerHTML = html;
+                    // Re-run scripts in component
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading component:', path, error);
+            }
+        }
+
+        async function navigate(page) {
+            const main = document.getElementById('main-content');
+            main.style.opacity = '0';
+
+            setTimeout(async () => {
+                const path = `pages/${page}/${page}.html`;
+                await loadComponent('main-content', path);
+
+                main.style.opacity = '1';
+                window.scrollTo(0, 0);
+            }, 500);
+        }
+
+        // Reveal Logic
+        function initReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.kinetic-reveal').forEach(el => observer.observe(el));
+        }
+
+        // Scroll Effects
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            const progress = document.querySelector(".scroll-progress");
+            if (progress) progress.style.width = scrolled + "%";
+
+            // Header Scrolled
+            const header = document.querySelector("header");
+            if (header) {
+                if (winScroll > 100) {
+                    header.classList.add("header-scrolled");
+                } else {
+                    header.classList.remove("header-scrolled");
+                }
+            }
+        };
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'components/header.html');
+            loadComponent('footer-placeholder', 'components/footer.html');
+            loadComponent('floating-widgets-placeholder', 'components/floating-widgets.html');
+            navigate('home');
+        });
+    </script>
+    <style>
+        #main-content {
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</body>
+
+</html>

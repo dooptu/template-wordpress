@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTEC TÂN BÌNH DƯƠNG | Xây Dựng Công Nghiệp Sáng Tạo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+
+<body>
+
+    <div id="header-wrapper"></div>
+    <div id="app"></div>
+    <div id="footer-wrapper"></div>
+    <div id="widgets-wrapper"></div>
+
+    <script>
+        const config = {
+            pages: {
+                home: {
+                    path: 'pages/home/home.html',
+                    components: [
+                        { id: 'hero', path: 'pages/home/components/hero.html' },
+                        { id: 'about', path: 'pages/home/components/about.html' },
+                        { id: 'stats', path: 'pages/home/components/stats.html' },
+                        { id: 'services', path: 'pages/home/components/services.html' },
+                        { id: 'equipment', path: 'pages/home/components/equipment.html' },
+                        { id: 'projects', path: 'pages/home/components/projects.html' },
+                        { id: 'testimonials', path: 'components/testimonials.html' },
+                        { id: 'faq', path: 'components/faq.html' },
+                        { id: 'cta', path: 'components/cta.html' }
+                    ]
+                },
+                about: {
+                    path: 'pages/about/about.html',
+                    components: [
+                        { id: 'about-hero', path: 'pages/about/components/about-hero.html' },
+                        { id: 'history', path: 'pages/about/components/history.html' },
+                        { id: 'founder', path: 'pages/about/components/founder.html' },
+                        { id: 'team', path: 'pages/about/components/team.html' },
+                        { id: 'values', path: 'pages/about/components/values.html' },
+                        { id: 'cta', path: 'components/cta.html' }
+                    ]
+                },
+
+
+                services: {
+                    path: 'pages/services/services.html',
+                    components: [
+                        { id: 'services-hero', path: 'pages/services/components/services-hero.html' },
+                        { id: 'services-grid', path: 'pages/services/components/services-grid.html' },
+                        { id: 'process', path: 'pages/services/components/process.html' },
+                        { id: 'cta', path: 'components/cta.html' }
+                    ]
+                },
+                projects: {
+                    path: 'pages/projects/projects.html',
+                    components: [
+                        { id: 'projects-hero', path: 'pages/projects/components/projects-hero.html' },
+                        { id: 'projects-gallery', path: 'pages/projects/components/projects-gallery.html' },
+                        { id: 'cta', path: 'components/cta.html' }
+                    ]
+                },
+                contact: {
+                    path: 'pages/contact/contact.html',
+                    components: [
+                        { id: 'contact-hero', path: 'pages/contact/components/contact-hero.html' },
+                        { id: 'contact-form', path: 'pages/contact/components/contact-form.html' },
+                        { id: 'map', path: 'pages/contact/components/map.html' },
+                        { id: 'cta', path: 'components/cta.html' }
+                    ]
+                }
+
+            }
+        };
+
+        async function loadComponent(id, url) {
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const html = await response.text();
+                    const container = document.getElementById(id);
+                    if (!container) return;
+                    container.innerHTML = html;
+
+                    // Execute scripts manually
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(oldScript => {
+                        const newScript = document.createElement('script');
+                        Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                        newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                    });
+                    return true;
+                }
+            } catch (error) {
+                console.error('Error loading component:', url, error);
+            }
+            return false;
+        }
+
+        async function navigate(pageId) {
+            const page = config.pages[pageId] || config.pages.home;
+            const app = document.getElementById('app');
+
+            // Show loading or clear current
+            app.innerHTML = '<div style="height:100vh; display:flex; align-items:center; justify-content:center; background: var(--color-black); color: white;">' +
+                '<h2 class="floating-anim">PTEC...</h2></div>';
+
+            try {
+                const res = await fetch(page.path);
+                if (res.ok) {
+                    app.innerHTML = await res.text();
+
+                    // Load page-specific components
+                    const promises = page.components.map(comp =>
+                        loadComponent(comp.id + '-component', comp.path)
+                    );
+                    await Promise.all(promises);
+
+                    // Re-init reveal animations
+                    initAnimations();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    app.innerHTML = '<h2>Page Not Found</h2>';
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function initAnimations() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-blur, .reveal-zoom');
+            const revealObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(r => revealObserver.observe(r));
+        }
+
+
+        async function init() {
+            // Load Shared
+            await loadComponent('header-wrapper', 'components/header.html');
+            await loadComponent('footer-wrapper', 'components/footer.html');
+            await loadComponent('widgets-wrapper', 'components/floating-widgets.html');
+
+            // Load initial page (Home)
+            navigate('home');
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

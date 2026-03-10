@@ -1,0 +1,45 @@
+<header style="position: fixed; top: 20px; left: 0; width: 100%; z-index: 1000; pointer-events: none;">
+    <div class="container">
+        <div class="header-pill" style="
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            padding: 10px 40px; 
+            border-radius: 100px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1); 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            pointer-events: auto;
+            border: 1px solid rgba(255,255,255,0.5);
+        ">
+            <div class="logo">
+                <a href="#" onclick="navigate('home')"
+                    style="font-family: var(--font-heading); font-weight: 900; font-size: 1.8rem; color: var(--color-black);">PTEC<span
+                        style="color: var(--color-primary);">.</span></a>
+            </div>
+
+            <nav>
+                <ul style="display: flex; gap: 30px; list-style: none;">
+                    <li><a href="#" onclick="navigate('home')"
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Trang
+                            Chủ</a></li>
+                    <li><a href="#" onclick="navigate('about')"
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Giới
+                            Thiệu</a></li>
+                    <li><a href="#" onclick="navigate('services')"
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Dịch
+                            Vụ</a></li>
+                    <li><a href="#" onclick="navigate('projects')"
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Dự
+                            Án</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-action">
+                <a href="#" onclick="navigate('contact')" class="btn-pill"
+                    style="padding: 10px 25px; font-size: 0.85rem;">Liên Hệ <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</header>

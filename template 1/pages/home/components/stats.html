@@ -1,0 +1,105 @@
+<!-- STATS -->
+    <section class="stats-wrapper">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-num" data-target="150">0</div>
+                    <div class="stat-label">Dự Án Hoàn Thành</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="08">0</div>
+                    <div class="stat-label">Năm Kinh Nghiệm</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="500">0</div>
+                    <div class="stat-label">Kỹ Sư & Công Nhân</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num" data-target="100">0</div>
+                    <div class="stat-label">% An Toàn</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<style>
+/* ==========================================================================
+           7. STATS SECTION
+           ========================================================================== */
+        .stats-wrapper {
+            background: #FF3333;
+            /* Updated color */
+            padding: 80px 0;
+            /* Increased */
+            color: #fff;
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+            /* Adjusted for modern look */
+            margin: 0;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            /* Increased */
+            padding: 40px;
+            /* Added padding */
+        }
+
+        .stat-item {
+            flex: 1 1 250px;
+            /* Larger min width */
+            position: relative;
+            transition: transform 0.3s;
+            /* Added hover animation */
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-num {
+            font-size: 4.5rem;
+            /* Larger */
+            font-family: var(--font-heading);
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            /* Larger */
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+</style>
+
+<script>
+// Counter animation
+            const counters = document.querySelectorAll('.stat-num');
+            const counterObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseInt(el.dataset.target);
+                        let count = 0;
+                        const update = () => {
+                            const increment = target / 50;
+                            if (count < target) {
+                                count += increment;
+                                el.innerText = Math.ceil(count) + (target > 50 ? '+' : '');
+                                setTimeout(update, 40);
+                            } else {
+                                el.innerText = target + (target > 50 ? '+' : '');
+                            }
+                        };
+                        update();
+                        counterObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(c => counterObserver.observe(c));
+</script>

@@ -1,0 +1,215 @@
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-gradient"></div>
+    <div class="container">
+        <div class="hero-content reveal">
+            <div class="hero-badge">PTEC Tân Bình Dương</div>
+            <h1>KIẾN TẠO HẠ TẦNG <br><span class="highlight">VỮNG TƯƠNG LAI</span></h1>
+            <p>Tổng thầu uy tín trong lĩnh vực Xây dựng Công nghiệp & Hạ tầng Kỹ thuật. Với hơn 8 năm kinh nghiệm,
+                chúng tôi cam kết mang đến giải pháp tối ưu, an toàn và bền vững cho mọi dự án.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-red">NHẬN BÁO GIÁ</a>
+                <a href="#projects" class="btn btn-outline">XEM HỒ SƠ</a>
+            </div>
+        </div>
+    </div>
+    <div class="building-animation-wrap">
+        <div class="building b1"></div>
+        <div class="building b2"></div>
+        <div class="building b3"></div>
+        <div class="building b4">
+            <div class="crane"></div>
+        </div>
+        <div class="building b5"></div>
+    </div>
+</section>
+
+<style>
+    /* ==========================================================================
+           5. HERO SECTION
+           ========================================================================== */
+    .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 700px;
+        background: var(--color-black);
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        background: url('https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    .hero-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(5, 5, 5, 0.95) 0%, rgba(5, 5, 5, 0.7) 50%, rgba(5, 5, 5, 0.2) 100%);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        max-width: 800px;
+        padding: 40px;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 10px 20px;
+        background: rgba(230, 0, 0, 0.2);
+        border-left: 4px solid #FF3333;
+        color: var(--color-white);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+        color: var(--color-white);
+        line-height: 1.1;
+        margin-bottom: 25px;
+    }
+
+    .hero h1 .highlight {
+        color: transparent;
+        -webkit-text-stroke: 2px #FF3333;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        color: #ccc;
+        margin-bottom: 40px;
+        max-width: 700px;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    /* Building animation with added modern effects */
+    .building-animation-wrap {
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        width: 45%;
+        height: 350px;
+        z-index: 5;
+        display: flex;
+        align-items: flex-end;
+        gap: 15px;
+        opacity: 0.8;
+        pointer-events: none;
+    }
+
+    .building {
+        background: linear-gradient(to bottom, #222, #111);
+        border: 1px solid #FF3333;
+        border-bottom: none;
+        transform-origin: bottom;
+        transform: scaleY(0);
+        animation: growBuilding 2.5s ease-in-out forwards;
+    }
+
+    .b1 {
+        width: 70px;
+        height: 180px;
+        animation-delay: 0.5s;
+    }
+
+    .b2 {
+        width: 90px;
+        height: 280px;
+        animation-delay: 0.8s;
+    }
+
+    .b3 {
+        width: 60px;
+        height: 150px;
+        animation-delay: 1.2s;
+    }
+
+    .b4 {
+        width: 110px;
+        height: 330px;
+        animation-delay: 1.5s;
+        position: relative;
+    }
+
+    .b5 {
+        width: 80px;
+        height: 230px;
+        animation-delay: 1.8s;
+    }
+
+    .building::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        right: 5px;
+        bottom: 10px;
+        background-size: 12px 12px;
+        opacity: 0.15;
+        background-image: radial-gradient(#fff 1px, transparent 1px);
+    }
+
+    .crane {
+        position: absolute;
+        top: -50px;
+        left: -25px;
+        width: 90px;
+        height: 5px;
+        background: #FF3333;
+        transform-origin: right center;
+        animation: swingCrane 4.5s ease-in-out infinite alternate;
+        opacity: 0;
+        animation-delay: 2.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .crane::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 5px;
+        height: 60px;
+        background: #FF3333;
+    }
+
+    @keyframes growBuilding {
+        0% {
+            transform: scaleY(0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes swingCrane {
+        0% {
+            transform: rotate(-10deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotate(10deg);
+            opacity: 1;
+        }
+    }
+</style>

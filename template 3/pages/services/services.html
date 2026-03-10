@@ -1,0 +1,14 @@
+<div id="services-hero-component"></div>
+<div id="services-grid-component"></div>
+<div id="process-component"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('services-hero-component', 'pages/services/components/services-hero.html'),
+            loadComponent('services-grid-component', 'pages/services/components/services-grid.html'),
+            loadComponent('process-component', 'pages/services/components/process.html')
+        ]);
+        initReveal();
+    })();
+</script>

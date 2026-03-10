@@ -1,0 +1,26 @@
+<div id="hero-component"></div>
+<div id="marquee-component"></div>
+<div id="about-component"></div>
+<div id="stats-component"></div>
+<div id="services-component"></div>
+<div id="equipment-component"></div>
+<div id="projects-component"></div>
+<div id="faq-component"></div>
+<div id="cta-component"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('hero-component', 'pages/home/components/hero.html'),
+            loadComponent('marquee-component', 'components/marquee.html'),
+            loadComponent('about-component', 'pages/home/components/about.html'),
+            loadComponent('stats-component', 'pages/home/components/stats.html'),
+            loadComponent('services-component', 'pages/home/components/services.html'),
+            loadComponent('equipment-component', 'pages/home/components/equipment.html'),
+            loadComponent('projects-component', 'pages/home/components/projects.html'),
+            loadComponent('faq-component', 'pages/home/components/faq.html'),
+            loadComponent('cta-component', 'components/cta.html')
+        ]);
+        initReveal();
+    })();
+</script>

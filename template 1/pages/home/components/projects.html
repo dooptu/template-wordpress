@@ -1,0 +1,181 @@
+<!-- PROJECTS -->
+    <section class="section-padding projects-area" id="projects">
+        <div class="container">
+            <div class="title-wrapper">
+                <span class="title-bg">PORTFOLIO</span>
+                <h2 class="section-title">Dấu Ấn <span>Công Trình</span></h2>
+            </div>
+        </div>
+        <div class="container" style="max-width: 100%; padding: 0;">
+            <div class="prj-masonry">
+                <div class="prj-item prj-1">
+                    <img src="https://images.unsplash.com/photo-1570549717489-6ba100d3ab18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                        alt="VSIP"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Tổng Thầu</span>
+                        <h3>Nhà Máy Điện Tử VSIP II</h3>
+                    </div>
+                </div>
+                <div class="prj-item prj-2">
+                    <img src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Kết cấu thép"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Kết Cấu Thép</span>
+                        <h3>Kho Logistics Thông Minh</h3>
+                    </div>
+                </div>
+                <div class="prj-item prj-3">
+                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="KCN Rạch Bắp"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Hạ Tầng</span>
+                        <h3>KCN Rạch Bắp</h3>
+                    </div>
+                </div>
+                <div class="prj-item prj-4">
+                    <img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Giao thông"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Giao Thông</span>
+                        <h3>Đường Nội Bộ Bàu Bàng</h3>
+                    </div>
+                </div>
+                <div class="prj-item prj-5">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="MEP"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Cơ Điện</span>
+                        <h3>Trạm Biến Áp Tân Uyên</h3>
+                    </div>
+                </div>
+                <div class="prj-item prj-6">
+                    <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Nhà máy dệt"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Thiết Kế - Thi Công</span>
+                        <h3>Nhà Máy Dệt May Mỹ Phước 3</h3>
+                    </div>
+                </div>
+                <div class="prj-item prj-7"> <!-- Added more for content -->
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Dự án mới"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Mới</span>
+                        <h3>Nhà Máy Thực Phẩm Bình Phước</h3>
+                    </div>
+                </div>
+                <div class="prj-item prj-8">
+                    <img src="https://images.unsplash.com/photo-1541888082470-fa52b56f58a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Dự án mới 2"> <!-- Updated URL -->
+                    <div class="prj-overlay"><span class="prj-tag">Hạ Tầng</span>
+                        <h3>KCN Đồng Nai</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 50px;"><a href="#" class="btn btn-red">XEM TOÀN BỘ DỰ ÁN</a>
+            </div>
+        </div>
+    </section>
+
+<style>
+/* ==========================================================================
+           10. PROJECTS MASONRY
+           ========================================================================== */
+        .projects-area {
+            background: #fff;
+        }
+
+        .prj-masonry {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 280px;
+            /* Increased */
+            gap: 25px;
+            /* Increased */
+            padding: 40px;
+            /* Added */
+        }
+
+        .prj-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            /* Rounded */
+        }
+
+        .prj-1 {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .prj-2 {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .prj-3,
+        .prj-4 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .prj-5,
+        .prj-6 {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .prj-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .prj-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .prj-overlay {
+            position: absolute;
+            inset: 25px;
+            /* Increased */
+            background: rgba(5, 5, 5, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: 0.4s ease;
+            border: 1px solid #FF3333;
+            /* Updated */
+        }
+
+        .prj-item:hover .prj-overlay {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .prj-tag {
+            background: #FF3333;
+            /* Updated */
+            padding: 8px 20px;
+            /* Increased */
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .prj-overlay h3 {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+        /* Larger */
+        /* Added more projects for more content */
+        .prj-7 {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .prj-8 {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+</style>

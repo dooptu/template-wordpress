@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTEC | Liquid Design Concept</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="assets/css/global.css">
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <main id="content-area">
+        <!-- SPA-like content area -->
+        <div id="page-content"></div>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="widgets-container"></div>
+
+    <script>
+        const API = {
+            pages: {
+                home: 'pages/home/home.html',
+                about: 'pages/about/about.html',
+                services: 'pages/services/services.html',
+                projects: 'pages/projects/projects.html',
+                contact: 'pages/contact/contact.html'
+            }
+        };
+
+        async function loadComponent(id, url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                const container = document.getElementById(id);
+                if (!container) return;
+
+                container.innerHTML = html;
+
+                // Execute scripts manually
+                const scripts = container.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
+
+                initObservers();
+            } catch (err) {
+                console.error('Failed to load component:', url, err);
+            }
+        }
+
+        async function navigate(pageId) {
+            const url = API.pages[pageId];
+            if (!url) return;
+
+            await loadComponent('page-content', url);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            const dynamicComps = document.querySelectorAll('[id$="-component"]');
+            for (let comp of dynamicComps) {
+                const name = comp.id.replace('-component', '');
+
+                // Special handling for global components like CTA
+                let path;
+                if (name === 'cta') {
+                    path = 'components/cta.html';
+                } else {
+                    const folder = pageId === 'home' ? 'pages/home/components' :
+                        pageId === 'about' ? 'pages/about/components' :
+                            pageId === 'services' ? 'pages/services/components' :
+                                pageId === 'projects' ? 'pages/projects/components' :
+                                    'pages/contact/components';
+                    path = `${folder}/${name}.html`;
+                }
+
+                await loadComponent(comp.id, path);
+            }
+        }
+
+
+        function initObservers() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-liquid').forEach(el => observer.observe(el));
+        }
+
+        // Initial Load
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadComponent('header-container', 'components/header.html');
+            await loadComponent('footer-container', 'components/footer.html');
+            // await loadComponent('widgets-container', '../template 1/components/floating-widgets.html'); // Reuse widgets
+            await navigate('home');
+        });
+    </script>
+</body>
+
+</html>

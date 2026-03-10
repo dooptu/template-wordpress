@@ -1,0 +1,117 @@
+<section class="section-padding faq-kinetic" style="background: var(--color-white);">
+    <div class="container">
+        <div class="kinetic-grid" style="margin-bottom: 80px;">
+            <div style="grid-column: span 12;">
+                <h2 style="font-size: 5rem; letter-spacing: -3px; line-height: 0.9;">HỎI ĐÁP <br><span
+                        style="color: var(--color-primary);">KINETIC</span></h2>
+                <div style="width: 100px; height: 10px; background: var(--color-black); margin-top: 30px;"></div>
+            </div>
+        </div>
+
+        <div style="max-width: 900px;">
+            <!-- FAQ Item 1 -->
+            <div class="kinetic-reveal faq-kinetic-item active"
+                style="border-bottom: 1px solid #eee; margin-bottom: 20px;">
+                <div class="faq-trigger"
+                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
+                    onclick="toggleFaq(this)">
+                    <h3 style="font-size: 1.8rem; font-weight: 900; max-width: 80%;">PTEC có nhận thiết kế thi công trọn
+                        gói không?</h3>
+                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-primary);">+
+                    </div>
+                </div>
+                <div class="faq-content"
+                    style="max-height: 500px; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
+                        Có, PTEC chuyên cung cấp dịch vụ Design & Build, giúp tiết kiệm chi phí và rút ngắn thời gian
+                        lên đến 30% cho chủ đầu tư.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="kinetic-reveal faq-kinetic-item" style="border-bottom: 1px solid #eee; margin-bottom: 20px;"
+                data-delay="0.2s">
+                <div class="faq-trigger"
+                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
+                    onclick="toggleFaq(this)">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; max-width: 80%;">Chính sách bảo hành công trình thế
+                        nào?</h3>
+                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-black);">+</div>
+                </div>
+                <div class="faq-content"
+                    style="max-height: 0; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
+                        Bảo hành kết cấu 05 năm, bảo hành chống thấm, MEP 12-24 tháng, hỗ trợ 24/7 với đội ngũ kỹ thuật
+                        viên chuyên nghiệp.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="kinetic-reveal faq-kinetic-item" style="border-bottom: 1px solid #eee; margin-bottom: 20px;"
+                data-delay="0.4s">
+                <div class="faq-trigger"
+                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
+                    onclick="toggleFaq(this)">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; max-width: 80%;">Khu vực hoạt động chính của PTEC?
+                    </h3>
+                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-black);">+</div>
+                </div>
+                <div class="faq-content"
+                    style="max-height: 0; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
+                        Trụ sở tại Bến Cát, Bình Dương. Thi công mạnh tại các KCN Bình Dương, Đồng Nai, Bình Phước, và
+                        mở rộng toàn miền Nam.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="kinetic-reveal faq-kinetic-item" style="border-bottom: 1px solid #eee; margin-bottom: 20px;"
+                data-delay="0.6s">
+                <div class="faq-trigger"
+                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
+                    onclick="toggleFaq(this)">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; max-width: 80%;">Thời gian thi công trung bình cho
+                        một nhà xưởng?</h3>
+                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-black);">+</div>
+                </div>
+                <div class="faq-content"
+                    style="max-height: 0; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
+                        Từ 3-6 tháng tùy quy mô, với cam kết hoàn thành đúng hạn hoặc sớm hơn mục tiêu đề ra.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleFaq(trigger) {
+        const item = trigger.parentElement;
+        const content = item.querySelector('.faq-content');
+        const icon = trigger.querySelector('.faq-plus');
+        const isActive = item.classList.contains('active');
+
+        // Close others
+        document.querySelectorAll('.faq-kinetic-item').forEach(i => {
+            i.classList.remove('active');
+            i.querySelector('.faq-content').style.maxHeight = '0';
+            i.querySelector('.faq-plus').style.transform = 'rotate(0deg)';
+            i.querySelector('.faq-plus').style.color = 'var(--color-black)';
+            i.querySelector('.faq-plus').innerText = '+';
+            i.querySelector('h3').style.fontWeight = '700';
+        });
+
+        if (!isActive) {
+            item.classList.add('active');
+            content.style.maxHeight = '500px';
+            icon.style.transform = 'rotate(45deg)';
+            icon.style.color = 'var(--color-primary)';
+            icon.innerText = '×';
+            trigger.querySelector('h3').style.fontWeight = '900';
+        }
+    }
+</script>

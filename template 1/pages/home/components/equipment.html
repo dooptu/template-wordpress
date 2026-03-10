@@ -1,0 +1,132 @@
+<!-- EQUIPMENT -->
+<section class="section-padding equipment-area">
+    <div class="container">
+        <div class="eq-grid">
+            <div class="eq-content">
+                <div class="title-wrapper" style="text-align: left;">
+                    <span class="title-bg" style="left:0; transform:none;">POWER</span>
+                    <h2 class="section-title">Năng Lực <span>Thiết Bị</span></h2>
+                </div>
+                <div class="eq-list">
+                    <div class="eq-item">
+                        <div class="eq-icon"><i class="fa-solid fa-truck-moving"></i></div>
+                        <div class="eq-text">
+                            <h4>Xe Đào & Xe Cẩu</h4>
+                            <p>Hơn 50 đầu máy hạng nặng Komatsu, Hitachi, đảm bảo tiến độ thi công nhanh chóng.</p>
+                        </div>
+                    </div>
+                    <div class="eq-item">
+                        <div class="eq-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                        <div class="eq-text">
+                            <h4>Nhà Máy Gia Công</h4>
+                            <p>Xưởng 5.000m2 máy CNC, hàn tự động, sản xuất kết cấu thép chất lượng cao.</p>
+                        </div>
+                    </div>
+                    <div class="eq-item">
+                        <div class="eq-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <div class="eq-text">
+                            <h4>Công Nghệ BIM</h4>
+                            <p>Số hóa mô hình, phát hiện xung đột kết cấu, giảm lỗi thi công đến 90%.</p>
+                        </div>
+                    </div>
+                    <div class="eq-item">
+                        <div class="eq-icon"><i class="fa-solid fa-tools"></i></div>
+                        <div class="eq-text">
+                            <h4>Hệ Thống Quản Lý</h4>
+                            <p>Phần mềm ERP và IoT theo dõi tiến độ thực tế thời gian thực.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eq-image-display">
+                <img src="https://images.unsplash.com/photo-1541888082470-fa52b56f58a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="Equipment">
+                <div class="eq-badge">OWN EQUIPMENT</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* ==========================================================================
+           9. EQUIPMENT
+           ========================================================================== */
+    .equipment-area {
+        background: var(--color-black);
+        color: #fff;
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+        margin: 0;
+    }
+
+    .eq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .eq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .eq-item {
+        display: flex;
+        gap: 25px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 25px;
+        border-left: 3px solid transparent;
+        transition: 0.3s ease;
+        cursor: default;
+        border-radius: 8px;
+    }
+
+    .eq-item:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-left-color: #FF3333;
+        transform: translateX(15px);
+    }
+
+    .eq-icon {
+        font-size: 3rem;
+        color: #FF3333;
+    }
+
+    .eq-image-display {
+        position: relative;
+        height: 450px;
+        border: 1px solid #333;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .eq-image-display img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        transition: opacity 0.3s;
+    }
+
+    .eq-image-display:hover img {
+        opacity: 1;
+    }
+
+    .eq-badge {
+        position: absolute;
+        bottom: 40px;
+        left: -15px;
+        background: #FF3333;
+        padding: 20px 35px;
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 800;
+        box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    .eq-text p {
+        margin-top: 10px;
+    }
+</style>

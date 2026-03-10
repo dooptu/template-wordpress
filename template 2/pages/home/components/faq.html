@@ -1,0 +1,114 @@
+<section class="section-padding faq-liquid glow-bg glow-bg-left"
+    style="background: var(--color-bg); position: relative;">
+    <div class="container">
+        <div class="title-wrapper text-center reveal-liquid" style="margin-bottom: 80px;">
+            <p
+                style="color: var(--color-primary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px;">
+                Giải Đáp Thắc Mắc</p>
+            <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1;">HỎI ĐÁP <span
+                    class="high-text-gradient">LIQUID</span></h2>
+            <div
+                style="width: 80px; height: 4px; background: var(--color-primary); margin: 30px auto; border-radius: 2px;">
+            </div>
+        </div>
+
+        <div class="liquid-accordion reveal-liquid"
+            style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+            <!-- Accordion Item 1 -->
+            <div class="faq-item liquid-card" style="padding: 0; overflow: hidden; border-radius: 24px;">
+                <div class="faq-trigger"
+                    style="padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: 0.3s; background: var(--color-white);">
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-black);">Liquid Architecture là
+                        gì?</h4>
+                    <div class="faq-icon"
+                        style="width: 40px; height: 40px; background: var(--color-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.4s;">
+                        <i class="fa-solid fa-plus" style="font-size: 0.9rem; color: var(--color-primary);"></i>
+                    </div>
+                </div>
+                <div class="faq-content"
+                    style="max-height: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div
+                        style="padding: 0 40px 40px; color: var(--color-text-muted); line-height: 1.8; font-size: 1.05rem;">
+                        Đó là ngôn ngữ kiến trúc đề cao tính linh hoạt trong mở rộng, tối ưu hóa dòng chảy vận hành bên
+                        trong nhà xưởng và sử dụng các đường nét uốn lượn để giảm bớt sự thô cứng của kết cấu thép
+                        truyền thống.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="faq-item liquid-card" style="padding: 0; overflow: hidden; border-radius: 24px;">
+                <div class="faq-trigger"
+                    style="padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: 0.3s; background: var(--color-white);">
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-black);">Thời gian thi công
+                        trung bình cho một dự án?</h4>
+                    <div class="faq-icon"
+                        style="width: 40px; height: 40px; background: var(--color-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.4s;">
+                        <i class="fa-solid fa-plus" style="font-size: 0.9rem; color: var(--color-primary);"></i>
+                    </div>
+                </div>
+                <div class="faq-content"
+                    style="max-height: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div
+                        style="padding: 0 40px 40px; color: var(--color-text-muted); line-height: 1.8; font-size: 1.05rem;">
+                        Nhờ quy trình sản xuất tiền chế tại nhà máy và kỹ thuật lắp dựng siêu tốc, chúng tôi thường rút
+                        ngắn 30% thời gian so với xây dựng truyền thống, trung bình từ 3-5 tháng cho dự án quy mô vừa.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 3 -->
+            <div class="faq-item liquid-card" style="padding: 0; overflow: hidden; border-radius: 24px;">
+                <div class="faq-trigger"
+                    style="padding: 30px 40px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: 0.3s; background: var(--color-white);">
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--color-black);">PTEC có hỗ trợ xin giấy
+                        phép xây dựng không?</h4>
+                    <div class="faq-icon"
+                        style="width: 40px; height: 40px; background: var(--color-bg); border-radius: 12px; display: flex; align-items: center; justify-content: center; transition: 0.4s;">
+                        <i class="fa-solid fa-plus" style="font-size: 0.9rem; color: var(--color-primary);"></i>
+                    </div>
+                </div>
+                <div class="faq-content"
+                    style="max-height: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div
+                        style="padding: 0 40px 40px; color: var(--color-text-muted); line-height: 1.8; font-size: 1.05rem;">
+                        Có, chúng tôi cung cấp dịch vụ trọn gói từ khâu xin phép, thiết kế cơ sở, thiết kế kỹ thuật thi
+                        công đến khâu hoàn công bàn giao cho chủ đầu tư.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function () {
+        const triggers = document.querySelectorAll('.faq-trigger');
+
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', function () {
+                const item = this.parentElement;
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.faq-icon i');
+                const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+
+                // Close all other items
+                document.querySelectorAll('.faq-content').forEach(c => {
+                    c.style.maxHeight = '0px';
+                    c.parentElement.querySelector('.faq-icon i').className = 'fa-solid fa-plus';
+                    c.parentElement.style.boxShadow = 'var(--shadow-sharp)';
+                });
+
+                if (!isOpen) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.className = 'fa-solid fa-minus';
+                    item.style.boxShadow = 'var(--shadow-glow)';
+                } else {
+                    content.style.maxHeight = '0px';
+                    icon.className = 'fa-solid fa-plus';
+                    item.style.boxShadow = 'var(--shadow-sharp)';
+                }
+            });
+        });
+    })();
+</script>
