@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTEC | Heritage Excellence</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="floating-widgets-placeholder"></div>
+    <div class="scroll-progress"></div>
+
+    <header id="header-placeholder"
+        style="position: fixed; top: 0; width: 100%; z-index: 1000; transition: all 0.5s ease;"></header>
+
+    <main id="main-content">
+        <!-- SPA Content -->
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script>
+        // Heritage SPA Framework
+        async function loadComponent(id, path) {
+            try {
+                const response = await fetch(path);
+                const html = await response.text();
+                const container = document.getElementById(id);
+                if (container) {
+                    container.innerHTML = html;
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        if (script.src) {
+                            newScript.src = script.src;
+                        } else {
+                            newScript.textContent = script.textContent;
+                        }
+                        document.body.appendChild(newScript);
+                    });
+                }
+            } catch (error) {
+                console.error('Heritage System Error:', path, error);
+            }
+        }
+
+        async function navigate(page) {
+            const main = document.getElementById('main-content');
+            main.style.opacity = '0';
+            main.style.transform = 'translateY(20px)';
+
+            setTimeout(async () => {
+                const path = `pages/${page}/${page}.html`;
+                await loadComponent('main-content', path);
+                main.style.opacity = '1';
+                main.style.transform = 'translateY(0)';
+                window.scrollTo(0, 0);
+            }, 600);
+        }
+
+        // Stately Reveal Animation
+        function initReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.heritage-reveal').forEach(el => observer.observe(el));
+        }
+
+        // Luxury Scroll Listener
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            const progress = document.querySelector(".scroll-progress");
+            if (progress) progress.style.width = scrolled + "%";
+
+            const header = document.getElementById("header-placeholder");
+            if (header) {
+                if (winScroll > 100) {
+                    header.classList.add("header-scrolled");
+                    header.style.padding = "10px 0";
+                } else {
+                    header.classList.remove("header-scrolled");
+                    header.style.padding = "30px 0";
+                }
+            }
+        };
+
+        // Initialize Heritage Experience
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'components/header.html');
+            loadComponent('footer-placeholder', 'components/footer.html');
+            loadComponent('floating-widgets-placeholder', 'components/floating-widgets.html');
+            navigate('home');
+        });
+    </script>
+    <style>
+        #main-content {
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            min-height: 100vh;
+        }
+    </style>
+</body>
+
+</html>

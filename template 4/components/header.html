@@ -1,0 +1,42 @@
+<nav class="container"
+    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2); height: 100px;">
+    <div class="logo">
+        <a href="#" onclick="navigate('home')"
+            style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+            <div
+                style="width: 50px; height: 50px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 900; color: white; font-size: 1.5rem; border: 2px solid var(--color-secondary);">
+                P</div>
+            <span
+                style="font-family: var(--font-heading); font-weight: 900; font-size: 1.8rem; letter-spacing: 2px; color: var(--color-secondary);">PTEC</span>
+        </a>
+    </div>
+
+    <div style="display: flex; gap: 40px;">
+        <a href="#" onclick="navigate('home')" class="nav-link"
+            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Trang
+            Chủ</a>
+        <a href="#" onclick="navigate('about')" class="nav-link"
+            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Giới
+            Thiệu</a>
+        <a href="#" onclick="navigate('services')" class="nav-link"
+            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Dịch
+            Vụ</a>
+        <a href="#" onclick="navigate('projects')" class="nav-link"
+            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Dự
+            Án</a>
+        <a href="#" onclick="navigate('contact')" class="nav-link"
+            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Liên
+            Hệ</a>
+    </div>
+
+    <div>
+        <a href="#" onclick="navigate('contact')" class="btn-heritage"
+            style="padding: 10px 25px; font-size: 0.75rem;">Yêu cầu tư vấn</a>
+    </div>
+</nav>
+
+<style>
+    .nav-link:hover {
+        color: var(--color-primary) !important;
+    }
+</style>

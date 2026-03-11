@@ -1,0 +1,12 @@
+<div id="contact-hero-placeholder"></div>
+<div id="contact-content-placeholder"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('contact-hero-placeholder', 'pages/contact/components/contact-hero.html'),
+            loadComponent('contact-content-placeholder', 'pages/contact/components/contact-content.html')
+        ]);
+        initReveal();
+    })();
+</script>

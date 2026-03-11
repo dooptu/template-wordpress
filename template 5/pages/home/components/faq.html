@@ -1,0 +1,98 @@
+<section class="section-padding faq-neo" style="background: var(--color-white); position: relative;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 80px;">
+            <div class="neo-reveal-left">
+                <h2
+                    style="font-size: 4rem; line-height: 1; letter-spacing: -2px; font-weight: 900; margin-bottom: 30px;">
+                    CÂU HỎI <br><span style="color: var(--color-primary);">THƯỜNG GẶP</span></h2>
+                <div style="width: 150px; height: 15px; background: var(--color-primary); transform: skew(-20deg);">
+                </div>
+            </div>
+
+            <div class="neo-reveal-right">
+                <div class="faq-list-neo" style="display: flex; flex-direction: column; gap: 20px;">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item-neo"
+                        style="border: 2px solid #000; padding: 30px; position: relative; transition: 0.3s;">
+                        <div onclick="toggleFaqNeo(this)"
+                            style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="font-size: 1.4rem; margin: 0; font-weight: 800; text-transform: uppercase;">PTEC
+                                có nhận thi công trọn gói không?</h3>
+                            <i class="fa-solid fa-plus transition-transform" style="font-size: 1.2rem;"></i>
+                        </div>
+                        <div class="faq-answer-neo" style="max-height: 0; overflow: hidden; transition: 0.5s ease-out;">
+                            <p style="margin-top: 20px; color: #666; line-height: 1.6;">PTEC cung cấp giải pháp tổng
+                                thầu thiết kế và thi công (Design & Build), giúp chủ đầu tư tối ưu hóa chi phí và thời
+                                gian quản lý dự án.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item-neo"
+                        style="border: 2px solid #000; padding: 30px; position: relative; transition: 0.3s;">
+                        <div onclick="toggleFaqNeo(this)"
+                            style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="font-size: 1.4rem; margin: 0; font-weight: 800; text-transform: uppercase;">Công
+                                ty có xưởng gia công thép riêng không?</h3>
+                            <i class="fa-solid fa-plus transition-transform" style="font-size: 1.2rem;"></i>
+                        </div>
+                        <div class="faq-answer-neo" style="max-height: 0; overflow: hidden; transition: 0.5s ease-out;">
+                            <p style="margin-top: 20px; color: #666; line-height: 1.6;">Chúng tôi sở hữu nhà máy gia
+                                công kết cấu thép hiện đại với diện tích hơn 5.000m2, đảm bảo chất lượng cấu kiện đạt
+                                chuẩn ISO.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item-neo"
+                        style="border: 2px solid #000; padding: 30px; position: relative; transition: 0.3s;">
+                        <div onclick="toggleFaqNeo(this)"
+                            style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="font-size: 1.4rem; margin: 0; font-weight: 800; text-transform: uppercase;">PTEC
+                                đã thực hiện dự án ở những khu vực nào?</h3>
+                            <i class="fa-solid fa-plus transition-transform" style="font-size: 1.2rem;"></i>
+                        </div>
+                        <div class="faq-answer-neo" style="max-height: 0; overflow: hidden; transition: 0.5s ease-out;">
+                            <p style="margin-top: 20px; color: #666; line-height: 1.6;">PTEC đã và đang thực hiện nhiều
+                                dự án trọng điểm tại các khu công nghiệp ở Bình Dương, Đồng Nai, Long An và các tỉnh
+                                thành miền Bắc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleFaqNeo(element) {
+        const item = element.parentElement;
+        const answer = item.querySelector('.faq-answer-neo');
+        const icon = item.querySelector('i');
+
+        if (answer.style.maxHeight === '0px' || answer.style.maxHeight === '') {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            icon.classList.add('fa-minus');
+            icon.classList.remove('fa-plus');
+            item.style.borderColor = 'var(--color-primary)';
+            item.style.backgroundColor = '#fff';
+        } else {
+            answer.style.maxHeight = '0px';
+            icon.classList.add('fa-plus');
+            icon.classList.remove('fa-minus');
+            item.style.borderColor = '#000';
+            item.style.backgroundColor = 'transparent';
+        }
+    }
+</script>
+
+<style>
+    .faq-item-neo:hover {
+        border-color: var(--color-primary);
+        transform: translateX(10px);
+    }
+
+    .transition-transform {
+        transition: transform 0.3s;
+    }
+</style>

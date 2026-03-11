@@ -1,0 +1,12 @@
+<div id="projects-hero-placeholder"></div>
+<div id="gallery-placeholder"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('projects-hero-placeholder', 'pages/projects/components/projects-hero.html'),
+            loadComponent('gallery-placeholder', 'pages/projects/components/gallery.html')
+        ]);
+        initReveal();
+    })();
+</script>

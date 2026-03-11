@@ -1,0 +1,65 @@
+<section class="section-padding stats-heritage"
+    style="background: var(--color-secondary); color: white; position: relative; overflow: hidden;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 50px;">
+            <div class="heritage-reveal" style="text-align: center;">
+                <h2 style="font-size: 4rem; color: var(--color-primary); margin-bottom: 10px;" class="counter"
+                    data-target="150">0</h2>
+                <div style="width: 50px; height: 1px; background: var(--color-primary); margin: 0 auto 20px;"></div>
+                <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; opacity: 0.7;">Dự Án Hoàn
+                    Thành</p>
+            </div>
+            <div class="heritage-reveal" style="text-align: center;" data-delay="0.2s">
+                <h2 style="font-size: 4rem; color: var(--color-white); margin-bottom: 10px;" class="counter"
+                    data-target="8">0</h2>
+                <div style="width: 50px; height: 1px; background: var(--color-primary); margin: 0 auto 20px;"></div>
+                <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; opacity: 0.7;">Năm Kinh
+                    Nghiệm</p>
+            </div>
+            <div class="heritage-reveal" style="text-align: center;" data-delay="0.4s">
+                <h2 style="font-size: 4rem; color: var(--color-primary); margin-bottom: 10px;" class="counter"
+                    data-target="500">0</h2>
+                <div style="width: 50px; height: 1px; background: var(--color-primary); margin: 0 auto 20px;"></div>
+                <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; opacity: 0.7;">Kỹ Sư &
+                    Công Nhân</p>
+            </div>
+            <div class="heritage-reveal" style="text-align: center;" data-delay="0.6s">
+                <h2 style="font-size: 4rem; color: var(--color-white); margin-bottom: 10px;" class="counter"
+                    data-target="100">0</h2>
+                <div style="width: 50px; height: 1px; background: var(--color-primary); margin: 0 auto 20px;"></div>
+                <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; opacity: 0.7;">% An Toàn
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function () {
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target);
+                    let count = 0;
+                    const duration = 2500;
+                    const increment = target / (duration / 16);
+
+                    const update = () => {
+                        count += increment;
+                        if (count < target) {
+                            el.innerText = Math.ceil(count);
+                            requestAnimationFrame(update);
+                        } else {
+                            el.innerText = target + (target > 10 ? '+' : '');
+                        }
+                    };
+                    update();
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        counters.forEach(c => observer.observe(c));
+    })();
+</script>

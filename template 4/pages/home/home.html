@@ -1,0 +1,26 @@
+<div id="hero-placeholder"></div>
+<div id="stats-placeholder"></div>
+<div id="about-placeholder"></div>
+<div id="services-placeholder"></div>
+<div id="equipment-placeholder"></div>
+<div id="projects-placeholder"></div>
+<div id="testimonials-placeholder"></div>
+<div id="faq-placeholder"></div>
+<div id="cta-placeholder"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('hero-placeholder', 'pages/home/components/hero.html'),
+            loadComponent('stats-placeholder', 'pages/home/components/stats.html'),
+            loadComponent('about-placeholder', 'pages/home/components/about.html'),
+            loadComponent('services-placeholder', 'pages/home/components/services.html'),
+            loadComponent('equipment-placeholder', 'pages/home/components/equipment.html'),
+            loadComponent('projects-placeholder', 'pages/home/components/projects.html'),
+            loadComponent('testimonials-placeholder', 'pages/home/components/testimonials.html'),
+            loadComponent('faq-placeholder', 'pages/home/components/faq.html'),
+            loadComponent('cta-placeholder', 'pages/home/components/cta.html')
+        ]);
+        initReveal();
+    })();
+</script>
