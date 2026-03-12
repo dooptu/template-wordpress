@@ -61,3 +61,30 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .services-grid-heritage .container > div:last-child {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 30px !important;
+        }
+
+        .services-grid-heritage h2 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+        }
+
+        .services-grid-heritage .heritage-reveal {
+            padding: 40px !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .services-grid-heritage .container > div:last-child {
+            grid-template-columns: 1fr !important;
+        }
+
+        .services-grid-heritage .heritage-reveal h3 {
+            font-size: 1.6rem !important;
+        }
+    }
+</style>

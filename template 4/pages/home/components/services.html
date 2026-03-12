@@ -62,3 +62,22 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .services-heritage .container > div:last-child {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 25px !important;
+        }
+
+        .services-heritage h2 {
+            font-size: clamp(2.4rem, 8vw, 4.5rem) !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .services-heritage .container > div:last-child {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>

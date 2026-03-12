@@ -11,7 +11,7 @@
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
             <!-- Member 1 -->
             <div class="heritage-reveal member-card" style="position: relative;">
-                <div style="height: 500px; background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.8s;"
+                <div style="height: 500px; background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.8s;"
                     class="member-img">
                 </div>
                 <div
@@ -29,7 +29,7 @@
 
             <!-- Member 2 -->
             <div class="heritage-reveal member-card" style="position: relative;" data-delay="0.2s">
-                <div style="height: 500px; background: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.8s;"
+                <div style="height: 500px; background: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.8s;"
                     class="member-img">
                 </div>
                 <div
@@ -45,7 +45,7 @@
 
             <!-- Member 3 -->
             <div class="heritage-reveal member-card" style="position: relative;" data-delay="0.4s">
-                <div style="height: 500px; background: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.8s;"
+                <div style="height: 500px; background: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.8s;"
                     class="member-img">
                 </div>
                 <div
@@ -67,5 +67,28 @@
     .member-card:hover .member-img {
         filter: grayscale(0);
         transform: scale(1.05);
+    }
+</style>
+
+<style>
+    @media (max-width: 991px) {
+        .team-heritage .container > div:last-child {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 30px !important;
+        }
+
+        .team-heritage h2 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .team-heritage .container > div:last-child {
+            grid-template-columns: 1fr !important;
+        }
+
+        .team-heritage .member-img {
+            height: 350px !important;
+        }
     }
 </style>

@@ -1,0 +1,12 @@
+<div id="blog-hero-placeholder"></div>
+<div id="blog-list-placeholder"></div>
+
+<script>
+    (async function () {
+        await Promise.all([
+            loadComponent('blog-hero-placeholder', 'pages/blog/components/blog-hero.html'),
+            loadComponent('blog-list-placeholder', 'pages/blog/components/blog-list.html')
+        ]);
+        initReveal();
+    })();
+</script>

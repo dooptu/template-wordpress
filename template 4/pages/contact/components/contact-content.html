@@ -45,3 +45,31 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .contact-heritage .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 50px !important;
+        }
+
+        .contact-heritage h2 {
+            font-size: clamp(2.5rem, 8vw, 4rem) !important;
+        }
+
+        .contact-heritage form {
+            padding: 40px !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .contact-heritage form div {
+            grid-template-columns: 1fr !important;
+            gap: 15px !important;
+        }
+
+        .contact-heritage form {
+            padding: 25px !important;
+        }
+    }
+</style>

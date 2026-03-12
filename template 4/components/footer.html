@@ -68,3 +68,23 @@
         </div>
     </div>
 </footer>
+
+<style>
+    @media (max-width: 991px) {
+        .footer-heritage .container > div:first-child {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 50px !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .footer-heritage .container > div:first-child {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+        }
+
+        .footer-heritage .container > div:first-child > div:first-child {
+            margin-bottom: 20px !important;
+        }
+    }
+</style>

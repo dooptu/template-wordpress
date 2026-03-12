@@ -39,3 +39,26 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .values-heritage .container > div:last-child {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 30px !important;
+        }
+
+        .values-heritage h2 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+        }
+
+        .values-heritage .ornate-border {
+            padding: 30px !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .values-heritage .container > div:last-child {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>

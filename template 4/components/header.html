@@ -1,42 +1,130 @@
-<nav class="container"
-    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(212, 175, 55, 0.2); height: 100px;">
-    <div class="logo">
-        <a href="#" onclick="navigate('home')"
-            style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
-            <div
-                style="width: 50px; height: 50px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 900; color: white; font-size: 1.5rem; border: 2px solid var(--color-secondary);">
-                P</div>
-            <span
-                style="font-family: var(--font-heading); font-weight: 900; font-size: 1.8rem; letter-spacing: 2px; color: var(--color-secondary);">PTEC</span>
-        </a>
-    </div>
+<nav class="header-heritage-nav">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; height: 100px;">
 
-    <div style="display: flex; gap: 40px;">
-        <a href="#" onclick="navigate('home')" class="nav-link"
-            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Trang
-            Chủ</a>
-        <a href="#" onclick="navigate('about')" class="nav-link"
-            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Giới
-            Thiệu</a>
-        <a href="#" onclick="navigate('services')" class="nav-link"
-            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Dịch
-            Vụ</a>
-        <a href="#" onclick="navigate('projects')" class="nav-link"
-            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Dự
-            Án</a>
-        <a href="#" onclick="navigate('contact')" class="nav-link"
-            style="text-decoration: none; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; transition: 0.3s;">Liên
-            Hệ</a>
-    </div>
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#" onclick="navigate('home')" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                <div style="width: 50px; height: 50px; background: var(--color-primary); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 900; color: white; font-size: 1.5rem; border: 2px solid var(--color-secondary);">P</div>
+                <span style="font-family: var(--font-heading); font-weight: 900; font-size: 1.8rem; letter-spacing: 2px; color: var(--color-secondary);">PTEC</span>
+            </a>
+        </div>
 
-    <div>
-        <a href="#" onclick="navigate('contact')" class="btn-heritage"
-            style="padding: 10px 25px; font-size: 0.75rem;">Yêu cầu tư vấn</a>
+        <!-- Hamburger Toggle -->
+        <button class="heritage-menu-toggle" onclick="toggleHeritageMenu()" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="heritage-nav" id="heritageNav">
+            <button class="heritage-nav-close" onclick="toggleHeritageMenu()"><i class="fa-solid fa-xmark"></i></button>
+            <a href="#" onclick="navigate('home'); closeHeritageMenu()" class="nav-link">Trang Chủ</a>
+            <a href="#" onclick="navigate('about'); closeHeritageMenu()" class="nav-link">Giới Thiệu</a>
+            <a href="#" onclick="navigate('services'); closeHeritageMenu()" class="nav-link">Dịch Vụ</a>
+            <a href="#" onclick="navigate('projects'); closeHeritageMenu()" class="nav-link">Dự Án</a>
+            <a href="#" onclick="navigate('blog'); closeHeritageMenu()" class="nav-link">Tin Tức</a>
+            <a href="#" onclick="navigate('contact'); closeHeritageMenu()" class="nav-link">Liên Hệ</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="heritage-cta-wrap">
+            <a href="#" onclick="navigate('contact')" class="btn-heritage" style="padding: 10px 25px; font-size: 0.75rem;">Yêu cầu tư vấn</a>
+        </div>
     </div>
 </nav>
 
 <style>
+    .header-heritage-nav {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--color-secondary);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        transition: color 0.3s;
+    }
+
     .nav-link:hover {
         color: var(--color-primary) !important;
     }
+
+    /* Desktop: show inline links */
+    .heritage-nav {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .heritage-menu-toggle,
+    .heritage-nav-close {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: var(--color-secondary);
+        z-index: 1100;
+    }
+
+    /* Mobile overlay */
+    @media (max-width: 991px) {
+        .heritage-cta-wrap {
+            display: none;
+        }
+
+        .heritage-menu-toggle {
+            display: block;
+        }
+
+        .heritage-nav {
+            position: fixed;
+            inset: 0;
+            background: var(--color-secondary);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            transform: translateX(100%);
+            transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+            z-index: 1099;
+        }
+
+        .heritage-nav.open {
+            transform: translateX(0);
+        }
+
+        .heritage-nav .nav-link {
+            font-size: 2rem;
+            color: white;
+            letter-spacing: 4px;
+        }
+
+        .heritage-nav-close {
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: white;
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo span {
+            font-size: 1.4rem !important;
+        }
+    }
 </style>
+
+<script>
+    function toggleHeritageMenu() {
+        document.getElementById('heritageNav').classList.toggle('open');
+    }
+    function closeHeritageMenu() {
+        document.getElementById('heritageNav').classList.remove('open');
+    }
+</script>
+

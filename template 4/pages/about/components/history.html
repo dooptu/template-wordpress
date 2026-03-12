@@ -64,3 +64,32 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 768px) {
+        .history-heritage .container > div:last-child > div {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+            text-align: left !important;
+        }
+
+        .history-heritage .container > div:last-child > div[data-delay="0.2s"] > div {
+            grid-column: 1 !important;
+            grid-row: auto !important;
+            text-align: left !important;
+        }
+
+        /* Hide the timeline center line on mobile since layout stacks */
+        .history-heritage .container > div:last-child > div:first-child {
+            display: none !important;
+        }
+
+        .history-heritage h3 {
+            font-size: 3rem !important;
+        }
+
+        .history-heritage h2 {
+            font-size: clamp(2.5rem, 8vw, 4rem) !important;
+        }
+    }
+</style>

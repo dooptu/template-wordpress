@@ -1,0 +1,155 @@
+<section class="section-padding blog-list-heritage" style="background: var(--color-white);">
+    <div class="container">
+        <div class="blog-heritage-grid">
+
+            <!-- Blog Card 1 -->
+            <div class="heritage-reveal blog-heritage-card" onclick="navigate('blog-detail')">
+                <div class="blog-heritage-img" style="background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                <div class="blog-heritage-body">
+                    <span class="blog-heritage-tag">Công Nghệ</span>
+                    <p class="blog-heritage-date">12 Tháng 3, 2026</p>
+                    <h3 class="blog-heritage-title">Ứng Dụng AI Trong Quản Lý Xây Dựng</h3>
+                    <p class="blog-heritage-excerpt">Khám phá cách PTEC tích hợp trí tuệ nhân tạo để tối ưu hóa tiến độ và đảm bảo an toàn tại công trường...</p>
+                    <a href="#" onclick="navigate('blog-detail')" class="blog-heritage-read">Đọc tiếp <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="heritage-reveal blog-heritage-card" data-delay="0.2s" onclick="navigate('blog-detail')">
+                <div class="blog-heritage-img" style="background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                <div class="blog-heritage-body">
+                    <span class="blog-heritage-tag">Dự Án</span>
+                    <p class="blog-heritage-date">08 Tháng 3, 2026</p>
+                    <h3 class="blog-heritage-title">Khởi Công Nhà Máy Logistics Thông Minh Bắc Ninh</h3>
+                    <p class="blog-heritage-excerpt">Dự án trọng điểm đánh dấu bước tiến mới của PTEC tại thị trường miền Bắc với quy mô đầu tư khủng...</p>
+                    <a href="#" onclick="navigate('blog-detail')" class="blog-heritage-read">Đọc tiếp <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="heritage-reveal blog-heritage-card" data-delay="0.4s" onclick="navigate('blog-detail')">
+                <div class="blog-heritage-img" style="background: url('https://images.unsplash.com/photo-1541888082470-fa52b56f58a4?auto=format&fit=crop&w=800&q=80') center/cover;"></div>
+                <div class="blog-heritage-body">
+                    <span class="blog-heritage-tag">Tuyển Dụng</span>
+                    <p class="blog-heritage-date">01 Tháng 3, 2026</p>
+                    <h3 class="blog-heritage-title">Cơ Hội Nghề Nghiệp Cho Kỹ Sư Kết Cấu Thép</h3>
+                    <p class="blog-heritage-excerpt">Gia nhập đội ngũ PTEC để cùng chúng tôi kiến tạo những biểu tượng công nghiệp trên khắp Việt Nam...</p>
+                    <a href="#" onclick="navigate('blog-detail')" class="blog-heritage-read">Đọc tiếp <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .blog-heritage-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    .blog-heritage-card {
+        cursor: pointer;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow 0.4s, transform 0.4s;
+        background: var(--color-bg-light);
+    }
+
+    .blog-heritage-card:hover {
+        box-shadow: 8px 8px 0 var(--color-primary);
+        transform: translate(-4px, -4px);
+    }
+
+    .blog-heritage-img {
+        height: 260px;
+        filter: sepia(0.2);
+        transition: filter 0.4s;
+    }
+
+    .blog-heritage-card:hover .blog-heritage-img {
+        filter: sepia(0);
+    }
+
+    .blog-heritage-body {
+        padding: 35px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-top: 3px solid var(--color-primary);
+    }
+
+    .blog-heritage-tag {
+        font-family: var(--font-heading);
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        font-weight: 700;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .blog-heritage-date {
+        font-size: 0.82rem;
+        color: var(--color-text-light);
+        margin-bottom: 15px;
+    }
+
+    .blog-heritage-title {
+        font-size: 1.4rem;
+        color: var(--color-secondary);
+        line-height: 1.35;
+        margin-bottom: 15px;
+        flex: 1;
+        transition: color 0.3s;
+    }
+
+    .blog-heritage-card:hover .blog-heritage-title {
+        color: var(--color-primary);
+    }
+
+    .blog-heritage-excerpt {
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .blog-heritage-read {
+        text-decoration: none;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--color-secondary);
+        border-bottom: 2px solid var(--color-primary);
+        padding-bottom: 5px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: color 0.3s, gap 0.3s;
+    }
+
+    .blog-heritage-read:hover {
+        color: var(--color-primary);
+        gap: 16px;
+    }
+
+    @media (max-width: 991px) {
+        .blog-heritage-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .blog-heritage-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+</style>

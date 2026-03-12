@@ -4,7 +4,7 @@
             <!-- Projected Item 1 -->
             <div class="heritage-reveal"
                 style="position: relative; overflow: hidden; border: 1px solid var(--color-primary); padding: 10px; background: white;">
-                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80"
                     alt="Intel VSIP"
                     style="width: 100%; height: 400px; object-fit: cover; filter: grayscale(1); transition: 1s;"
                     onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(1)'">
@@ -23,7 +23,7 @@
             <div class="heritage-reveal"
                 style="position: relative; overflow: hidden; border: 1px solid var(--color-primary); padding: 10px; background: white;"
                 data-delay="0.2s">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80"
                     alt="Shopee"
                     style="width: 100%; height: 400px; object-fit: cover; filter: grayscale(1); transition: 1s;"
                     onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(1)'">
@@ -41,7 +41,7 @@
             <!-- Projected Item 3 -->
             <div class="heritage-reveal"
                 style="position: relative; overflow: hidden; border: 1px solid var(--color-primary); padding: 10px; background: white;">
-                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
                     alt="Becamex"
                     style="width: 100%; height: 400px; object-fit: cover; filter: grayscale(1); transition: 1s;"
                     onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(1)'">
@@ -60,7 +60,7 @@
             <div class="heritage-reveal"
                 style="position: relative; overflow: hidden; border: 1px solid var(--color-primary); padding: 10px; background: white;"
                 data-delay="0.2s">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
                     alt="VSIP II"
                     style="width: 100%; height: 400px; object-fit: cover; filter: grayscale(1); transition: 1s;"
                     onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(1)'">
@@ -78,7 +78,7 @@
             <!-- Projected Item 5 -->
             <div class="heritage-reveal"
                 style="position: relative; overflow: hidden; border: 1px solid var(--color-primary); padding: 10px; background: white;">
-                <img src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                <img src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?auto=format&fit=crop&w=800&q=80"
                     alt="Logistics"
                     style="width: 100%; height: 400px; object-fit: cover; filter: grayscale(1); transition: 1s;"
                     onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(1)'">
@@ -97,7 +97,7 @@
             <div class="heritage-reveal"
                 style="position: relative; overflow: hidden; border: 1px solid var(--color-primary); padding: 10px; background: white;"
                 data-delay="0.2s">
-                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
                     alt="Rạch Bắp"
                     style="width: 100%; height: 400px; object-fit: cover; filter: grayscale(1); transition: 1s;"
                     onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(1)'">
@@ -113,3 +113,20 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .gallery-heritage .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+        }
+
+        .gallery-heritage img {
+            height: 300px !important;
+        }
+
+        .gallery-heritage h3 {
+            font-size: 1.5rem !important;
+        }
+    }
+</style>

@@ -34,6 +34,26 @@
     </div>
 </section>
 
+<style>
+    @media (max-width: 991px) {
+        .stats-heritage .container > div {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 40px !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .stats-heritage .container > div {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 30px !important;
+        }
+
+        .stats-heritage h2.counter {
+            font-size: 2.8rem !important;
+        }
+    }
+</style>
+
 <script>
     (function () {
         const counters = document.querySelectorAll('.counter');
