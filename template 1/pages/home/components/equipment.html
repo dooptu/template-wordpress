@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="eq-image-display">
-                <img src="https://images.unsplash.com/photo-1541888082470-fa52b56f58a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                     alt="Equipment">
                 <div class="eq-badge">OWN EQUIPMENT</div>
             </div>
@@ -129,4 +129,34 @@
     .eq-text p {
         margin-top: 10px;
     }
+
+    /* RESPONSIVE EQUIPMENT */
+    @media (max-width: 991px) {
+        .eq-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 20px;
+        }
+        .eq-image-display {
+            height: 350px;
+        }
+        .eq-badge {
+            font-size: 1.4rem;
+            padding: 15px 25px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .equipment-area {
+            clip-path: none;
+            padding: 60px 0;
+        }
+        .eq-item {
+            padding: 20px;
+        }
+        .eq-icon {
+            font-size: 2.5rem;
+        }
+    }
 </style>
+

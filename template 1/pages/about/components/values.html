@@ -1,28 +1,50 @@
+<!-- CORE VALUES -->
 <section class="section-padding values-section">
     <div class="container">
         <div class="title-wrapper reveal-blur">
             <h2 class="section-title">GIÁ TRỊ <span>CỐT LÕI</span></h2>
         </div>
-        <div class="values-grid"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="values-grid">
             <div class="value-card ptec-card reveal-zoom">
-                <div class="icon" style="font-size: 3rem; color: var(--color-red); margin-bottom: 20px;"><i
-                        class="fa-solid fa-shield-halved"></i></div>
+                <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <h3>AN TOÀN</h3>
                 <p>Không có sự thỏa hiệp nào cho an toàn lao động tại PTEC.</p>
             </div>
             <div class="value-card ptec-card reveal-zoom" data-delay="0.2s">
-                <div class="icon" style="font-size: 3rem; color: var(--color-red); margin-bottom: 20px;"><i
-                        class="fa-solid fa-gem"></i></div>
+                <div class="icon"><i class="fa-solid fa-gem"></i></div>
                 <h3>CHẤT LƯỢNG</h3>
                 <p>Mỗi công trình là một kiệt tác kỹ thuật bền bỉ với thời gian.</p>
             </div>
             <div class="value-card ptec-card reveal-zoom" data-delay="0.4s">
-                <div class="icon" style="font-size: 3rem; color: var(--color-red); margin-bottom: 20px;"><i
-                        class="fa-solid fa-rocket"></i></div>
+                <div class="icon"><i class="fa-solid fa-rocket"></i></div>
                 <h3>TIẾN ĐỘ</h3>
                 <p>Năng lực thi công thần tốc, chuẩn xác đến từng chi tiết.</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .value-card .icon {
+        font-size: 3rem;
+        color: var(--color-red);
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .values-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .value-card {
+            padding: 30px;
+        }
+    }
+</style>

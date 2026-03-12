@@ -4,7 +4,7 @@
     <div class="hero-gradient"></div>
     <div class="container">
         <div class="hero-content reveal">
-            <div class="hero-badge">PTEC Tân Bình Dương</div>
+            <div class="hero-badge">PTEC Việt Nam</div>
             <h1>KIẾN TẠO HẠ TẦNG <br><span class="highlight">VỮNG TƯƠNG LAI</span></h1>
             <p>Tổng thầu uy tín trong lĩnh vực Xây dựng Công nghiệp & Hạ tầng Kỹ thuật. Với hơn 8 năm kinh nghiệm,
                 chúng tôi cam kết mang đến giải pháp tối ưu, an toàn và bền vững cho mọi dự án.</p>
@@ -210,6 +210,42 @@
         100% {
             transform: rotate(10deg);
             opacity: 1;
+        }
+    }
+
+    /* RESPONSIVE HERO */
+    @media (max-width: 991px) {
+        .hero {
+            height: auto;
+            padding: 150px 0 100px;
+            min-height: auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+        }
+
+        .building-animation-wrap {
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2.8rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        .hero-actions {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .hero-actions .btn {
+            width: 100%;
         }
     }
 </style>

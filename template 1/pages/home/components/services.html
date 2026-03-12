@@ -4,52 +4,145 @@
         <div class="title-wrapper reveal-blur">
             <span class="hero-badge" style="border-color: var(--color-red); color: var(--color-red);">Expertise</span>
             <h2 class="section-title">GIẢI PHÁP <span>XÂY DỰNG</span></h2>
-            <p style="max-width: 600px; margin: 20px auto 0; color: var(--color-text-mutted);">Dẫn đầu kỹ thuật với các
-                giải pháp thi công thông minh và tối ưu chi phí.</p>
+            <p class="service-intro">Dẫn đầu kỹ thuật với các giải pháp thi công thông minh và tối ưu chi phí.</p>
         </div>
 
-        <div class="service-flex-grid" style="display: flex; gap: 30px; margin-top: 60px; flex-wrap: wrap;">
+        <div class="service-flex-grid">
             <!-- Main Card -->
-            <div class="srv-main ptec-card reveal-left"
-                style="flex: 2 1 600px; padding: 0; overflow: hidden; display: flex;">
-                <div style="flex: 1; padding: 50px;">
-                    <h3 style="font-size: 2rem; margin-bottom: 20px;">Xây Dựng <br><span class="text-gradient">Công
-                            Nghiệp</span></h3>
-                    <p style="color: var(--color-text-mutted); margin-bottom: 30px;">Hơn 150 dự án nhà xưởng thép tiền
-                        chế đã hoàn thành với chuẩn chất lượng quốc tế.</p>
-                    <ul style="padding: 0; margin: 0 0 30px; list-style: none;">
-                        <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center;"><i
-                                class="fa-solid fa-check" style="color: var(--color-red);"></i> Thiết kế BIM chuyên
-                            nghiệp</li>
-                        <li style="margin-bottom: 15px; display: flex; gap: 10px; align-items: center;"><i
-                                class="fa-solid fa-check" style="color: var(--color-red);"></i> Lắp dựng siêu tốc</li>
+            <div class="srv-main ptec-card reveal-left">
+                <div class="srv-main-content">
+                    <h3>Xây Dựng <br><span class="text-gradient">Công Nghiệp</span></h3>
+                    <p>Hơn 150 dự án nhà xưởng thép tiền chế đã hoàn thành với chuẩn chất lượng quốc tế.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Thiết kế BIM chuyên nghiệp</li>
+                        <li><i class="fa-solid fa-check"></i> Lắp dựng siêu tốc</li>
                     </ul>
                     <button class="btn btn-red" onclick="navigate('services')">Chi Tiết Giải Pháp</button>
                 </div>
-                <div
-                    style="flex: 1; background: url('https://images.unsplash.com/photo-1541888082470-fa52b56f58a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;">
-                </div>
+                <div class="srv-main-img"></div>
             </div>
 
             <!-- Side Cards -->
-            <div style="flex: 1 1 350px; display: flex; flex-direction: column; gap: 30px;">
-                <div class="srv-sub ptec-card reveal-zoom"
-                    style="padding: 40px; border-left: 5px solid var(--color-red);">
-                    <i class="fa-solid fa-road-barrier"
-                        style="font-size: 2.5rem; color: var(--color-red); margin-bottom: 20px; display: block;"></i>
-                    <h4 style="font-size: 1.5rem; margin-bottom: 15px;">Hạ Tầng</h4>
-                    <p style="font-size: 0.95rem; color: var(--color-text-mutted);">San lấp và thi công đường nội bộ KCN
-                        chuyên nghiệp.</p>
+            <div class="srv-side">
+                <div class="srv-sub ptec-card reveal-zoom">
+                    <i class="fa-solid fa-road-barrier"></i>
+                    <h4>Hạ Tầng</h4>
+                    <p>San lấp và thi công đường nội bộ KCN chuyên nghiệp.</p>
                 </div>
-                <div class="srv-sub ptec-card reveal-zoom"
-                    style="padding: 40px; border-left: 5px solid var(--color-black);" data-delay="0.2s">
-                    <i class="fa-solid fa-plug-circle-bolt"
-                        style="font-size: 2.5rem; color: var(--color-black); margin-bottom: 20px; display: block;"></i>
-                    <h4 style="font-size: 1.5rem; margin-bottom: 15px;">Cơ Điện & PCCC</h4>
-                    <p style="font-size: 0.95rem; color: var(--color-text-mutted);">Hệ thống điện và PCCC đạt chuẩn an
-                        toàn quốc gia.</p>
+                <div class="srv-sub ptec-card reveal-zoom" data-delay="0.2s">
+                    <i class="fa-solid fa-plug-circle-bolt" style="color: var(--color-black);"></i>
+                    <h4 style="border-left-color: var(--color-black);">Cơ Điện & PCCC</h4>
+                    <p>Hệ thống điện và PCCC đạt chuẩn an toàn quốc gia.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .service-intro {
+        max-width: 600px;
+        margin: 20px auto 0;
+        color: var(--color-text-mutted);
+    }
+
+    .service-flex-grid {
+        display: flex;
+        gap: 30px;
+        margin-top: 60px;
+        flex-wrap: wrap;
+    }
+
+    .srv-main {
+        flex: 2 1 600px;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .srv-main-content {
+        flex: 1;
+        padding: 50px;
+    }
+
+    .srv-main-content h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .srv-main-content p {
+        color: var(--color-text-mutted);
+        margin-bottom: 30px;
+    }
+
+    .srv-main-content ul {
+        padding: 0;
+        margin: 0 0 30px;
+        list-style: none;
+    }
+
+    .srv-main-content li {
+        margin-bottom: 15px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .srv-main-content i {
+        color: var(--color-red);
+    }
+
+    .srv-main-img {
+        flex: 1;
+        background: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+    }
+
+    .srv-side {
+        flex: 1 1 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .srv-sub {
+        padding: 40px;
+        border-left: 5px solid var(--color-red);
+    }
+
+    .srv-sub i {
+        font-size: 2.5rem;
+        color: var(--color-red);
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .srv-sub h4 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .srv-sub p {
+        font-size: 0.95rem;
+        color: var(--color-text-mutted);
+    }
+
+    @media (max-width: 991px) {
+        .srv-main {
+            flex-direction: column;
+            flex: 1 1 100%;
+        }
+        .srv-main-img {
+            height: 300px;
+        }
+        .srv-main-content {
+            padding: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .service-flex-grid {
+            margin-top: 40px;
+        }
+    }
+</style>
+

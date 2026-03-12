@@ -1,27 +1,47 @@
 <header class="ast-primary-header-bar">
-    <div class="container ast-container">
-        <div class="ast-builder-grid-row"
-            style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px;">
-            <div class="site-header-section ast-site-identity" style="justify-self: start;">
+    <div class="container">
+        <div class="ast-builder-grid-row">
+            <div class="ast-site-identity">
                 <div class="ast-site-title-wrap">
                     <h1 class="site-title"><a href="#" onclick="navigate('home')">PTEC<span>.</span></a></h1>
                 </div>
             </div>
-            <div class="site-header-section main-header-bar-navigation" style="justify-self: center;">
+
+            <div class="ast-header-right">
                 <nav class="main-navigation">
-                    <ul class="main-header-menu" style="margin: 0; gap: 40px;">
+                    <ul class="main-header-menu">
                         <li class="menu-item"><a href="#" onclick="navigate('home')">Trang Chủ</a></li>
                         <li class="menu-item"><a href="#" onclick="navigate('about')">Giới Thiệu</a></li>
                         <li class="menu-item"><a href="#" onclick="navigate('services')">Dịch Vụ</a></li>
                         <li class="menu-item"><a href="#" onclick="navigate('projects')">Dự Án</a></li>
+                        <li class="menu-item"><a href="#" onclick="navigate('blog')">Tin Tức</a></li>
                         <li class="menu-item"><a href="#" onclick="navigate('contact')">Liên Hệ</a></li>
                     </ul>
                 </nav>
-            </div>
-            <div class="ast-header-button-1" style="justify-self: end;">
-                <a href="#" class="ast-custom-button" onclick="navigate('contact')">Tư Vấn Ngay</a>
+
+                <div class="ast-header-button">
+                    <a href="#" class="ast-custom-button" onclick="navigate('contact')">Tư Vấn Ngay</a>
+                </div>
+
+                <button class="menu-toggle" aria-label="Menu Toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-
     </div>
 </header>
+
+<script>
+    (function () {
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.main-navigation');
+        if (toggle && nav) {
+            toggle.onclick = () => {
+                nav.classList.toggle('active');
+                toggle.querySelector('i').classList.toggle('fa-bars');
+                toggle.querySelector('i').classList.toggle('fa-times');
+            };
+        }
+    })();
+</script>
+

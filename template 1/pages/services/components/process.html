@@ -1,41 +1,89 @@
+<!-- PROCESS -->
 <section class="section-padding process-area" style="background: var(--color-gray);">
     <div class="container">
         <div class="title-wrapper reveal-blur">
             <h2 class="section-title">QUY TRÌNH <span>LÀM VIỆC</span></h2>
         </div>
-        <div class="process-steps"
-            style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-top: 60px;">
-            <div class="step-card reveal-zoom" style="flex: 1; min-width: 200px; text-align: center;">
-                <div class="step-num"
-                    style="width: 60px; height: 60px; background: var(--color-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.5rem; position: relative; z-index: 2;">
-                    01</div>
+        <div class="process-steps">
+            <div class="step-card reveal-zoom">
+                <div class="step-num">01</div>
                 <h3>Tư Vấn</h3>
                 <p>Khảo sát địa điểm và tư vấn giải pháp tối ưu nhất.</p>
             </div>
-            <div class="step-card reveal-zoom" style="flex: 1; min-width: 200px; text-align: center;" data-delay="0.2s">
-                <div class="step-num"
-                    style="width: 60px; height: 60px; background: var(--color-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.5rem; position: relative; z-index: 2;">
-                    02</div>
+            <div class="step-card reveal-zoom" data-delay="0.2s">
+                <div class="step-num">02</div>
                 <h3>Thiết Kế</h3>
                 <p>Thiết kế BIM bản vẽ 3D trực quan, chính xác.</p>
             </div>
-            <div class="step-card reveal-zoom" style="flex: 1; min-width: 200px; text-align: center;" data-delay="0.4s">
-                <div class="step-num"
-                    style="width: 60px; height: 60px; background: var(--color-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.5rem; position: relative; z-index: 2;">
-                    03</div>
+            <div class="step-card reveal-zoom" data-delay="0.4s">
+                <div class="step-num">03</div>
                 <h3>Chế Tạo</h3>
                 <p>Gia công cấu kiện tại xưởng với máy móc hiện đại.</p>
             </div>
-            <div class="step-card reveal-zoom" style="flex: 1; min-width: 200px; text-align: center;" data-delay="0.6s">
-                <div class="step-num"
-                    style="width: 60px; height: 60px; background: var(--color-red); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: 800; font-size: 1.5rem; position: relative; z-index: 2;">
-                    04</div>
+            <div class="step-card reveal-zoom" data-delay="0.6s">
+                <div class="step-num">04</div>
                 <h3>Thi Công</h3>
                 <p>Lắp dựng an toàn, bàn giao đúng tiến độ cam kết.</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .process-steps {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+
+    .step-card {
+        flex: 1;
+        min-width: 200px;
+        text-align: center;
+    }
+
+    .step-num {
+        width: 60px;
+        height: 60px;
+        background: var(--color-red);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-weight: 800;
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: #ddd;
+            z-index: 1;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .process-steps {
+            flex-direction: column;
+            gap: 40px;
+        }
+        .step-card {
+            min-width: 100%;
+        }
+    }
+</style>
 
 <style>
     .process-steps {
@@ -55,3 +103,4 @@
         }
     }
 </style>
+
