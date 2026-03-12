@@ -2,7 +2,7 @@
     <div class="container">
         <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 100px;">
             <div class="neo-reveal-left">
-                <h2 style="font-size: 4rem; font-weight: 900; line-height: 0.9; margin-bottom: 50px;">KẾT NỐI <br><span
+                <h2 style="font-size: clamp(2.5rem, 10vw, 4rem); font-weight: 900; line-height: 0.9; margin-bottom: 50px;">KẾT NỐI <br><span
                         style="background: #000; color: white; padding: 5px 20px; display: inline-block; transform: rotate(-3deg);">VỚI
                         PTEC</span></h2>
 
@@ -73,3 +73,31 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .contact-content-neo .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 60px !important;
+        }
+
+        .contact-content-neo h2 {
+            font-size: 3rem !important;
+        }
+
+        .contact-content-neo form {
+            padding: 40px !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .contact-content-neo form > div:first-of-type {
+            grid-template-columns: 1fr !important;
+        }
+
+        .contact-content-neo button {
+            letter-spacing: 2px !important;
+            padding: 20px !important;
+        }
+    }
+</style>

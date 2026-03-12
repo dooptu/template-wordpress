@@ -50,6 +50,26 @@
 </section>
 
 <style>
+    @media (max-width: 991px) {
+        .services-grid-neo .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 10px !important;
+            background: transparent !important;
+            border: none !important;
+        }
+
+        .services-grid-neo .neo-reveal-up {
+            border: 1px solid #000 !important;
+            padding: 40px !important;
+        }
+
+        .services-grid-neo h3 {
+            font-size: 1.6rem !important;
+        }
+    }
+</style>
+
+<style>
     .services-grid-neo .neo-reveal-up:hover {
         background: var(--color-primary) !important;
         color: white !important;

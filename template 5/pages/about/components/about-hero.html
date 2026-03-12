@@ -11,7 +11,7 @@
 
     <div class="container" style="position: relative; z-index: 1;">
         <div class="neo-reveal">
-            <h1 style="font-size: 7rem; line-height: 0.8; font-weight: 900; letter-spacing: -5px;">VỀ <br><span
+            <h1 style="font-size: clamp(3rem, 15vw, 7rem); line-height: 0.8; font-weight: 900; letter-spacing: -5px;">VỀ <br><span
                     style="color: var(--color-primary);">CHÚNG TÔI</span></h1>
             <p
                 style="max-width: 600px; margin-top: 40px; font-size: 1.2rem; opacity: 0.7; border-left: 5px solid var(--color-primary); padding-left: 30px;">
@@ -21,3 +21,20 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .about-hero-neo {
+            padding-top: 150px !important;
+        }
+
+        .about-hero-neo h1 {
+            font-size: clamp(3rem, 15vw, 7rem) !important;
+        }
+
+        .about-hero-neo div[style*="width: 500px"],
+        .about-hero-neo div[style*="width: 300px"] {
+            display: none;
+        }
+    }
+</style>

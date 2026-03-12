@@ -11,7 +11,7 @@
         <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center;">
             <div class="neo-reveal-left">
                 <h2
-                    style="font-size: 4.5rem; line-height: 0.9; margin-bottom: 30px; letter-spacing: -3px; font-weight: 900;">
+                    style="font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 0.9; margin-bottom: 30px; letter-spacing: -3px; font-weight: 900;">
                     BẠN SẴN SÀNG <br><span style="text-decoration: underline; text-decoration-thickness: 10px;">KHỞI
                         TẠO</span> DỰ ÁN?</h2>
                 <p style="font-size: 1.2rem; opacity: 0.9; max-width: 500px;">Hãy để các chuyên gia của PTEC đồng hành
@@ -26,6 +26,29 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .cta-neo .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+            text-align: center;
+        }
+
+        .cta-neo h2 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+        }
+
+        .cta-neo div:last-child {
+            text-align: center !important;
+        }
+
+        .cta-neo .btn-neo {
+            padding: 20px 40px !important;
+            font-size: 1.2rem !important;
+        }
+    }
+</style>
 
 <style>
     .btn-neo:hover {

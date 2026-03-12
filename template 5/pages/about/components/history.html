@@ -1,7 +1,7 @@
 <section class="section-padding history-neo" style="background: white;">
     <div class="container">
         <div style="margin-bottom: 80px;" class="neo-reveal">
-            <h2 style="font-size: 4rem; font-weight: 900; letter-spacing: -2px;">HÀNH TRÌNH <br><span
+            <h2 style="font-size: clamp(2.5rem, 10vw, 4rem); font-weight: 900; letter-spacing: -2px;">HÀNH TRÌNH <br><span
                     style="color: var(--color-primary);">PHÁT TRIỂN</span></h2>
         </div>
 
@@ -53,3 +53,30 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .history-neo h2 {
+            font-size: 3rem !important;
+        }
+
+        .history-neo .container > div:last-child {
+            gap: 40px !important;
+        }
+
+        .history-neo .container > div:last-child > div {
+            flex-direction: column !important;
+            gap: 20px !important;
+        }
+
+        .history-neo [style*="width: 2px"] {
+            left: 20px !important;
+        }
+
+        .history-neo [style*="width: 100px"] {
+            width: 70px !important;
+            height: 70px !important;
+            font-size: 1.1rem !important;
+        }
+    }
+</style>

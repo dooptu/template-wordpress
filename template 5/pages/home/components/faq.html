@@ -3,7 +3,7 @@
         <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 80px;">
             <div class="neo-reveal-left">
                 <h2
-                    style="font-size: 4rem; line-height: 1; letter-spacing: -2px; font-weight: 900; margin-bottom: 30px;">
+                    style="font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1; letter-spacing: -2px; font-weight: 900; margin-bottom: 30px;">
                     CÂU HỎI <br><span style="color: var(--color-primary);">THƯỜNG GẶP</span></h2>
                 <div style="width: 150px; height: 15px; background: var(--color-primary); transform: skew(-20deg);">
                 </div>
@@ -63,6 +63,19 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .faq-neo .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 50px !important;
+        }
+
+        .faq-neo h2 {
+            font-size: clamp(3rem, 10vw, 4rem) !important;
+        }
+    }
+</style>
 
 <script>
     function toggleFaqNeo(element) {

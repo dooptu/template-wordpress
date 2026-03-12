@@ -1,0 +1,82 @@
+<section class="section-padding blog-list-neo" style="background: white;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+            <!-- Blog 1 -->
+            <article class="neo-reveal-up"
+                style="border: 2px solid #000; padding: 25px; transition: 0.3s; position: relative;">
+                <div style="height: 250px; overflow: hidden; margin-bottom: 25px; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80"
+                        alt="Blog" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1);">
+                    <div
+                        style="position: absolute; top: 15px; left: 15px; background: var(--color-primary); color: white; padding: 5px 15px; font-weight: 800; font-size: 0.7rem; transform: rotate(-5deg);">
+                        KỸ THUẬT</div>
+                </div>
+                <h3 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 20px; line-height: 1.2;">XU HƯỚNG SỬ DỤNG
+                    BIM TRONG XÂY DỰNG 2024</h3>
+                <p style="opacity: 0.6; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.6;">Ứng dụng BIM không
+                    chỉ giúp tối ưu hóa thiết kế mà còn giảm thiểu tối đa sai sót trong thi công...</p>
+                <a href="#" onclick="navigate('blog-detail')"
+                    style="text-decoration: none; color: black; font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 2px solid var(--color-primary); padding-bottom: 5px;">Xem
+                    chi tiết</a>
+            </article>
+
+            <!-- Blog 2 -->
+            <article class="neo-reveal-up"
+                style="border: 2px solid #000; padding: 25px; transition: 0.3s; position: relative; background: var(--color-secondary); color: white;"
+                data-delay="0.2s">
+                <div style="height: 250px; overflow: hidden; margin-bottom: 25px; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80"
+                        alt="Blog" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; top: 15px; left: 15px; background: white; color: black; padding: 5px 15px; font-weight: 800; font-size: 0.7rem; transform: rotate(5deg);">
+                        DỰ ÁN</div>
+                </div>
+                <h3 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 20px; line-height: 1.2; color: var(--color-primary);">BÀN GIAO NHÀ MÁY INTEL VSIP II ĐÚNG TIẾN ĐỘ</h3>
+                <p style="opacity: 0.7; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.6;">Vượt qua những thách
+                    thức về thời tiết, PTEC đã hoàn thiện dự án sớm 15 ngày so với cam kết...</p>
+                <a href="#" onclick="navigate('blog-detail')"
+                    style="text-decoration: none; color: white; font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 2px solid var(--color-primary); padding-bottom: 5px;">Xem
+                    chi tiết</a>
+            </article>
+
+            <!-- Blog 3 -->
+            <article class="neo-reveal-up"
+                style="border: 2px solid #000; padding: 25px; transition: 0.3s; position: relative;" data-delay="0.4s">
+                <div style="height: 250px; overflow: hidden; margin-bottom: 25px; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
+                        alt="Blog" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1);">
+                    <div
+                        style="position: absolute; top: 15px; left: 15px; background: var(--color-primary); color: white; padding: 5px 15px; font-weight: 800; font-size: 0.7rem; transform: rotate(-3deg);">
+                        Hạ Tầng</div>
+                </div>
+                <h3 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 20px; line-height: 1.2;">PHÁT TRIỂN HẠ TẦNG
+                    KCN BỀN VỮNG TẠI BÌNH DƯƠNG</h3>
+                <p style="opacity: 0.6; font-size: 0.95rem; margin-bottom: 30px; line-height: 1.6;">Hạ tầng kỹ thuật đóng
+                    vai trò xương sống trong việc thu hút đầu tư FDI vào các khu công nghiệp...</p>
+                <a href="#" onclick="navigate('blog-detail')"
+                    style="text-decoration: none; color: black; font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 2px solid var(--color-primary); padding-bottom: 5px;">Xem
+                    chi tiết</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<style>
+    .blog-list-neo article:hover {
+        transform: translateY(-10px) rotate(1deg);
+        border-color: var(--color-primary);
+        box-shadow: 15px 15px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 991px) {
+        .blog-list-neo .container > div {
+            grid-template-columns: 1fr 1fr !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .blog-list-neo .container > div {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>

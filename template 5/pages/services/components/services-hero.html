@@ -6,7 +6,7 @@
 
     <div class="container" style="position: relative; z-index: 1; text-align: center;">
         <div class="neo-reveal">
-            <h1 style="font-size: 6rem; font-weight: 900; line-height: 0.9; letter-spacing: -3px; margin-bottom: 30px;">
+            <h1 style="font-size: clamp(2.5rem, 12vw, 6rem); font-weight: 900; line-height: 0.9; letter-spacing: -3px; margin-bottom: 30px;">
                 DỊCH VỤ <br><span style="color: var(--color-primary);">CHUYÊN NGHIỆP</span></h1>
             <p style="max-width: 750px; margin: 40px auto; font-size: 1.25rem; color: #555; line-height: 1.8;">
                 Chúng tôi cung cấp giải pháp toàn diện cho ngành xây dựng công nghiệp, từ tư vấn chiến lược đến thi công
@@ -15,3 +15,15 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .services-hero-neo {
+            padding-top: 140px !important;
+        }
+
+        .services-hero-neo h1 {
+            font-size: clamp(2.5rem, 12vw, 6rem) !important;
+        }
+    }
+</style>

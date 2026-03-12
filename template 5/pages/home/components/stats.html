@@ -60,3 +60,29 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .stats-neo .container > div {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 60px 40px !important;
+        }
+
+        .stats-neo [style*="font-size: 8rem"] {
+            font-size: clamp(3.5rem, 15vw, 5rem) !important;
+        }
+
+        .stats-neo [style*="background: white"],
+        .stats-neo [style*="background: var(--color-primary)"] {
+            left: clamp(40px, 15vw, 80px) !important;
+            padding: 5px 15px !important;
+            font-size: 0.7rem !important;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .stats-neo .container > div {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>

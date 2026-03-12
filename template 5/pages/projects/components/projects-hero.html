@@ -6,7 +6,7 @@
 
     <div class="container" style="position: relative; z-index: 1;">
         <div class="neo-reveal">
-            <h1 style="font-size: 7rem; line-height: 0.8; font-weight: 900; letter-spacing: -5px; margin-bottom: 30px;">
+            <h1 style="font-size: clamp(3rem, 15vw, 7rem); line-height: 0.8; font-weight: 900; letter-spacing: -5px; margin-bottom: 30px;">
                 DỰ ÁN <br><span class="text-outline" style="color: transparent; -webkit-text-stroke: 2px white;">TIÊU
                     BIỂU</span></h1>
             <p
@@ -17,3 +17,20 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .projects-hero-neo {
+            padding-top: 150px !important;
+        }
+
+        .projects-hero-neo h1 {
+            font-size: clamp(3rem, 15vw, 7rem) !important;
+        }
+
+        .projects-hero-neo div[style*="width: 60%"] {
+            width: 100% !important;
+            clip-path: none !important;
+        }
+    }
+</style>

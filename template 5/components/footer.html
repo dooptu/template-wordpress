@@ -5,7 +5,7 @@
     <div class="container"
         style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px; position: relative; z-index: 1;">
         <div>
-            <h2 style="font-size: 3rem; margin-bottom: 30px; letter-spacing: -2px;">KIẾN TẠO <br><span
+            <h2 style="font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 30px; letter-spacing: -2px;">KIẾN TẠO <br><span
                     class="text-red">TƯƠNG LAI</span></h2>
             <p style="opacity: 0.5; max-width: 400px; margin-bottom: 40px;">Công ty Cổ phần Kỹ thuật Xây dựng Tân Bình
                 Dương (PTEC) tự hào là đơn vị tiên phong trong lĩnh vực xây dựng công nghiệp và hạ tầng kỹ thuật.
@@ -53,3 +53,22 @@
         <div>Neo-Constructivist Edition</div>
     </div>
 </footer>
+
+<style>
+    @media (max-width: 991px) {
+        footer .container {
+            grid-template-columns: 1fr !important;
+            gap: 50px !important;
+        }
+
+        footer h2 {
+            font-size: 2.2rem !important;
+        }
+
+        footer div:last-child {
+            flex-direction: column !important;
+            gap: 15px !important;
+            text-align: center;
+        }
+    }
+</style>

@@ -43,7 +43,7 @@
                 </div>
                 <div
                     style="position: relative; z-index: 1; height: 600px; overflow: hidden; clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
                         alt="Equipment" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <div
@@ -54,3 +54,20 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .equipment-neo .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 60px !important;
+        }
+
+        .equipment-neo h2 {
+            font-size: clamp(2.5rem, 8vw, 4rem) !important;
+        }
+
+        .equipment-neo .neo-reveal-right div:nth-child(2) {
+            height: 400px !important;
+        }
+    }
+</style>

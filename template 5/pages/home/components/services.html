@@ -67,6 +67,30 @@
 </section>
 
 <style>
+    @media (max-width: 991px) {
+        .services-neo .container > div:first-child {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 20px !important;
+        }
+
+        .services-neo h2 {
+            font-size: 3rem !important;
+        }
+
+        .services-neo .container > div:last-of-type {
+            grid-template-columns: 1fr 1fr !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .services-neo .container > div:last-of-type {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+
+<style>
     .services-neo .neo-reveal-up:hover {
         transform: translateY(-15px) rotate(1deg);
         border-color: var(--color-primary);
