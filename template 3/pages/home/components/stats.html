@@ -1,44 +1,72 @@
 <section class="section-padding stats-kinetic" style="background: var(--color-black); color: var(--color-white);">
     <div class="container">
-        <div class="kinetic-grid">
+        <div class="kinetic-grid stats-grid">
             <div class="kinetic-reveal stat-box"
                 style="grid-column: span 3; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px;">
-                <h2 style="font-size: 6rem; line-height: 1; font-weight: 900; color: var(--color-primary);"
+                <h2 style="font-size: clamp(4rem, 8vw, 6rem); line-height: 1; font-family: var(--font-heading); font-weight: 900; color: var(--color-primary);"
                     class="counter" data-target="150">0</h2>
                 <p
-                    style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; opacity: 0.6; margin-top: 20px;">
+                    style="text-transform: uppercase; font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; opacity: 0.6; margin-top: 15px;">
                     Dự án hoàn thành</p>
             </div>
             <div class="kinetic-reveal stat-box"
                 style="grid-column: span 3; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px;"
                 data-delay="0.2s">
-                <h2 style="font-size: 6rem; line-height: 1; font-weight: 900; color: var(--color-white);"
+                <h2 style="font-size: clamp(4rem, 8vw, 6rem); line-height: 1; font-family: var(--font-heading); font-weight: 900; color: var(--color-white);"
                     class="counter" data-target="8">0</h2>
                 <p
-                    style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; opacity: 0.6; margin-top: 20px;">
+                    style="text-transform: uppercase; font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; opacity: 0.6; margin-top: 15px;">
                     Năm kinh nghiệm</p>
             </div>
             <div class="kinetic-reveal stat-box"
                 style="grid-column: span 3; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px;"
                 data-delay="0.4s">
-                <h2 style="font-size: 6rem; line-height: 1; font-weight: 900; color: var(--color-primary);"
+                <h2 style="font-size: clamp(4rem, 8vw, 6rem); line-height: 1; font-family: var(--font-heading); font-weight: 900; color: var(--color-primary);"
                     class="counter" data-target="500">0</h2>
                 <p
-                    style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; opacity: 0.6; margin-top: 20px;">
+                    style="text-transform: uppercase; font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; opacity: 0.6; margin-top: 15px;">
                     Kỹ sư & Công nhân</p>
             </div>
             <div class="kinetic-reveal stat-box"
                 style="grid-column: span 3; border-left: 1px solid rgba(255,255,255,0.1); padding-left: 30px;"
                 data-delay="0.6s">
-                <h2 style="font-size: 6rem; line-height: 1; font-weight: 900; color: var(--color-white);"
+                <h2 style="font-size: clamp(4rem, 8vw, 6rem); line-height: 1; font-family: var(--font-heading); font-weight: 900; color: var(--color-white);"
                     class="counter" data-target="100">0</h2>
                 <p
-                    style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; opacity: 0.6; margin-top: 20px;">
+                    style="text-transform: uppercase; font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px; font-size: 0.9rem; opacity: 0.6; margin-top: 15px;">
                     % An toàn lao động</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .stats-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 40px !important;
+        }
+        
+        .stat-box {
+            border-left: none !important;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-left: 0 !important;
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .stats-grid {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+        }
+
+        .stat-box {
+            padding-top: 30px;
+        }
+    }
+</style>
 
 <script>
     (function () {

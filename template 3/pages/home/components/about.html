@@ -1,39 +1,75 @@
 <section class="section-padding about-kinetic" style="background: var(--color-white);">
     <div class="container">
-        <div class="kinetic-grid" style="align-items: center;">
-            <div class="kinetic-reveal" style="grid-column: span 6;">
-                <h2 style="font-size: 5rem; line-height: 0.9; margin-bottom: 40px; letter-spacing: -3px;">
+        <div class="kinetic-grid-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div class="kinetic-reveal">
+                <h2 style="font-size: clamp(3rem, 6vw, 5rem); line-height: 0.9; margin-bottom: 40px; letter-spacing: -3px; font-family: var(--font-heading); font-weight: 900; color: var(--color-black);">
                     NỀN TẢNG CỦA <br>
                     <span style="color: var(--color-primary);">SỰ KHÁC BIỆT</span>
                 </h2>
                 <div style="width: 100px; height: 10px; background: var(--color-black); margin-bottom: 40px;"></div>
-                <p
-                    style="font-size: 1.4rem; line-height: 1.7; color: var(--color-black); opacity: 0.7; margin-bottom: 30px;">
-                    Khởi nguồn từ trung tâm công nghiệp Bình Dương, PTEC mang trong mình DNA của sự năng động và đổi
-                    mới. Chúng tôi biến những bản vẽ phức tạp thành hiện thực.
+                <p style="font-size: 1.25rem; line-height: 1.7; color: var(--color-black); opacity: 0.8; margin-bottom: 30px;">
+                    Khởi nguồn từ trung tâm công nghiệp Bình Dương, PTEC mang trong mình DNA của sự năng động và đổi mới. Chúng tôi biến những bản vẽ phức tạp thành hiện thực vững chắc.
                 </p>
-                <p
-                    style="font-size: 1.1rem; line-height: 1.7; color: var(--color-black); opacity: 0.5; margin-bottom: 50px;">
-                    PTEC tuân thủ nghiêm ngặt các tiêu chuẩn ISO 9001 và OHSAS 18001, đảm bảo mọi dự án đều vượt kỳ vọng
-                    khách hàng với tổng giá trị vượt 5000 tỷ VND.
-                </p>
-                <div class="btn-kinetic" onclick="navigate('about')">Read Our Story</div>
+                <div style="padding: 30px; border-left: 5px solid var(--color-primary); background: rgba(0,0,0,0.03); margin-bottom: 40px;">
+                    <p style="font-size: 1.05rem; line-height: 1.7; color: var(--color-black); opacity: 0.7; margin: 0;">
+                        Tuân thủ nghiêm ngặt các tiêu chuẩn Quốc tế, đảm bảo mọi dự án đều vượt kỳ vọng với tổng giá trị thi công ấn tượng.
+                    </p>
+                </div>
+                <div class="btn-kinetic" onclick="navigate('about')">XEM CÂU CHUYỆN CỦA CHÚNG TÔI</div>
             </div>
 
-            <div class="kinetic-reveal" style="grid-column: span 5; grid-column-start: 8; position: relative;"
-                data-delay="0.3s">
-                <div
-                    style="width: 100%; height: 600px; background: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; position: relative; z-index: 1;">
-                </div>
-                <div
-                    style="position: absolute; top: -30px; left: -30px; width: 100%; height: 100%; border: 2px solid var(--color-primary); z-index: 0;">
-                </div>
-                <div
-                    style="position: absolute; bottom: 30px; right: -60px; background: var(--color-black); color: white; padding: 40px; z-index: 2;">
-                    <h3 style="font-size: 3rem; color: var(--color-primary);">150+</h3>
-                    <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Projects Finished</p>
+            <div class="kinetic-reveal" data-delay="0.3s" style="position: relative;">
+                <div style="position: relative; padding-bottom: 30px; padding-right: 30px;">
+                    <!-- Decal Border Background -->
+                    <div style="position: absolute; top: 30px; left: 30px; width: 100%; height: 100%; border: 2px solid var(--color-primary); z-index: 0;"></div>
+                    
+                    <!-- Main Image -->
+                    <div style="width: 100%; height: 500px; background: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; position: relative; z-index: 1;"></div>
+                    
+                    <!-- Stats Box -->
+                    <div class="stats-box" style="position: absolute; bottom: 0; right: 0; background: var(--color-black); color: white; padding: 40px; z-index: 2;">
+                        <h3 style="font-size: 3rem; color: var(--color-primary); margin: 0; font-family: var(--font-heading); font-weight: 900;">150+</h3>
+                        <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin: 0; opacity: 0.8;">Dự Án Hoàn Thành</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .kinetic-grid-wrapper {
+            grid-template-columns: 1fr !important;
+            gap: 60px !important;
+        }
+
+        .kinetic-grid-wrapper > div:first-child {
+            order: 2;
+        }
+        
+        .kinetic-grid-wrapper > div:last-child {
+            order: 1;
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .kinetic-grid-wrapper > div:last-child > div > div:nth-child(2) {
+            height: 400px !important;
+        }
+
+        .stats-box {
+            padding: 25px !important;
+        }
+        
+        .stats-box h3 {
+            font-size: 2.2rem !important;
+        }
+        
+        .btn-kinetic {
+            width: 100%;
+            text-align: center;
+        }
+    }
+</style>

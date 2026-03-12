@@ -1,25 +1,25 @@
 <section class="section-padding services-kinetic" style="background: var(--color-gray);">
     <div class="container">
-        <div class="kinetic-grid" style="margin-bottom: 80px;">
+        <div class="kinetic-grid services-header" style="margin-bottom: 80px;">
             <div style="grid-column: span 8;">
-                <h2 style="font-size: 5rem; letter-spacing: -3px; line-height: 0.9;">
+                <h2 style="font-size: clamp(3rem, 6vw, 5rem); letter-spacing: -3px; line-height: 0.9; font-family: var(--font-heading); font-weight: 900;">
                     GIẢI PHÁP <br>
                     <span style="color: var(--color-primary);">XÂY DỰNG</span>
                 </h2>
             </div>
             <div style="grid-column: span 4; display: flex; align-items: flex-end; justify-content: flex-end;">
-                <p style="opacity: 0.5; text-align: right; max-width: 300px;">Dẫn đầu kỹ thuật với các giải pháp thi
+                <p style="opacity: 0.5; text-align: right; max-width: 300px; margin: 0;">Dẫn đầu kỹ thuật với các giải pháp thi
                     công thông minh và tối ưu chi phí.</p>
             </div>
         </div>
 
-        <div class="kinetic-grid">
+        <div class="kinetic-grid services-cards">
             <!-- Flash Card 1 -->
             <div class="kinetic-reveal flash-card" style="grid-column: span 4;">
                 <div class="flash-card-inner"
                     style="height: 500px; background: var(--color-white); padding: 50px; border-right: 5px solid var(--color-primary); display: flex; flex-direction: column; justify-content: space-between; transition: 0.5s;">
                     <div>
-                        <h3 style="font-size: 2.5rem; margin-bottom: 20px;">Xây Dựng <br>Công Nghiệp</h3>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); font-weight: 900;">Xây Dựng <br>Công Nghiệp</h3>
                         <p style="opacity: 0.6;">Hơn 150 dự án nhà xưởng thép tiền chế đã hoàn thành với chuẩn chất
                             lượng quốc tế.</p>
                         <ul style="margin-top: 30px; list-style: none; padding: 0;">
@@ -31,7 +31,7 @@
                                 Lắp dựng siêu tốc</li>
                         </ul>
                     </div>
-                    <div class="btn-kinetic" style="width: fit-content;" onclick="navigate('services')">Learn More</div>
+                    <div class="btn-kinetic" style="width: fit-content;" onclick="navigate('services')">TÌM HIỂU THÊM</div>
                 </div>
             </div>
 
@@ -40,11 +40,11 @@
                 <div class="flash-card-inner"
                     style="height: 500px; background: var(--color-black); color: white; padding: 50px; border-right: 5px solid var(--color-primary); display: flex; flex-direction: column; justify-content: space-between; transition: 0.5s;">
                     <div>
-                        <h3 style="font-size: 2.5rem; margin-bottom: 20px;">Hạ Tầng <br>Kỹ Thuật</h3>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); font-weight: 900;">Hạ Tầng <br>Kỹ Thuật</h3>
                         <p style="opacity: 0.6;">San lấp và thi công đường nội bộ KCN chuyên nghiệp, bền vững.</p>
                     </div>
                     <div class="btn-kinetic" style="width: fit-content; border-color: white;"
-                        onclick="navigate('services')">Learn More</div>
+                        onclick="navigate('services')">TÌM HIỂU THÊM</div>
                 </div>
             </div>
 
@@ -53,12 +53,12 @@
                 <div class="flash-card-inner"
                     style="height: 500px; background: var(--color-white); padding: 50px; border-right: 5px solid var(--color-black); display: flex; flex-direction: column; justify-content: space-between; transition: 0.5s;">
                     <div>
-                        <h3 style="font-size: 2.5rem; margin-bottom: 20px;">Cơ Điện <br>& PCCC</h3>
+                        <h3 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); font-weight: 900;">Cơ Điện <br>& PCCC</h3>
                         <p style="opacity: 0.6;">Hệ thống điện và PCCC đạt chuẩn an toàn quốc gia cho các nhà xưởng quy
                             mô lớn.</p>
                     </div>
                     <div class="btn-kinetic" style="width: fit-content; background: var(--color-black);"
-                        onclick="navigate('services')">Learn More</div>
+                        onclick="navigate('services')">TÌM HIỂU THÊM</div>
                 </div>
             </div>
         </div>
@@ -69,5 +69,49 @@
     .flash-card-inner:hover {
         transform: translateY(-20px);
         box-shadow: 30px 30px 0 var(--color-primary);
+    }
+
+    @media (max-width: 991px) {
+        .services-header {
+            display: flex !important;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .services-header > div:last-child {
+            justify-content: flex-start !important;
+        }
+
+        .services-header p {
+            text-align: left !important;
+        }
+
+        .services-cards {
+            display: flex !important;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .flash-card-inner {
+            height: auto !important;
+            min-height: 350px;
+            padding: 40px !important;
+        }
+        
+        .flash-card-inner:hover {
+            transform: translateY(-10px);
+            box-shadow: 15px 15px 0 var(--color-primary);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .flash-card-inner {
+            padding: 30px !important;
+            border-right-width: 3px !important;
+        }
+
+        .flash-card-inner h3 {
+            font-size: 2rem !important;
+        }
     }
 </style>

@@ -2,22 +2,22 @@
     <div class="container">
         <div class="kinetic-grid" style="margin-bottom: 80px;">
             <div style="grid-column: span 12;">
-                <h2 style="font-size: 5rem; letter-spacing: -3px; line-height: 0.9;">ĐỘI NGŨ <br><span
+                <h2 style="font-size: clamp(3rem, 6vw, 5rem); letter-spacing: -3px; line-height: 0.9; font-family: var(--font-heading); font-weight: 900;">ĐỘI NGŨ <br><span
                         style="color: var(--color-primary);">TÂM HUYẾT</span></h2>
             </div>
         </div>
 
-        <div class="kinetic-grid">
+        <div class="kinetic-grid team-grid">
             <!-- Member 1 -->
             <div class="kinetic-reveal member-kinetic-card" style="grid-column: span 4;">
-                <div
+                <div class="member-img"
                     style="height: 500px; background: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.5s;">
                 </div>
-                <div
+                <div class="member-info"
                     style="padding: 40px; background: var(--color-gray); border-bottom: 8px solid var(--color-primary);">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 5px;">Đặng Quốc Thắng</h3>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 5px; font-family: var(--font-heading); font-weight: 900;">Đặng Quốc Thắng</h3>
                     <p
-                        style="color: var(--color-primary); font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                        style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
                         CEO & Founder</p>
                     <p style="opacity: 0.6; font-size: 0.9rem; line-height: 1.6;">Hơn 15 năm kinh nghiệm quản lý dự án
                         công nghiệp trọng điểm tại khu vực phía Nam.</p>
@@ -26,14 +26,14 @@
 
             <!-- Member 2 -->
             <div class="kinetic-reveal member-kinetic-card" style="grid-column: span 4;" data-delay="0.2s">
-                <div
+                <div class="member-img"
                     style="height: 500px; background: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.5s;">
                 </div>
-                <div
+                <div class="member-info"
                     style="padding: 40px; background: var(--color-black); color: white; border-bottom: 8px solid var(--color-primary);">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 5px;">Nguyễn Minh Trí</h3>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 5px; font-family: var(--font-heading); font-weight: 900;">Nguyễn Minh Trí</h3>
                     <p
-                        style="color: var(--color-primary); font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                        style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
                         Giám Đốc Kỹ Thuật</p>
                     <p style="opacity: 0.6; font-size: 0.9rem; line-height: 1.6;">Chuyên gia đầu ngành về kết cấu thép
                         tiền chế và tối ưu hóa chi phí xây dựng (V.E).</p>
@@ -42,13 +42,13 @@
 
             <!-- Member 3 -->
             <div class="kinetic-reveal member-kinetic-card" style="grid-column: span 4;" data-delay="0.4s">
-                <div
+                <div class="member-img"
                     style="height: 500px; background: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.5s;">
                 </div>
-                <div style="padding: 40px; background: var(--color-gray); border-bottom: 8px solid var(--color-black);">
-                    <h3 style="font-size: 1.8rem; margin-bottom: 5px;">Trần Lệ Chi</h3>
+                <div class="member-info" style="padding: 40px; background: var(--color-gray); border-bottom: 8px solid var(--color-black);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 5px; font-family: var(--font-heading); font-weight: 900;">Trần Lệ Chi</h3>
                     <p
-                        style="color: var(--color-black); font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
+                        style="color: var(--color-black); font-family: var(--font-heading); font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
                         Giám Đốc Tài Chính</p>
                     <p style="opacity: 0.6; font-size: 0.9rem; line-height: 1.6;">Đảm bảo sự minh bạch và bền vững tài
                         chính cho toàn bộ chuỗi cung ứng dự án.</p>
@@ -62,5 +62,21 @@
     .member-kinetic-card:hover div:first-child {
         filter: grayscale(0);
         transform: scale(1.05);
+    }
+
+    @media (max-width: 991px) {
+        .team-grid {
+            display: flex !important;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .member-img {
+            height: 400px !important;
+        }
+
+        .member-info {
+            padding: 30px !important;
+        }
     }
 </style>

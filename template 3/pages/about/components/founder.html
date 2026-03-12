@@ -1,24 +1,24 @@
 <section class="section-padding founder-kinetic" style="background: var(--color-gray);">
     <div class="container">
-        <div class="kinetic-grid"
+        <div class="kinetic-grid founder-grid"
             style="align-items: center; background: var(--color-white); padding: 80px; position: relative; border-right: 15px solid var(--color-primary);">
-            <div class="kinetic-reveal" style="grid-column: span 4;">
-                <div
+            <div class="kinetic-reveal founder-img-container" style="grid-column: span 4;">
+                <div class="founder-img"
                     style="height: 450px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1);">
                 </div>
                 <div style="margin-top: 30px;">
-                    <h4 style="font-size: 1.8rem; margin-bottom: 5px;">Đặng Quốc Thắng</h4>
-                    <p style="color: var(--color-primary); font-weight: 900; letter-spacing: 2px;">CEO & FOUNDER</p>
+                    <h4 style="font-size: 1.8rem; margin-bottom: 5px; font-family: var(--font-heading); font-weight: 900;">Đặng Quốc Thắng</h4>
+                    <p style="color: var(--color-primary); font-family: var(--font-heading); font-weight: 900; letter-spacing: 2px;">CEO & FOUNDER</p>
                 </div>
             </div>
 
-            <div class="kinetic-reveal" style="grid-column: span 7; grid-column-start: 6;" data-delay="0.3s">
+            <div class="kinetic-reveal founder-text" style="grid-column: span 7; grid-column-start: 6;" data-delay="0.3s">
                 <i class="fa-solid fa-quote-left"
-                    style="font-size: 5rem; color: var(--color-primary); opacity: 0.1; display: block; margin-bottom: 30px;"></i>
-                <h2 style="font-size: 3rem; margin-bottom: 40px; line-height: 1.1;">ARCHITECTURE OF <br><span
-                        style="color: var(--color-primary);">TRANSPARENCY</span></h2>
+                    style="font-size: clamp(3rem, 5vw, 5rem); color: var(--color-primary); opacity: 0.1; display: block; margin-bottom: 30px;"></i>
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-family: var(--font-heading); font-weight: 900; margin-bottom: 40px; line-height: 1.1;">KIẾN TRÚC CỦA SỰ <br><span
+                        style="color: var(--color-primary);">MINH BẠCH</span></h2>
                 <p
-                    style="font-size: 1.4rem; line-height: 1.7; font-style: italic; color: var(--color-black); opacity: 0.8;">
+                    style="font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.7; font-style: italic; color: var(--color-black); opacity: 0.8;">
                     "Tại PTEC, chúng tôi không chỉ xây dựng những bức tường hay mái vòm bằng thép. Chúng tôi kiến tạo
                     nền tảng cho sự thịnh vượng của khách hàng thông qua sự minh bạch, kỷ luật và niềm đam mê mãnh liệt
                     với kỹ thuật."
@@ -28,3 +28,27 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .founder-grid {
+            display: flex !important;
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px !important;
+            border-right-width: 8px !important;
+        }
+
+        .founder-img-container {
+            width: 100%;
+        }
+
+        .founder-img {
+            height: 350px !important;
+        }
+
+        .founder-text {
+            width: 100%;
+        }
+    }
+</style>

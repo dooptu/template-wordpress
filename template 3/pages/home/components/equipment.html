@@ -1,58 +1,165 @@
 <section class="section-padding equipment-kinetic" style="background: var(--color-white);">
     <div class="container">
-        <div class="kinetic-grid" style="margin-bottom: 80px;">
-            <div style="grid-column: span 12;">
-                <h2 style="font-size: 5rem; letter-spacing: -3px;">NĂNG LỰC <span
-                        style="color: var(--color-primary);">THIẾT BỊ</span></h2>
-                <div style="width: 100%; height: 2px; background: var(--color-black); margin-top: 30px;"></div>
-            </div>
+        <div style="margin-bottom: 60px;">
+            <h2 class="equip-heading">NĂNG LỰC <span style="color: var(--color-primary);">THIẾT BỊ</span></h2>
+            <div style="width: 100%; height: 2px; background: var(--color-black); margin-top: 30px;"></div>
         </div>
 
-        <div class="kinetic-grid" style="gap: 50px;">
-            <div class="kinetic-reveal" style="grid-column: span 4;">
-                <div style="margin-bottom: 50px;">
-                    <h3 style="font-size: 2rem; margin-bottom: 20px; transition: 0.3s;"
-                        onmouseover="this.style.color='var(--color-primary)'"
-                        onmouseout="this.style.color='var(--color-black)'">Xe Đào & Xe Cẩu</h3>
-                    <p style="opacity: 0.6; line-height: 1.6;">Hơn 50 đầu máy hạng nặng Komatsu, Hitachi, đảm bảo tiến
-                        độ thi công nhanh chóng và ổn định.</p>
+        <div class="equip-grid" style="margin: 0 auto;">
+            <!-- Col 1: text items -->
+            <div class="kinetic-reveal equip-text-col">
+                <div class="equip-item">
+                    <h3 class="equip-item-title">Xe Đào &amp; Xe Cẩu</h3>
+                    <p class="equip-item-desc">Hơn 50 đầu máy hạng nặng Komatsu, Hitachi, đảm bảo tiến độ thi công nhanh chóng và ổn định.</p>
                 </div>
-                <div style="margin-bottom: 50px;">
-                    <h3 style="font-size: 2rem; margin-bottom: 20px; transition: 0.3s;"
-                        onmouseover="this.style.color='var(--color-primary)'"
-                        onmouseout="this.style.color='var(--color-black)'">Nhà Máy Gia Công</h3>
-                    <p style="opacity: 0.6; line-height: 1.6;">Xưởng 5.000m2 máy CNC, hàn tự động, sản xuất kết cấu thép
-                        với độ chính xác tuyệt đối.</p>
+                <div class="equip-item">
+                    <h3 class="equip-item-title">Nhà Máy Gia Công</h3>
+                    <p class="equip-item-desc">Xưởng 5.000m² với máy CNC, hàn tự động, sản xuất kết cấu thép với độ chính xác tuyệt đối.</p>
                 </div>
             </div>
 
-            <div class="kinetic-reveal" style="grid-column: span 4;" data-delay="0.2s">
-                <div style="margin-bottom: 50px;">
-                    <h3 style="font-size: 2rem; margin-bottom: 20px; transition: 0.3s;"
-                        onmouseover="this.style.color='var(--color-primary)'"
-                        onmouseout="this.style.color='var(--color-black)'">Công Nghệ BIM</h3>
-                    <p style="opacity: 0.6; line-height: 1.6;">Số hóa mô hình, phát hiện xung đột kết cấu, giảm thiểu
-                        rủi ro và tiết kiệm chi phí đến 90%.</p>
+            <!-- Col 2: text items -->
+            <div class="kinetic-reveal equip-text-col" data-delay="0.2s">
+                <div class="equip-item">
+                    <h3 class="equip-item-title">Công Nghệ BIM</h3>
+                    <p class="equip-item-desc">Số hóa mô hình, phát hiện xung đột kết cấu, giảm thiểu rủi ro và tiết kiệm chi phí đến 90%.</p>
                 </div>
-                <div style="margin-bottom: 50px;">
-                    <h3 style="font-size: 2rem; margin-bottom: 20px; transition: 0.3s;"
-                        onmouseover="this.style.color='var(--color-primary)'"
-                        onmouseout="this.style.color='var(--color-black)'">Hệ Thống Quản Lý</h3>
-                    <p style="opacity: 0.6; line-height: 1.6;">Phần mềm ERP và IoT theo dõi tiến độ thực tế thời gian
-                        thực, minh bạch trong mọi giai đoạn.</p>
+                <div class="equip-item">
+                    <h3 class="equip-item-title">Hệ Thống Quản Lý</h3>
+                    <p class="equip-item-desc">Phần mềm ERP và IoT theo dõi tiến độ thực tế thời gian thực, minh bạch trong mọi giai đoạn.</p>
                 </div>
             </div>
 
-            <div class="kinetic-reveal" style="grid-column: span 4;" data-delay="0.4s">
-                <div style="position: relative; height: 100%;">
-                    <div style="height: 500px; background: url('https://images.unsplash.com/photo-1541975040043-348f5fd120ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; filter: grayscale(1); transition: 0.5s;"
-                        onmouseover="this.style.filter='grayscale(0)'" onmouseout="this.style.filter='grayscale(1)'">
+            <!-- Col 3: image block -->
+            <div class="kinetic-reveal equip-img-col" data-delay="0.4s">
+                <div class="equip-img-wrapper">
+                    <div class="equip-img"
+                        style="background: url('https://images.unsplash.com/photo-1541975040043-348f5fd120ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;"
+                        onmouseover="this.style.filter='grayscale(0)'"
+                        onmouseout="this.style.filter='grayscale(1)'">
                     </div>
-                    <div
-                        style="position: absolute; bottom: 30px; left: -30px; background: var(--color-primary); color: white; padding: 20px 40px; font-weight: 900; letter-spacing: 2px;">
-                        OWN EQUIPMENT</div>
+                    <div class="equip-badge" style="bottom: 20px; left: 0;">THIẾT BỊ TỰ CÓ</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    /* ── Heading ── */
+    .equip-heading {
+        font-family: var(--font-heading);
+        font-weight: 900;
+        font-size: clamp(2.6rem, 6vw, 5rem);
+        letter-spacing: -3px;
+        line-height: 1;
+        margin: 0;
+    }
+
+    /* ── Grid ── */
+    .equip-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        align-items: start;
+    }
+
+    /* ── Text columns ── */
+    .equip-text-col {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .equip-item-title {
+        font-family: var(--font-heading);
+        font-weight: 900;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        margin: 0 0 15px;
+        transition: color 0.3s;
+        cursor: default;
+        line-height: 1.2;
+    }
+
+    .equip-item-title:hover {
+        color: var(--color-primary);
+    }
+
+    .equip-item-desc {
+        opacity: 0.6;
+        line-height: 1.7;
+        margin: 0;
+        font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+    }
+
+    /* ── Image column ── */
+    .equip-img-col {
+        position: relative;
+    }
+
+    .equip-img-wrapper {
+        position: relative;
+    }
+
+    .equip-img {
+        height: 480px;
+        filter: grayscale(1);
+        transition: filter 0.5s;
+    }
+
+    .equip-badge {
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+        background: var(--color-primary);
+        color: white;
+        padding: 18px 36px;
+        font-family: var(--font-heading);
+        font-weight: 900;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 991px) {
+        .equip-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .equip-img-col {
+            grid-column: span 2;
+        }
+
+        .equip-img {
+            height: 380px !important;
+        }
+
+        .equip-badge {
+            bottom: -10px;
+            left: 0;
+            padding: 14px 24px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .equip-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .equip-img-col {
+            grid-column: span 1;
+        }
+
+        .equip-text-col {
+            gap: 30px;
+        }
+
+        .equip-img {
+            height: 280px !important;
+        }
+    }
+</style>

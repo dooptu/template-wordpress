@@ -1,22 +1,22 @@
 <section class="section-padding form-kinetic" style="background: white;">
     <div class="container">
-        <div class="kinetic-grid">
-            <div class="kinetic-reveal" style="grid-column: span 5; padding-right: 60px;">
-                <h3 style="font-size: 3rem; margin-bottom: 40px;">BÁO GIÁ <br><span
+        <div class="kinetic-grid form-grid">
+            <div class="kinetic-reveal form-info" style="grid-column: span 5; padding-right: 60px;">
+                <h3 style="font-size: clamp(2.5rem, 5vw, 3rem); font-family: var(--font-heading); font-weight: 900; margin-bottom: 40px;">BÁO GIÁ <br><span
                         style="color: var(--color-primary);">NHANH</span></h3>
                 <p style="font-size: 1.2rem; opacity: 0.6; line-height: 1.8; margin-bottom: 40px;">
                     Điền thông tin dự án của bạn, đội ngũ kỹ sư PTEC sẽ phản hồi trong vòng 24h với giải pháp tối ưu
                     nhất.
                 </p>
-                <div style="font-weight: 900; letter-spacing: 2px;">
+                <div style="font-family: var(--font-heading); font-weight: 900; letter-spacing: 2px;">
                     <p style="margin-bottom: 15px;">HOTLINE: 0909 123 456</p>
                     <p>EMAIL: INFO@PTEC.VN</p>
                 </div>
             </div>
 
-            <div class="kinetic-reveal" style="grid-column: span 7; position: relative;" data-delay="0.2s">
+            <div class="kinetic-reveal form-container" style="grid-column: span 7; position: relative;" data-delay="0.2s">
                 <form style="display: flex; flex-direction: column; gap: 30px;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                         <input type="text" placeholder="HỌ TÊN"
                             style="width: 100%; padding: 25px; background: var(--color-gray); border: none; font-family: var(--font-heading); font-size: 0.8rem; outline: none; transition: 0.3s;"
                             onfocus="this.style.background='var(--color-black)'; this.style.color='white'"
@@ -39,10 +39,32 @@
                         NGAY</button>
                 </form>
                 <!-- Decorative Grid Dot -->
-                <div
+                <div class="form-deco"
                     style="position: absolute; bottom: -40px; right: -40px; width: 100px; height: 100px; background-image: radial-gradient(var(--color-primary) 1.5px, transparent 1.5px); background-size: 15px 15px; opacity: 0.3;">
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .form-grid {
+            display: flex !important;
+            flex-direction: column;
+            gap: 60px !important;
+        }
+
+        .form-info {
+            padding-right: 0 !important;
+        }
+
+        .form-row {
+            grid-template-columns: 1fr !important;
+        }
+
+        .form-deco {
+            display: none !important;
+        }
+    }
+</style>

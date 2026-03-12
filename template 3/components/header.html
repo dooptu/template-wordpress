@@ -1,33 +1,114 @@
-<header
-    style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 30px 0; mix-blend-mode: difference;">
+<header class="header-kinetic" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 25px 0; mix-blend-mode: difference; transition: 0.3s;">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
         <div class="logo-kinetic"
-            style="color: var(--color-white); font-family: var(--font-heading); font-size: 2rem; letter-spacing: -2px; cursor: pointer;"
+            style="color: var(--color-white); font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; letter-spacing: -2px; cursor: pointer;"
             onclick="navigate('home')">
             PTEC<span style="color: var(--color-primary);">.</span>
         </div>
 
-        <nav style="display: flex; gap: 40px;">
-            <a href="#" onclick="navigate('home')"
-                style="color: var(--color-white); text-decoration: none; font-family: var(--font-heading); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                onmouseover="this.style.color='var(--color-primary)'"
-                onmouseout="this.style.color='var(--color-white)'">Home</a>
-            <a href="#" onclick="navigate('about')"
-                style="color: var(--color-white); text-decoration: none; font-family: var(--font-heading); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                onmouseover="this.style.color='var(--color-primary)'"
-                onmouseout="this.style.color='var(--color-white)'">About</a>
-            <a href="#" onclick="navigate('services')"
-                style="color: var(--color-white); text-decoration: none; font-family: var(--font-heading); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                onmouseover="this.style.color='var(--color-primary)'"
-                onmouseout="this.style.color='var(--color-white)'">Services</a>
-            <a href="#" onclick="navigate('projects')"
-                style="color: var(--color-white); text-decoration: none; font-family: var(--font-heading); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                onmouseover="this.style.color='var(--color-primary)'"
-                onmouseout="this.style.color='var(--color-white)'">Projects</a>
-            <a href="#" onclick="navigate('contact')"
-                style="color: var(--color-white); text-decoration: none; font-family: var(--font-heading); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;"
-                onmouseover="this.style.color='var(--color-primary)'"
-                onmouseout="this.style.color='var(--color-white)'">Contact</a>
+        <button class="menu-toggle-kinetic" style="display: none; background: none; border: none; color: var(--color-white); font-size: 2rem; cursor: pointer; z-index: 1001;">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-kinetic">
+            <ul style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;">
+                <li><a href="#" onclick="navigate('home')">Trang Chủ</a></li>
+                <li><a href="#" onclick="navigate('about')">Giới Thiệu</a></li>
+                <li><a href="#" onclick="navigate('services')">Dịch Vụ</a></li>
+                <li><a href="#" onclick="navigate('projects')">Dự Án</a></li>
+                <li><a href="#" onclick="navigate('blog')">Tin Tức</a></li>
+                <li><a href="#" onclick="navigate('contact')">Liên Hệ</a></li>
+            </ul>
         </nav>
     </div>
 </header>
+
+<style>
+    .nav-kinetic a {
+        color: var(--color-white);
+        text-decoration: none;
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+    }
+
+    .nav-kinetic a:hover {
+        color: var(--color-primary);
+    }
+
+    @media (max-width: 991px) {
+        .menu-toggle-kinetic {
+            display: block !important;
+            mix-blend-mode: difference;
+        }
+
+        .nav-kinetic {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: var(--color-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+            z-index: 1000;
+            mix-blend-mode: normal !important;
+        }
+
+        .nav-kinetic.active {
+            right: 0;
+        }
+
+        .nav-kinetic ul {
+            flex-direction: column;
+            text-align: center;
+            gap: 40px !important;
+        }
+
+        .nav-kinetic a {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+    }
+</style>
+
+<script>
+    (function () {
+        const toggle = document.querySelector('.menu-toggle-kinetic');
+        const nav = document.querySelector('.nav-kinetic');
+        const header = document.querySelector('.header-kinetic');
+        
+        if (toggle && nav) {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                nav.classList.toggle('active');
+                const i = toggle.querySelector('i');
+                i.classList.toggle('fa-bars');
+                i.classList.toggle('fa-xmark');
+                
+                // Remove mix-blend-mode when menu is open so 'X' is visible on black bg
+                if(nav.classList.contains('active')) {
+                     header.style.mixBlendMode = 'normal';
+                     toggle.style.color = 'var(--color-white)';
+                } else {
+                     header.style.mixBlendMode = 'difference';
+                }
+            });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    const i = toggle.querySelector('i');
+                    i.classList.add('fa-bars');
+                    i.classList.remove('fa-xmark');
+                    header.style.mixBlendMode = 'difference';
+                });
+            });
+        }
+    })();
+</script>

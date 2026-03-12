@@ -1,0 +1,89 @@
+<section class="section-padding blog-list-kinetic" style="background: var(--color-white);">
+    <div class="container">
+        <div class="kinetic-grid blog-grid" style="gap: 40px;">
+            <!-- Blog Item 1 -->
+            <div class="kinetic-reveal kinetic-blog-card"
+                style="grid-column: span 4; background: var(--color-gray); cursor: pointer;"
+                onclick="navigate('blog-detail')">
+                <div class="blog-img"
+                    style="height: 300px; background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.5s;">
+                </div>
+                <div style="padding: 40px; border-bottom: 8px solid var(--color-primary);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-family: var(--font-heading); font-weight: 900; color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Công Nghệ</span>
+                        <span style="opacity: 0.5; font-size: 0.85rem;">12 Tháng 3, 2026</span>
+                    </div>
+                    <h4 style="font-size: 1.8rem; font-family: var(--font-heading); font-weight: 900; margin-bottom: 15px; line-height: 1.3;" class="blog-title">Ứng Dụng AI Trong Quản Lý Xây Dựng</h4>
+                    <p style="opacity: 0.6; line-height: 1.6; font-size: 1rem;">Khám phá cách PTEC tích hợp trí tuệ nhân tạo để tối ưu hóa tiến độ và đảm bảo an toàn tại công trường...</p>
+                </div>
+            </div>
+
+            <!-- Blog Item 2 -->
+            <div class="kinetic-reveal kinetic-blog-card"
+                style="grid-column: span 4; background: var(--color-black); color: white; cursor: pointer;"
+                data-delay="0.2s" onclick="navigate('blog-detail')">
+                <div class="blog-img"
+                    style="height: 300px; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.5s;">
+                </div>
+                <div style="padding: 40px; border-bottom: 8px solid var(--color-primary);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-family: var(--font-heading); font-weight: 900; color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Dự Án</span>
+                        <span style="opacity: 0.5; font-size: 0.85rem;">08 Tháng 3, 2026</span>
+                    </div>
+                    <h4 style="font-size: 1.8rem; font-family: var(--font-heading); font-weight: 900; margin-bottom: 15px; line-height: 1.3;" class="blog-title-w">Khởi Công Nhà Máy Logistics</h4>
+                    <p style="opacity: 0.6; line-height: 1.6; font-size: 1rem;">Dự án trọng điểm đánh dấu bước tiến mới của PTEC tại thị trường miền Bắc với quy mô đầu tư khủng...</p>
+                </div>
+            </div>
+
+            <!-- Blog Item 3 -->
+            <div class="kinetic-reveal kinetic-blog-card"
+                style="grid-column: span 4; background: var(--color-gray); cursor: pointer;"
+                data-delay="0.4s" onclick="navigate('blog-detail')">
+                <div class="blog-img"
+                    style="height: 300px; background: url('https://images.unsplash.com/photo-1541888082470-fa52b56f58a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; filter: grayscale(1); transition: 0.5s;">
+                </div>
+                <div style="padding: 40px; border-bottom: 8px solid var(--color-black);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <span style="font-family: var(--font-heading); font-weight: 900; color: var(--color-black); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">Tuyển Dụng</span>
+                        <span style="opacity: 0.5; font-size: 0.85rem;">01 Tháng 3, 2026</span>
+                    </div>
+                    <h4 style="font-size: 1.8rem; font-family: var(--font-heading); font-weight: 900; margin-bottom: 15px; line-height: 1.3;" class="blog-title">Cơ Hội Nghề Nghiệp Cho Kỹ Sư</h4>
+                    <p style="opacity: 0.6; line-height: 1.6; font-size: 1rem;">Gia nhập đội ngũ PTEC để cùng chúng tôi kiến tạo những biểu tượng công nghiệp trên khắp Việt Nam...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .kinetic-blog-card .blog-title, .kinetic-blog-card .blog-title-w {
+        transition: 0.3s;
+    }
+    
+    .kinetic-blog-card:hover .blog-title {
+        color: var(--color-primary);
+    }
+    .kinetic-blog-card:hover .blog-title-w {
+        color: var(--color-primary);
+    }
+
+    .kinetic-blog-card:hover .blog-img {
+        filter: grayscale(0) !important;
+    }
+
+    @media (max-width: 991px) {
+        .blog-grid {
+            display: flex !important;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .kinetic-blog-card {
+            padding: 0 !important;
+        }
+
+        .blog-img {
+            height: 250px !important;
+        }
+    }
+</style>

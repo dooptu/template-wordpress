@@ -2,40 +2,59 @@
     <div class="container">
         <div class="kinetic-grid" style="margin-bottom: 60px;">
             <div style="grid-column: span 12;">
-                <h2 style="font-size: 5rem; letter-spacing: -3px;">GIÁ TRỊ <span
+                <h2 style="font-size: clamp(3rem, 6vw, 5rem); font-family: var(--font-heading); font-weight: 900; letter-spacing: -3px;">GIÁ TRỊ <span
                         style="color: var(--color-primary);">CỐT LÕI</span></h2>
             </div>
         </div>
-        <div class="kinetic-grid">
+        <div class="kinetic-grid values-grid">
             <div class="kinetic-reveal value-block"
                 style="grid-column: span 4; background: var(--color-gray); padding: 60px; border-top: 10px solid var(--color-black);">
-                <div
-                    style="font-size: 10rem; line-height: 0.8; font-weight: 900; color: var(--color-primary); opacity: 0.1; margin-bottom: -50px;">
+                <div class="value-number"
+                    style="font-size: 10rem; font-family: var(--font-heading); font-weight: 900; line-height: 0.8; font-weight: 900; color: var(--color-primary); opacity: 0.1; margin-bottom: -50px;">
                     01</div>
-                <h3 style="font-size: 2.5rem; margin-bottom: 20px; position: relative; z-index: 1;">AN TOÀN</h3>
+                <h3 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); font-weight: 900; position: relative; z-index: 1;">AN TOÀN</h3>
                 <p style="opacity: 0.6; line-height: 1.6; position: relative; z-index: 1;">Không có sự thỏa hiệp nào cho
                     an toàn lao động tại PTEC. Đó là ưu tiên hàng đầu trong mọi hành động.</p>
             </div>
             <div class="kinetic-reveal value-block"
                 style="grid-column: span 4; background: var(--color-black); color: white; padding: 60px; border-top: 10px solid var(--color-primary);"
                 data-delay="0.2s">
-                <div
-                    style="font-size: 10rem; line-height: 0.8; font-weight: 900; color: var(--color-white); opacity: 0.1; margin-bottom: -50px;">
+                <div class="value-number"
+                    style="font-size: 10rem; font-family: var(--font-heading); font-weight: 900; line-height: 0.8; font-weight: 900; color: var(--color-white); opacity: 0.1; margin-bottom: -50px;">
                     02</div>
-                <h3 style="font-size: 2.5rem; margin-bottom: 20px; position: relative; z-index: 1;">CHẤT LƯỢNG</h3>
+                <h3 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); font-weight: 900; position: relative; z-index: 1;">CHẤT LƯỢNG</h3>
                 <p style="opacity: 0.6; line-height: 1.6; position: relative; z-index: 1;">Mỗi công trình là một kiệt
                     tác kỹ thuật bền bỉ với thời gian, vượt qua mọi kỳ vọng khắt khe nhất.</p>
             </div>
             <div class="kinetic-reveal value-block"
                 style="grid-column: span 4; background: var(--color-gray); padding: 60px; border-top: 10px solid var(--color-black);"
                 data-delay="0.4s">
-                <div
-                    style="font-size: 10rem; line-height: 0.8; font-weight: 900; color: var(--color-primary); opacity: 0.1; margin-bottom: -50px;">
+                <div class="value-number"
+                    style="font-size: 10rem; font-family: var(--font-heading); font-weight: 900; line-height: 0.8; font-weight: 900; color: var(--color-primary); opacity: 0.1; margin-bottom: -50px;">
                     03</div>
-                <h3 style="font-size: 2.5rem; margin-bottom: 20px; position: relative; z-index: 1;">TIẾN ĐỘ</h3>
+                <h3 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); font-weight: 900; position: relative; z-index: 1;">TIẾN ĐỘ</h3>
                 <p style="opacity: 0.6; line-height: 1.6; position: relative; z-index: 1;">Năng lực thi công thần tốc,
                     chuẩn xác đến từng chi tiết nhờ ứng dụng công nghệ BIM và ERP.</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .values-grid {
+            display: flex !important;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .value-block {
+            padding: 40px !important;
+        }
+
+        .value-number {
+            font-size: 6rem !important;
+            margin-bottom: -30px !important;
+        }
+    }
+</style>

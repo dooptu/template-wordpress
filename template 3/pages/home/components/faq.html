@@ -1,117 +1,199 @@
 <section class="section-padding faq-kinetic" style="background: var(--color-white);">
     <div class="container">
-        <div class="kinetic-grid" style="margin-bottom: 80px;">
-            <div style="grid-column: span 12;">
-                <h2 style="font-size: 5rem; letter-spacing: -3px; line-height: 0.9;">HỎI ĐÁP <br><span
-                        style="color: var(--color-primary);">KINETIC</span></h2>
-                <div style="width: 100px; height: 10px; background: var(--color-black); margin-top: 30px;"></div>
-            </div>
+        <div style="margin-bottom: 60px;">
+            <h2 class="faq-heading">HỎI ĐÁP <br><span style="color: var(--color-primary);">THƯỜNG GẶP</span></h2>
+            <div style="width: 100px; height: 10px; background: var(--color-black); margin-top: 30px;"></div>
         </div>
 
-        <div style="max-width: 900px;">
+        <div class="faq-list" style="margin: 0 auto;">
             <!-- FAQ Item 1 -->
-            <div class="kinetic-reveal faq-kinetic-item active"
-                style="border-bottom: 1px solid #eee; margin-bottom: 20px;">
-                <div class="faq-trigger"
-                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
-                    onclick="toggleFaq(this)">
-                    <h3 style="font-size: 1.8rem; font-weight: 900; max-width: 80%;">PTEC có nhận thiết kế thi công trọn
-                        gói không?</h3>
-                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-primary);">+
-                    </div>
+            <div class="kinetic-reveal faq-kinetic-item faq-active">
+                <div class="faq-trigger" onclick="toggleFaq(this)">
+                    <h3 class="faq-question">PTEC có nhận thiết kế thi công trọn gói không?</h3>
+                    <div class="faq-plus faq-plus-active">×</div>
                 </div>
-                <div class="faq-content"
-                    style="max-height: 500px; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
-                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
-                        Có, PTEC chuyên cung cấp dịch vụ Design & Build, giúp tiết kiệm chi phí và rút ngắn thời gian
-                        lên đến 30% cho chủ đầu tư.
-                    </p>
+                <div class="faq-content faq-content-open">
+                    <p>Có, PTEC chuyên cung cấp dịch vụ Design &amp; Build, giúp tiết kiệm chi phí và rút ngắn thời gian lên đến 30% cho chủ đầu tư.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="kinetic-reveal faq-kinetic-item" style="border-bottom: 1px solid #eee; margin-bottom: 20px;"
-                data-delay="0.2s">
-                <div class="faq-trigger"
-                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
-                    onclick="toggleFaq(this)">
-                    <h3 style="font-size: 1.8rem; font-weight: 700; max-width: 80%;">Chính sách bảo hành công trình thế
-                        nào?</h3>
-                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-black);">+</div>
+            <div class="kinetic-reveal faq-kinetic-item" data-delay="0.15s">
+                <div class="faq-trigger" onclick="toggleFaq(this)">
+                    <h3 class="faq-question">Chính sách bảo hành công trình thế nào?</h3>
+                    <div class="faq-plus">+</div>
                 </div>
-                <div class="faq-content"
-                    style="max-height: 0; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
-                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
-                        Bảo hành kết cấu 05 năm, bảo hành chống thấm, MEP 12-24 tháng, hỗ trợ 24/7 với đội ngũ kỹ thuật
-                        viên chuyên nghiệp.
-                    </p>
+                <div class="faq-content">
+                    <p>Bảo hành kết cấu 05 năm, bảo hành chống thấm &amp; MEP 12–24 tháng, hỗ trợ 24/7 với đội ngũ kỹ thuật viên chuyên nghiệp.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="kinetic-reveal faq-kinetic-item" style="border-bottom: 1px solid #eee; margin-bottom: 20px;"
-                data-delay="0.4s">
-                <div class="faq-trigger"
-                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
-                    onclick="toggleFaq(this)">
-                    <h3 style="font-size: 1.8rem; font-weight: 700; max-width: 80%;">Khu vực hoạt động chính của PTEC?
-                    </h3>
-                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-black);">+</div>
+            <div class="kinetic-reveal faq-kinetic-item" data-delay="0.3s">
+                <div class="faq-trigger" onclick="toggleFaq(this)">
+                    <h3 class="faq-question">Khu vực hoạt động chính của PTEC?</h3>
+                    <div class="faq-plus">+</div>
                 </div>
-                <div class="faq-content"
-                    style="max-height: 0; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
-                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
-                        Trụ sở tại Bến Cát, Bình Dương. Thi công mạnh tại các KCN Bình Dương, Đồng Nai, Bình Phước, và
-                        mở rộng toàn miền Nam.
-                    </p>
+                <div class="faq-content">
+                    <p>Trụ sở tại Bến Cát, Bình Dương. Thi công mạnh tại các KCN Bình Dương, Đồng Nai, Bình Phước và mở rộng toàn miền Nam.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 4 -->
-            <div class="kinetic-reveal faq-kinetic-item" style="border-bottom: 1px solid #eee; margin-bottom: 20px;"
-                data-delay="0.6s">
-                <div class="faq-trigger"
-                    style="padding: 40px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center;"
-                    onclick="toggleFaq(this)">
-                    <h3 style="font-size: 1.8rem; font-weight: 700; max-width: 80%;">Thời gian thi công trung bình cho
-                        một nhà xưởng?</h3>
-                    <div class="faq-plus" style="font-size: 2rem; transition: 0.3s; color: var(--color-black);">+</div>
+            <div class="kinetic-reveal faq-kinetic-item" data-delay="0.45s">
+                <div class="faq-trigger" onclick="toggleFaq(this)">
+                    <h3 class="faq-question">Thời gian thi công trung bình cho một nhà xưởng?</h3>
+                    <div class="faq-plus">+</div>
                 </div>
-                <div class="faq-content"
-                    style="max-height: 0; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);">
-                    <p style="padding-bottom: 40px; font-size: 1.2rem; opacity: 0.6; line-height: 1.8;">
-                        Từ 3-6 tháng tùy quy mô, với cam kết hoàn thành đúng hạn hoặc sớm hơn mục tiêu đề ra.
-                    </p>
+                <div class="faq-content">
+                    <p>Từ 3–6 tháng tùy quy mô, với cam kết hoàn thành đúng hạn hoặc sớm hơn mục tiêu đề ra.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<script>
-    function toggleFaq(trigger) {
-        const item = trigger.parentElement;
-        const content = item.querySelector('.faq-content');
-        const icon = trigger.querySelector('.faq-plus');
-        const isActive = item.classList.contains('active');
+<style>
+    /* ── FAQ Layout ── */
+    .faq-heading {
+        font-family: var(--font-heading);
+        font-weight: 900;
+        font-size: clamp(2.8rem, 7vw, 5rem);
+        letter-spacing: -3px;
+        line-height: 0.9;
+        margin: 0;
+    }
 
-        // Close others
-        document.querySelectorAll('.faq-kinetic-item').forEach(i => {
-            i.classList.remove('active');
-            i.querySelector('.faq-content').style.maxHeight = '0';
-            i.querySelector('.faq-plus').style.transform = 'rotate(0deg)';
-            i.querySelector('.faq-plus').style.color = 'var(--color-black)';
-            i.querySelector('.faq-plus').innerText = '+';
-            i.querySelector('h3').style.fontWeight = '700';
-        });
+    .faq-list {
+        max-width: 860px;
+    }
 
-        if (!isActive) {
-            item.classList.add('active');
-            content.style.maxHeight = '500px';
-            icon.style.transform = 'rotate(45deg)';
-            icon.style.color = 'var(--color-primary)';
-            icon.innerText = '×';
-            trigger.querySelector('h3').style.fontWeight = '900';
+    .faq-kinetic-item {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    /* ── Trigger row ── */
+    .faq-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 36px 0;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .faq-question {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+        line-height: 1.35;
+        margin: 0;
+        flex: 1;
+        transition: color 0.3s;
+    }
+
+    .faq-active .faq-question {
+        font-weight: 900;
+        color: var(--color-black);
+    }
+
+    /* ── Plus / × icon ── */
+    .faq-plus {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        line-height: 1;
+        color: var(--color-black);
+        border: 2px solid #e5e5e5;
+        transition: transform 0.35s, color 0.35s, border-color 0.35s, background 0.35s;
+    }
+
+    .faq-plus-active,
+    .faq-active .faq-plus {
+        color: white;
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+        transform: rotate(45deg);
+    }
+
+    /* ── Collapsible content ── */
+    .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+                    padding 0.45s;
+    }
+
+    .faq-content-open,
+    .faq-active .faq-content {
+        max-height: 400px;
+    }
+
+    .faq-content p {
+        font-size: clamp(1rem, 1.8vw, 1.15rem);
+        line-height: 1.85;
+        opacity: 0.65;
+        padding-bottom: 36px;
+        margin: 0;
+    }
+
+    /* ── Hover fill on trigger ── */
+    .faq-trigger:hover .faq-question {
+        color: var(--color-primary);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+        .faq-trigger {
+            padding: 24px 0;
+            gap: 12px;
+        }
+
+        .faq-plus {
+            width: 36px;
+            height: 36px;
+            font-size: 1.4rem;
+        }
+
+        .faq-content p {
+            padding-bottom: 24px;
         }
     }
+</style>
+
+<script>
+    function toggleFaq(trigger) {
+        const item = trigger.closest('.faq-kinetic-item');
+        const content = item.querySelector('.faq-content');
+        const plus = item.querySelector('.faq-plus');
+        const isActive = item.classList.contains('faq-active');
+
+        /* close all */
+        document.querySelectorAll('.faq-kinetic-item').forEach(el => {
+            el.classList.remove('faq-active');
+            el.querySelector('.faq-content').style.maxHeight = '0';
+            const p = el.querySelector('.faq-plus');
+            p.innerText = '+';
+            p.classList.remove('faq-plus-active');
+        });
+
+        /* open clicked (if it was closed) */
+        if (!isActive) {
+            item.classList.add('faq-active');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            plus.innerText = '×';
+            plus.classList.add('faq-plus-active');
+        }
+    }
+
+    /* Init: set the first open item's height correctly */
+    document.addEventListener('DOMContentLoaded', () => {
+        const first = document.querySelector('.faq-kinetic-item.faq-active .faq-content');
+        if (first) first.style.maxHeight = first.scrollHeight + 'px';
+    });
 </script>

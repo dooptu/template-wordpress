@@ -2,7 +2,7 @@
     <div class="container">
         <div class="kinetic-grid" style="margin-bottom: 80px;">
             <div style="grid-column: span 12;">
-                <h2 style="font-size: 5rem; letter-spacing: -3px; color: var(--color-white); line-height: 0.9;">KINETIC
+                <h2 style="font-size: clamp(3rem, 6vw, 5rem); font-family: var(--font-heading); font-weight: 900; letter-spacing: -3px; color: var(--color-white); line-height: 0.9;">KINETIC
                     <br><span style="color: var(--color-primary);">PORTFOLIO</span></h2>
                 <div style="width: 100%; height: 2px; background: var(--color-primary); margin-top: 30px;"></div>
             </div>
@@ -10,80 +10,109 @@
 
         <div class="prj-masonry-kinetic" style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 30px;">
             <!-- Project 1 -->
-            <div class="kinetic-reveal prj-card"
-                style="grid-column: span 7; position: relative; height: 500px; overflow: hidden;">
+            <div class="kinetic-reveal prj-card grid-span-7"
+                style="position: relative; height: 500px; overflow: hidden;">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                     alt="VSIP"
                     style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s;">
-                <div class="prj-info"
-                    style="position: absolute; bottom: 0; left: 0; padding: 40px; background: var(--color-primary); color: white; width: 70%; transform: translateX(-100%); transition: 0.5s;">
+                <div class="prj-info bg-primary"
+                    style="position: absolute; bottom: 0; left: 0; padding: 40px; color: white; width: 80%; max-width: 400px; transform: translateX(-100%); transition: 0.5s;">
                     <span
-                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; opacity: 0.7;">Tổng
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; font-family: var(--font-heading); letter-spacing: 2px; opacity: 0.7;">Tổng
                         Thầu</span>
-                    <h3 style="font-size: 2rem; margin-top: 10px;">Nhà Máy Điện Tử VSIP II</h3>
+                    <h3 style="font-size: 2rem; margin-top: 10px; font-family: var(--font-heading); font-weight: 900;">Nhà Máy Điện Tử VSIP II</h3>
                 </div>
             </div>
 
             <!-- Project 2 -->
-            <div class="kinetic-reveal prj-card"
-                style="grid-column: span 5; position: relative; height: 500px; overflow: hidden;" data-delay="0.2s">
+            <div class="kinetic-reveal prj-card grid-span-5"
+                style="position: relative; height: 500px; overflow: hidden;" data-delay="0.2s">
                 <img src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Logistics"
                     style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s;">
-                <div class="prj-info"
-                    style="position: absolute; bottom: 0; left: 0; padding: 40px; background: var(--color-white); color: black; width: 80%; transform: translateX(-100%); transition: 0.5s;">
+                <div class="prj-info bg-white"
+                    style="position: absolute; bottom: 0; left: 0; padding: 40px; color: var(--color-black); width: 80%; max-width: 400px; transform: translateX(-100%); transition: 0.5s;">
                     <span
-                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; opacity: 0.5;">Kết
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; font-family: var(--font-heading); letter-spacing: 2px; opacity: 0.6;">Kết
                         Cấu Thép</span>
-                    <h3 style="font-size: 1.8rem; margin-top: 10px;">Kho Logistics Thông Minh</h3>
+                    <h3 style="font-size: 1.8rem; margin-top: 10px; font-family: var(--font-heading); font-weight: 900;">Kho Logistics Thông Minh</h3>
                 </div>
             </div>
 
             <!-- Project 3 -->
-            <div class="kinetic-reveal prj-card"
-                style="grid-column: span 4; position: relative; height: 400px; overflow: hidden;">
+            <div class="kinetic-reveal prj-card grid-span-4"
+                style="position: relative; height: 400px; overflow: hidden;">
                 <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                     alt="Rach Bap"
                     style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s;">
-                <div class="prj-info"
-                    style="position: absolute; bottom: 0; left: 0; padding: 30px; background: var(--color-primary); color: white; width: 90%; transform: translateX(-100%); transition: 0.5s;">
+                <div class="prj-info bg-primary"
+                    style="position: absolute; bottom: 0; left: 0; padding: 30px; color: white; width: 90%; max-width: 400px; transform: translateX(-100%); transition: 0.5s;">
                     <span
-                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; opacity: 0.7;">Hạ
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; font-family: var(--font-heading); letter-spacing: 2px; opacity: 0.7;">Hạ
                         Tầng</span>
-                    <h3 style="font-size: 1.5rem; margin-top: 10px;">KCN Rạch Bắp</h3>
+                    <h3 style="font-size: 1.5rem; margin-top: 10px; font-family: var(--font-heading); font-weight: 900;">KCN Rạch Bắp</h3>
                 </div>
             </div>
 
             <!-- Project 4 -->
-            <div class="kinetic-reveal prj-card"
-                style="grid-column: span 8; position: relative; height: 400px; overflow: hidden;" data-delay="0.4s">
+            <div class="kinetic-reveal prj-card grid-span-8"
+                style="position: relative; height: 400px; overflow: hidden;" data-delay="0.4s">
                 <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="My Phuoc"
                     style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s;">
-                <div class="prj-info"
-                    style="position: absolute; bottom: 0; left: 0; padding: 40px; background: var(--color-white); color: black; width: 60%; transform: translateX(-100%); transition: 0.5s;">
+                <div class="prj-info bg-white"
+                    style="position: absolute; bottom: 0; left: 0; padding: 40px; color: var(--color-black); width: 80%; max-width: 400px; transform: translateX(-100%); transition: 0.5s;">
                     <span
-                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; letter-spacing: 2px; opacity: 0.5;">Thiết
+                        style="font-size: 0.8rem; text-transform: uppercase; font-weight: 900; font-family: var(--font-heading); letter-spacing: 2px; opacity: 0.6;">Thiết
                         Kế - Thi Công</span>
-                    <h3 style="font-size: 1.8rem; margin-top: 10px;">Nhà Máy Dệt May Mỹ Phước 3</h3>
+                    <h3 style="font-size: 1.8rem; margin-top: 10px; font-family: var(--font-heading); font-weight: 900;">Nhà Máy Dệt May Mỹ Phước 3</h3>
                 </div>
             </div>
         </div>
 
         <div style="margin-top: 80px; text-align: center;">
-            <div class="btn-kinetic" style="display: inline-block;" onclick="navigate('projects')">View Complete Archive
+            <div class="btn-kinetic" style="display: inline-block; border-color: var(--color-white); color: var(--color-white);" onclick="navigate('projects')">XEM TẤT CẢ DỰ ÁN
             </div>
         </div>
     </div>
 </section>
 
 <style>
+    .grid-span-7 { grid-column: span 7; }
+    .grid-span-5 { grid-column: span 5; }
+    .grid-span-4 { grid-column: span 4; }
+    .grid-span-8 { grid-column: span 8; }
+    .bg-primary { background: var(--color-primary); }
+    .bg-white { background: var(--color-white); }
+
     .prj-card:hover img {
-        filter: grayscale(0);
+        filter: grayscale(0) !important;
         transform: scale(1.1);
     }
 
-    .prj-card:hover .prj-info {
-        transform: translateX(0);
+    .prj-card:hover .prj-info, .prj-card:focus-within .prj-info, .prj-card:active .prj-info {
+        transform: translateX(0) !important;
+    }
+
+    @media (max-width: 991px) {
+        .prj-masonry-kinetic {
+            display: flex !important;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .prj-card {
+            height: 350px !important;
+        }
+
+        .prj-info {
+            padding: 25px !important;
+            transform: translateX(0) !important;
+            width: 85% !important;
+        }
+
+        .prj-card img {
+            filter: grayscale(0) !important;
+        }
     }
 </style>
