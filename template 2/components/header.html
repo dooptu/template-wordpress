@@ -19,20 +19,28 @@
                         style="color: var(--color-primary);">.</span></a>
             </div>
 
-            <nav>
-                <ul style="display: flex; gap: 30px; list-style: none;">
+            <nav class="pill-nav">
+                <ul class="nav-menu" style="display: flex; gap: 30px; list-style: none;">
                     <li><a href="#" onclick="navigate('home')"
-                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Trang
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-black)'">Trang
                             Chủ</a></li>
                     <li><a href="#" onclick="navigate('about')"
-                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Giới
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-black)'">Giới
                             Thiệu</a></li>
                     <li><a href="#" onclick="navigate('services')"
-                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Dịch
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-black)'">Dịch
                             Vụ</a></li>
                     <li><a href="#" onclick="navigate('projects')"
-                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">Dự
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-black)'">Dự
                             Án</a></li>
+                    <li><a href="#" onclick="navigate('blog')"
+                            style="text-decoration: none; color: var(--color-black); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; transition: 0.3s;"
+                            onmouseover="this.style.color='var(--color-primary)'" onmouseout="this.style.color='var(--color-black)'">Tin
+                            Tức</a></li>
                 </ul>
             </nav>
 
@@ -40,6 +48,105 @@
                 <a href="#" onclick="navigate('contact')" class="btn-pill"
                     style="padding: 10px 25px; font-size: 0.85rem;">Liên Hệ <i class="fa-solid fa-arrow-right"></i></a>
             </div>
+
+            <button class="menu-toggle-liquid"
+                style="display: none; background: none; border: none; font-size: 1.5rem; color: var(--color-black); cursor: pointer;">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </div>
 </header>
+
+<style>
+    @media (max-width: 991px) {
+        .header-pill {
+            padding: 10px 25px !important;
+        }
+
+        .pill-nav {
+            position: fixed;
+            top: 80px;
+            right: -120%;
+            width: calc(100% - 40px);
+            max-width: 300px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            z-index: 999;
+        }
+
+        .pill-nav.active {
+            right: 20px;
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            gap: 25px !important;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            font-size: 1rem !important;
+        }
+
+        .menu-toggle-liquid {
+            display: block !important;
+        }
+
+        .logo a {
+            font-size: 1.5rem !important;
+        }
+
+        .header-action {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header-pill {
+            margin: 0 10px;
+        }
+
+        .pill-nav {
+            top: 75px;
+        }
+    }
+</style>
+
+<script>
+    (function () {
+        const toggle = document.querySelector('.menu-toggle-liquid');
+        const nav = document.querySelector('.pill-nav');
+        if (toggle && nav) {
+            toggle.onclick = (e) => {
+                e.stopPropagation();
+                nav.classList.toggle('active');
+                const i = toggle.querySelector('i');
+                i.classList.toggle('fa-bars');
+                i.classList.toggle('fa-xmark');
+            };
+
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                    nav.classList.remove('active');
+                    const i = toggle.querySelector('i');
+                    i.classList.add('fa-bars');
+                    i.classList.remove('fa-xmark');
+                }
+            });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    const i = toggle.querySelector('i');
+                    i.classList.add('fa-bars');
+                    i.classList.remove('fa-xmark');
+                });
+            });
+        }
+    })();
+</script>

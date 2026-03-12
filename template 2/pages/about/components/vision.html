@@ -32,3 +32,39 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .vision-liquid div[style*="display: grid; grid-template-columns: 1.2fr 0.8fr"] {
+            grid-template-columns: 1fr !important;
+            gap: 50px !important;
+        }
+
+        .vision-liquid h2 {
+            font-size: 2.8rem !important;
+        }
+
+        .vision-liquid .liquid-img-wrap {
+            height: 400px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .vision-liquid {
+            border-radius: 40px !important;
+        }
+
+        .vision-liquid h2 {
+            font-size: 2.2rem !important;
+        }
+
+        .vision-liquid p {
+            font-size: 1rem !important;
+        }
+
+        .vision-liquid div[style*="grid-template-columns: 1fr 1fr"] {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+        }
+    }
+</style>

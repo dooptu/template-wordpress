@@ -39,6 +39,8 @@
     </div>
 </section>
 
+</section>
+
 <style>
     @keyframes scroll {
         0% {
@@ -52,5 +54,19 @@
 
     #partner-scroll {
         animation: scroll 30s linear infinite;
+    }
+
+    @media (max-width: 768px) {
+        #partner-scroll {
+            gap: 40px !important;
+        }
+
+        #partner-scroll div {
+            font-size: 1.5rem !important;
+        }
+
+        .partners-liquid {
+            padding: 50px 0 !important;
+        }
     }
 </style>

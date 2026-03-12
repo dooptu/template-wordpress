@@ -1,0 +1,87 @@
+<section class="section-padding blog-list-liquid" style="background: var(--color-bg);">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px;">
+            <!-- Blog Item 1 -->
+            <div class="liquid-card reveal-liquid"
+                style="padding: 0; overflow: hidden; border-radius: 32px; cursor: pointer;"
+                onclick="navigate('blog-detail')">
+                <div
+                    style="height: 250px; background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; position: relative;">
+                    <div
+                        style="position: absolute; bottom: 20px; left: 20px; background: var(--color-primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 800;">
+                        Công Nghệ</div>
+                </div>
+                <div style="padding: 30px;">
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 10px;">12 Tháng 3, 2026
+                    </p>
+                    <h4 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; line-height: 1.4; transition: 0.3s;"
+                        onmouseover="this.style.color='var(--color-primary)'"
+                        onmouseout="this.style.color='var(--color-black)'">Ứng Dụng AI Trong Quản Lý Xây Dựng</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Khám phá cách PTEC
+                        tích hợp trí tuệ nhân tạo để tối ưu hóa tiến độ và đảm bảo an toàn tại công trường...</p>
+                </div>
+            </div>
+
+            <!-- Blog Item 2 -->
+            <div class="liquid-card reveal-liquid"
+                style="padding: 0; overflow: hidden; border-radius: 32px; cursor: pointer;" data-delay="0.2s"
+                onclick="navigate('blog-detail')">
+                <div
+                    style="height: 250px; background: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; position: relative;">
+                    <div
+                        style="position: absolute; bottom: 20px; left: 20px; background: var(--color-primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 800;">
+                        Dự Án</div>
+                </div>
+                <div style="padding: 30px;">
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 10px;">08 Tháng 3, 2026
+                    </p>
+                    <h4 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; line-height: 1.4; transition: 0.3s;"
+                        onmouseover="this.style.color='var(--color-primary)'"
+                        onmouseout="this.style.color='var(--color-black)'">Khởi Công Nhà Máy Logistics Thông Minh Bắc
+                        Ninh</h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Dự án trọng điểm
+                        đánh dấu bước tiến mới của PTEC tại thị trường miền Bắc với quy mô đầu tư khủng...</p>
+                </div>
+            </div>
+
+            <!-- Blog Item 3 -->
+            <div class="liquid-card reveal-liquid"
+                style="padding: 0; overflow: hidden; border-radius: 32px; cursor: pointer;" data-delay="0.4s"
+                onclick="navigate('blog-detail')">
+                <div
+                    style="height: 250px; background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover; position: relative;">
+                    <div
+                        style="position: absolute; bottom: 20px; left: 20px; background: var(--color-primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 800;">
+                        Tuyển Dụng</div>
+                </div>
+                <div style="padding: 30px;">
+                    <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 10px;">01 Tháng 3, 2026
+                    </p>
+                    <h4 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 15px; line-height: 1.4; transition: 0.3s;"
+                        onmouseover="this.style.color='var(--color-primary)'"
+                        onmouseout="this.style.color='var(--color-black)'">Cơ Hội Nghề Nghiệp Cho Kỹ Sư Kết Cấu Thép
+                    </h4>
+                    <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Gia nhập đội ngũ
+                        PTEC để cùng chúng tôi kiến tạo những biểu tượng công nghiệp trên khắp Việt Nam...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @media (max-width: 768px) {
+        .blog-list-liquid div[style*="grid-template-columns"] {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+        }
+
+        .blog-list-liquid .liquid-card {
+            border-radius: 24px !important;
+        }
+
+        .blog-list-liquid .liquid-card h4 {
+            font-size: 1.2rem !important;
+        }
+    }
+</style>

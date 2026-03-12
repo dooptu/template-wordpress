@@ -39,7 +39,9 @@
                 about: 'pages/about/about.html',
                 services: 'pages/services/services.html',
                 projects: 'pages/projects/projects.html',
-                contact: 'pages/contact/contact.html'
+                contact: 'pages/contact/contact.html',
+                blog: 'pages/blog/blog.html',
+                'blog-detail': 'pages/blog-detail/blog-detail.html'
             }
         };
 
@@ -84,11 +86,16 @@
                 if (name === 'cta') {
                     path = 'components/cta.html';
                 } else {
-                    const folder = pageId === 'home' ? 'pages/home/components' :
-                        pageId === 'about' ? 'pages/about/components' :
-                            pageId === 'services' ? 'pages/services/components' :
-                                pageId === 'projects' ? 'pages/projects/components' :
-                                    'pages/contact/components';
+                    const folders = {
+                        'home': 'pages/home/components',
+                        'about': 'pages/about/components',
+                        'services': 'pages/services/components',
+                        'projects': 'pages/projects/components',
+                        'contact': 'pages/contact/components',
+                        'blog': 'pages/blog/components',
+                        'blog-detail': 'pages/blog-detail/components'
+                    };
+                    const folder = folders[pageId] || 'pages/home/components';
                     path = `${folder}/${name}.html`;
                 }
 

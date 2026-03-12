@@ -34,3 +34,35 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .equipment-liquid .about-grid {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+        }
+
+        .equipment-liquid h2 {
+            font-size: 2.5rem !important;
+        }
+
+        .eq-image-wrap .liquid-card {
+            height: 400px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .equipment-liquid h2 {
+            font-size: 2rem !important;
+        }
+
+        .equipment-liquid ul {
+            grid-template-columns: 1fr !important;
+        }
+
+        .eq-image-wrap .liquid-card {
+            height: 300px !important;
+            border-radius: 30px 60px 30px 60px !important;
+        }
+    }
+</style>

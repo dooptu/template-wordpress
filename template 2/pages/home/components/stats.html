@@ -38,6 +38,29 @@
     </div>
 </section>
 
+<style>
+    @media (max-width: 991px) {
+        .stat-num {
+            font-size: 3.5rem !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .stats-liquid {
+            border-radius: 40px !important;
+            margin: 20px 10px !important;
+        }
+
+        .stat-num {
+            font-size: 2.8rem !important;
+        }
+
+        .stats-liquid-grid {
+            gap: 20px !important;
+        }
+    }
+</style>
+
 <script>
     (function () {
         const counters = document.querySelectorAll('.stat-num');

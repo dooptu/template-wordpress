@@ -46,3 +46,38 @@
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 991px) {
+        .about-home-liquid div[style*="display: grid"] {
+            grid-template-columns: 1fr !important;
+            gap: 60px !important;
+        }
+
+        .about-home-liquid h2 {
+            font-size: 2.8rem !important;
+        }
+
+        .about-home-liquid div[style*="height: 600px"] {
+            height: 500px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about-home-liquid {
+            padding: 60px 0 !important;
+        }
+
+        .about-home-liquid h2 {
+            font-size: 2.2rem !important;
+        }
+
+        .about-home-liquid div[style*="margin-bottom: 40px"] {
+            margin-bottom: 30px !important;
+        }
+
+        .about-home-liquid div[style*="height: 500px"] {
+            height: 400px !important;
+        }
+    }
+</style>
