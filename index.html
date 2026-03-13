@@ -248,6 +248,40 @@
             .template-card {
                 height: 500px;
             }
+
+            .disclosure-notice {
+                margin: 0 20px 40px !important;
+                padding: 20px !important;
+                font-size: 0.85rem !important;
+            }
+        }
+
+        /* --- Disclosure Notice Styles --- */
+        .disclosure-notice {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .disclosure-notice i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.8;
+        }
+
+        .disclosure-notice span {
+            color: #fff;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -259,6 +293,20 @@
         <div class="logo">PTEC ARCHITECTURE</div>
         <h1>Design Collection</h1>
     </header>
+
+    <div class="disclosure-notice animate delay-1">
+        <i class="fa-solid fa-circle-info"></i>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <p>
+                <span>Lưu ý:</span> Các logo, tên thương hiệu, nội dung và hình ảnh trong các mẫu thiết kế này sẽ được
+                cập nhật và chỉnh sửa chi tiết sau khi có sự thống nhất cuối cùng.
+            </p>
+            <p>
+                Bố cục, màu sắc, font chữ và kích thước cũng sẽ được điều chỉnh linh hoạt để đảm bảo sự tinh tế và trải
+                nghiệm người dùng tốt nhất.
+            </p>
+        </div>
+    </div>
 
     <div class="showcase-container">
         <!-- Template 1 -->
