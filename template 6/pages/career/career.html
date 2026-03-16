@@ -1,0 +1,43 @@
+<div class="career-page-wrapper">
+    <div id="career-banner-component"></div>
+
+    <!-- Main Content Layout -->
+    <div class="container main-layout">
+        <div id="career-content-component"></div>
+        <div id="career-sidebar-component"></div>
+    </div>
+</div>
+
+<div id="career-script-component"></div>
+
+<style>
+    .career-page-wrapper {
+        background-color: var(--white);
+        padding-bottom: 80px;
+    }
+    
+    .career-page-wrapper .main-layout {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 50px;
+        padding: 60px 0;
+        align-items: flex-start;
+    }
+    
+    @media (max-width: 991px) {
+        .career-page-wrapper .main-layout {
+            grid-template-columns: 1fr;
+            padding: 40px 15px;
+        }
+    }
+</style>
+
+<script>
+    (function() {
+        const basePath = 'pages/career/components/';
+        loadComponent('career-banner-component', basePath + 'career-banner.html');
+        loadComponent('career-sidebar-component', basePath + 'career-sidebar.html');
+        loadComponent('career-content-component', basePath + 'career-content.html');
+        loadComponent('career-script-component', basePath + 'career-script.html');
+    })();
+</script>

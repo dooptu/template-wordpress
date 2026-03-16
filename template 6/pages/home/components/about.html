@@ -1,0 +1,296 @@
+<section class="about-section">
+    <div class="container about-grid-container">
+        <!-- Left: Image Grid (40%) -->
+        <div class="about-image-grid">
+            <div class="grid-item red-box">
+                <span class="about-label">ABOUT US</span>
+            </div>
+            <div class="grid-item globe-top">
+                <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=600&q=80" alt="Tech Network">
+            </div>
+            <div class="grid-item globe-bottom">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80" alt="Global Connectivity">
+            </div>
+        </div>
+
+        <!-- Right: Content Area (60%) -->
+        <div class="about-content">
+            <div class="about-tab-nav">
+                <button class="home-tab-btn active" data-home-tab="overview">TỔNG QUAN</button>
+                <button class="home-tab-btn" data-home-tab="mission">TẦM NHÌN</button>
+                <button class="home-tab-btn" data-home-tab="values">GIÁ TRỊ</button>
+            </div>
+
+            <div class="home-tab-content">
+                <!-- Overview Tab -->
+                <div id="home-overview" class="home-tab-panel active">
+                    <span class="welcome-text">WELCOME</span>
+                    <h2 class="main-heading">PTEC VIỆT NAM</h2>
+                    <p class="body-text">
+                        PTEC Việt Nam là đơn vị tiên phong cung cấp giải pháp hạ tầng khu công nghiệp tổng thể and dịch vụ MEP kỹ thuật cao. Với cam kết về sự xuất sắc and đổi mới, chúng tôi cung cấp hệ thống máy móc and hạ tầng hiện đại, thúc đẩy thế giới tiến lên.
+                    </p>
+                </div>
+
+                <!-- Mission Tab -->
+                <div id="home-mission" class="home-tab-panel">
+                    <span class="welcome-text">SỨ MỆNH</span>
+                    <h2 class="main-heading">Kiến Tạo Giá Trị Bền Vững</h2>
+                    <p class="body-text">
+                        Chúng tôi không ngừng sáng tạo để mang đến những giải pháp kỹ thuật an toàn, hiệu quả. Sứ mệnh của PTEC là trở thành đối tác chiến lược, đồng hành cùng sự phát triển của ngành công nghiệp Việt Nam and vươn tầm quốc tế.
+                    </p>
+                </div>
+
+                <!-- Values Tab -->
+                <div id="home-values" class="home-tab-panel">
+                    <span class="welcome-text">GIÁ TRỊ</span>
+                    <h2 class="main-heading">Tâm - Trí - Tín - Nhân</h2>
+                    <p class="body-text">
+                        Giá trị cốt lõi của PTEC Việt Nam nằm ở sự Tận tâm, Trí tuệ sáng tạo, Uy tín tuyệt đối and tinh thần Nhân văn. Chúng tôi coi con người là tài sản quý giá nhất and là chìa khóa cho mọi sự thành công.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- More Button Link -->
+            <div class="more-container">
+                <a href="#" class="btn-more" onclick="navigate('about')">
+                    <span class="btn-text">XEM CHI TIẾT</span>
+                    <span class="btn-icon"><i class="fas fa-plus"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-section {
+        padding: 100px 0;
+        background-color: var(--white);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-grid-container {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    /* Left: Image Grid */
+    .about-image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 200px;
+        gap: 15px;
+    }
+
+    .grid-item {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .grid-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .red-box {
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 20px;
+    }
+
+    .about-label {
+        color: var(--white);
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+
+    .globe-bottom {
+        grid-column: span 2;
+    }
+
+    /* Right: Content Area */
+    .about-content {
+        position: relative;
+    }
+
+    .abstract-layer {
+        position: absolute;
+        top: -50px;
+        right: -20px;
+        width: 300px;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .text-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    .welcome-text {
+        color: #888;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .main-heading {
+        color: var(--primary-color);
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    .body-text {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+
+    /* Custom More Button */
+    .more-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn-more {
+        display: inline-flex;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .btn-text {
+        background-color: var(--secondary-color);
+        color: var(--black);
+        padding: 12px 30px;
+        transition: background 0.3s ease;
+    }
+
+    .btn-icon {
+        background-color: var(--black);
+        color: var(--white);
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-more:hover .btn-text {
+        background-color: var(--secondary-hover);
+    }
+    
+    /* Home About Tabs */
+    .about-tab-nav {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    .home-tab-btn {
+        background: none;
+        border: none;
+        padding: 5px 15px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #999;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .home-tab-btn:hover {
+        color: var(--primary-color);
+    }
+
+    .home-tab-btn.active {
+        color: var(--brand-green);
+    }
+
+    .home-tab-btn.active::after {
+        content: '';
+        position: absolute;
+        bottom: -11px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--brand-green);
+    }
+
+    .home-tab-content {
+        min-height: 200px;
+    }
+
+    .home-tab-panel {
+        display: none;
+        animation: homeTabFade 0.5s ease forwards;
+    }
+
+    .home-tab-panel.active {
+        display: block;
+    }
+
+    @keyframes homeTabFade {
+        from { opacity: 0; transform: translateX(10px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @media (max-width: 991px) {
+        .about-grid-container {
+            grid-template-columns: 1fr;
+        }
+        .about-image-grid {
+            grid-template-rows: 200px 150px;
+        }
+        .about-tab-nav {
+            justify-content: center;
+        }
+    }
+</style>
+
+<script>
+    (function() {
+        const homeTabs = document.querySelectorAll('.home-tab-btn');
+        const homePanels = document.querySelectorAll('.home-tab-panel');
+
+        homeTabs.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const target = this.getAttribute('data-home-tab');
+
+                // Update Buttons
+                homeTabs.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Update Panels
+                homePanels.forEach(p => {
+                    if (p.id === 'home-' + target) {
+                        p.classList.add('active');
+                    } else {
+                        p.classList.remove('active');
+                    }
+                });
+            });
+        });
+    })();
+</script>

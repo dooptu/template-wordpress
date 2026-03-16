@@ -1,0 +1,317 @@
+<section class="hero-slider" id="main-slider">
+    <!-- Slide 1 -->
+    <div class="slide active">
+        <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=1920&q=80"
+                alt="PTEC Infrastructure">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+            <div class="content-wrapper">
+                <span class="hero-tag">GIẢI PHÁP HẠ TẦNG TOÀN DIỆN</span>
+                <h1 class="hero-heading">KIẾN TẠO HẠ TẦNG<br>& TRẠM BIẾN ÁP</h1>
+                <p class="hero-subheading">PTEC Việt Nam tự hào là đơn vị dẫn đầu trong việc kiến tạo hạ tầng khu công
+                    nghiệp hiện đại, bền vững.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80"
+                alt="MEP Solutions">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+            <div class="content-wrapper">
+                <span class="hero-tag">KỸ THUẬT CHUYÊN SÂU</span>
+                <h1 class="hero-heading">HỆ THỐNG CƠ ĐIỆN<br>& MEP TỔNG THỂ</h1>
+                <p class="hero-subheading">Số hóa quy trình vận hành, tối ưu hiệu suất năng lượng cho mọi công trình
+                    công nghiệp.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80"
+                alt="Construction">
+        </div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+            <div class="content-wrapper">
+                <span class="hero-tag">QUY MÔ & TẦM VÓC</span>
+                <h1 class="hero-heading">XÂY DỰNG NHÀ MÁY<br>& HẠ TẦNG KCN</h1>
+                <p class="hero-subheading">Kiến tạo những dấu ấn công nghiệp vươn tầm thời đại với cam kết tuyệt đối về
+                    chất lượng.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <div class="slider-nav">
+        <div class="nav-arrow prev" onclick="moveSlide(-1)">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="nav-arrow next" onclick="moveSlide(1)">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="slider-dots">
+        <div class="dot active" onclick="gotoSlide(0)"><span>01</span></div>
+        <div class="dot" onclick="gotoSlide(1)"><span>02</span></div>
+        <div class="dot" onclick="gotoSlide(2)"><span>03</span></div>
+    </div>
+</section>
+
+<script>
+    if (typeof moveSlide !== 'function') {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#main-slider .slide');
+        const dots = document.querySelectorAll('#main-slider .dot');
+        const totalSlides = slides.length;
+        let autoPlayInterval;
+
+        window.showSlide = function (n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        };
+
+        window.moveSlide = function (n) {
+            clearInterval(autoPlayInterval);
+            showSlide(currentSlide + n);
+            startAutoPlay();
+        };
+
+        window.gotoSlide = function (n) {
+            clearInterval(autoPlayInterval);
+            showSlide(n);
+            startAutoPlay();
+        };
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 6000);
+        }
+
+        startAutoPlay();
+    }
+</script>
+
+<style>
+    .hero-slider {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        background-color: var(--black);
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .slide.active {
+        opacity: 1;
+        z-index: 2;
+        pointer-events: auto;
+    }
+
+    .slide-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .slide-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.1);
+        transition: transform 10s linear;
+    }
+
+    .slide.active .slide-bg img {
+        transform: scale(1);
+    }
+
+    .slide-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+        z-index: 1;
+    }
+
+    .slide-content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding-top: 80px;
+    }
+
+    .content-wrapper {
+        max-width: 800px;
+    }
+
+    .hero-tag {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 800;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 25px;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all 0.8s ease-out;
+    }
+
+    .hero-heading {
+        font-size: 84px;
+        font-weight: 900;
+        color: var(--white);
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 30px;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all 0.8s ease-out 0.2s;
+    }
+
+    .hero-subheading {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 400;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        max-width: 600px;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all 0.8s ease-out 0.4s;
+    }
+
+    .slide.active .hero-tag,
+    .slide.active .hero-heading,
+    .slide.active .hero-subheading {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .slider-nav {
+        position: absolute;
+        bottom: 80px;
+        right: 15%;
+        display: flex;
+        gap: 5px;
+        z-index: 10;
+    }
+
+    .nav-arrow {
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .nav-arrow:hover {
+        background: var(--secondary-color);
+        color: var(--black);
+        border-color: var(--secondary-color);
+    }
+
+    .slider-dots {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        z-index: 10;
+    }
+
+    .dot {
+        flex: 1;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.5);
+        border-top: 3px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .dot span {
+        font-size: 12px;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.3);
+        letter-spacing: 2px;
+    }
+
+    .dot.active {
+        background: rgba(0, 0, 0, 0.8);
+        border-top-color: var(--secondary-color);
+    }
+
+    .dot.active span {
+        color: var(--secondary-color);
+    }
+
+    @media (max-width: 991px) {
+        .hero-heading {
+            font-size: 56px;
+        }
+
+        .hero-subheading {
+            font-size: 16px;
+        }
+
+        .hero-btns {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-heading {
+            font-size: 42px;
+        }
+
+        .hero-slider {
+            height: 80vh;
+        }
+
+        .slider-nav {
+            right: 5%;
+        }
+    }
+</style>

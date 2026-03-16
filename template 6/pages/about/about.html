@@ -1,0 +1,43 @@
+<div class="about-page-wrapper">
+    <div id="about-banner-component"></div>
+
+    <!-- Main Content Layout -->
+    <div class="container main-layout">
+        <div id="about-content-component"></div>
+        <div id="about-sidebar-component"></div>
+    </div>
+</div>
+
+<div id="about-script-component"></div>
+
+<style>
+    .about-page-wrapper {
+        background-color: var(--white);
+        padding-bottom: 80px;
+    }
+    
+    .about-page-wrapper .main-layout {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 50px;
+        padding: 60px 0;
+        align-items: flex-start;
+    }
+    
+    @media (max-width: 991px) {
+        .about-page-wrapper .main-layout {
+            grid-template-columns: 1fr;
+            padding: 40px 15px;
+        }
+    }
+</style>
+
+<script>
+    (function() {
+        const basePath = 'pages/about/components/';
+        loadComponent('about-banner-component', basePath + 'about-banner.html');
+        loadComponent('about-sidebar-component', basePath + 'about-sidebar.html');
+        loadComponent('about-content-component', basePath + 'about-content.html');
+        loadComponent('about-script-component', basePath + 'about-script.html');
+    })();
+</script>

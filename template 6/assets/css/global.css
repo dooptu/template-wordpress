@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #000080;
+    --primary-hover: #000066;
+    --secondary-color: #ffff00;
+    --secondary-hover: #e6e600;
+    --brand-green: #00a651;
+    --brand-green-hover: #008a44;
+    --white: #ffffff;
+    --black: #000000;
+    --gray-bg: #f8f9fa;
+    --gray-border: #e0e0e0;
+    --footer-bg: #222222;
+    --footer-bottom-bg: #1a1a1a;
+    --footer-text: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --font-main: 'Inter', sans-serif;
+    --container-max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Loader Transition */
+#main-content {
+    min-height: calc(100vh - 150px);
+}
+
+/* Common Page Banner */
+.page-banner {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+.banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,128,0.9) 0%, rgba(0,0,128,0.4) 100%);
+    z-index: 1;
+}
+
+.page-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-title {
+    color: var(--white);
+    font-size: 56px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.breadcrumb {
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.breadcrumb a {
+    color: var(--secondary-color);
+}
+
+.breadcrumb a:hover {
+    color: var(--white);
+}
+
+.breadcrumb span {
+    margin: 0 12px;
+    opacity: 0.5;
+}
+
+/* Standard Main Layout (Sidebar Right) */
+.main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 40px;
+    padding: 80px 0;
+}
+
+@media (max-width: 991px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+        padding: 40px 0;
+    }
+}

@@ -1,0 +1,128 @@
+<!-- About Sidebar -->
+<aside class="sidebar about-sidebar">
+    <div class="sidebar-widget">
+        <h3 class="widget-title">GIỚI THIỆU</h3>
+        <nav class="sidebar-nav">
+            <ul id="about-sidebar-menu">
+                <li class="active" data-section="intro">
+                    <a href="javascript:void(0)" onclick="switchAboutTab('intro')">Tổng quan công ty <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li data-section="vision">
+                    <a href="javascript:void(0)" onclick="switchAboutTab('vision')">Tầm nhìn - Sứ mệnh <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li data-section="values">
+                    <a href="javascript:void(0)" onclick="switchAboutTab('values')">Giá trị cốt lõi <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li data-section="founder">
+                    <a href="javascript:void(0)" onclick="switchAboutTab('founder')">Thông điệp sáng lập <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li data-section="team">
+                    <a href="javascript:void(0)" onclick="switchAboutTab('team')">Đội ngũ chuyên gia <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li data-section="org-chart">
+                    <a href="javascript:void(0)" onclick="switchAboutTab('org-chart')">Sơ đồ tổ chức <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li data-section="history">
+                    <a href="javascript:void(0)" onclick="switchAboutTab('history')">Lịch sử phát triển <i class="fas fa-chevron-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contact/CTA widget like news -->
+    <div class="sidebar-widget cta-widget">
+        <div class="cta-inner">
+            <h4>BẠN CẦN TƯ VẤN?</h4>
+            <p>Liên hệ hotline để được hỗ trợ 24/7 về các giải pháp hạ tầng and MEP.</p>
+            <a href="tel:0909123456" class="btn-sidebar-cta">0909.123.456</a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    .about-sidebar .sidebar-widget {
+        margin-bottom: 40px;
+    }
+
+    .about-sidebar .widget-title {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    .about-sidebar .widget-title::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--brand-green);
+    }
+
+    .about-sidebar .sidebar-nav li {
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .about-sidebar .sidebar-nav a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555;
+        transition: all 0.3s ease;
+    }
+
+    .about-sidebar .sidebar-nav a i {
+        font-size: 10px;
+        opacity: 0.3;
+        transition: transform 0.3s ease;
+    }
+
+    .about-sidebar .sidebar-nav li.active a,
+    .about-sidebar .sidebar-nav a:hover {
+        color: var(--brand-green);
+    }
+
+    .about-sidebar .sidebar-nav li.active a i {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+
+    /* CTA Widget styling match news-sidebar */
+    .cta-widget {
+        background-color: var(--primary-color);
+        padding: 30px;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .cta-inner h4 {
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: var(--secondary-color);
+    }
+
+    .cta-inner p {
+        font-size: 13px;
+        margin-bottom: 20px;
+        opacity: 0.9;
+    }
+
+    .btn-sidebar-cta {
+        display: block;
+        background-color: var(--white);
+        color: var(--primary-color);
+        padding: 12px;
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+</style>

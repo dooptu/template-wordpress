@@ -1,0 +1,110 @@
+<!-- Library Sidebar -->
+<aside class="sidebar library-sidebar">
+    <div class="sidebar-widget">
+        <h3 class="widget-title">TÀI LIỆU</h3>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active">
+                    <a href="javascript:void(0)">Danh mục tài liệu <i class="fas fa-chevron-right"></i></a>
+                </li>
+                <li><a href="javascript:void(0)" onclick="navigate('news')">Tin tức & Sự kiện <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="javascript:void(0)" onclick="navigate('projects')">Dự án thực tế <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="javascript:void(0)" onclick="navigate('about')">Hồ sơ công ty <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contact/CTA widget like news -->
+    <div class="sidebar-widget cta-widget">
+        <div class="cta-inner">
+            <h4>HỖ TRỢ TRỰC TUYẾN</h4>
+            <div style="font-size: 13px; line-height: 1.6; margin-bottom: 20px;">
+                <p><i class="fas fa-phone-alt" style="color: var(--secondary-color); margin-right: 8px;"></i> 0909 123 456</p>
+                <p><i class="fas fa-envelope" style="color: var(--secondary-color); margin-right: 8px;"></i> info@ptec.vn</p>
+            </div>
+            <a href="tel:0909123456" class="btn-sidebar-cta">LIÊN HỆ NGAY</a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    .library-sidebar .sidebar-widget {
+        margin-bottom: 40px;
+    }
+
+    .library-sidebar .widget-title {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    .library-sidebar .widget-title::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--brand-green);
+    }
+
+    .library-sidebar .sidebar-nav li {
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .library-sidebar .sidebar-nav a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: #555;
+        transition: all 0.3s ease;
+    }
+
+    .library-sidebar .sidebar-nav a i {
+        font-size: 10px;
+        opacity: 0.3;
+        transition: transform 0.3s ease;
+    }
+
+    .library-sidebar .sidebar-nav li.active a,
+    .library-sidebar .sidebar-nav a:hover {
+        color: var(--brand-green);
+    }
+
+    .library-sidebar .sidebar-nav li.active a i {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+
+    /* CTA Widget styling match news-sidebar */
+    .cta-widget {
+        background-color: var(--primary-color);
+        padding: 30px;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .cta-inner h4 {
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: var(--secondary-color);
+    }
+
+    .btn-sidebar-cta {
+        display: block;
+        background-color: var(--white);
+        color: var(--primary-color);
+        padding: 12px;
+        font-weight: 800;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+</style>

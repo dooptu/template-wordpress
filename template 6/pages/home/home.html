@@ -1,0 +1,27 @@
+<div id="hero-section"></div>
+<div id="about-section"></div>
+<div id="sectors-section"></div>
+<div id="projects-section"></div>
+<div id="news-section"></div>
+<div id="partners-section"></div>
+
+<script>
+    (function() {
+        async function initHomeComponents() {
+            // Wait for loadComponent to be available in global scope (from index.html)
+            if (typeof loadComponent === 'function') {
+                await loadComponent('hero-section', 'pages/home/components/hero.html');
+                await loadComponent('about-section', 'pages/home/components/about.html');
+                await loadComponent('sectors-section', 'pages/home/components/sectors.html');
+                await loadComponent('projects-section', 'pages/home/components/projects.html');
+                await loadComponent('news-section', 'pages/home/components/news.html');
+                await loadComponent('partners-section', 'pages/home/components/partners.html');
+            } else {
+                console.warn('loadComponent not ready, retrying home init...');
+                setTimeout(initHomeComponents, 50);
+            }
+        }
+        initHomeComponents();
+    })();
+</script>
+

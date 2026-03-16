@@ -1,0 +1,203 @@
+<div class="header-container">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="header-left">
+                <a href="/" class="logo" onclick="event.preventDefault(); navigate('home')">
+                    <span class="logo-p">P</span><span class="logo-tec">TEC</span><span class="logo-dot">.</span>
+                </a>
+            </div>
+
+            <div class="header-center">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="language-switcher">
+                    <div class="lang-selected">
+                        <span>Tiếng Việt</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <p class="phone">Hotline: 0909 123 456</p>
+                    <p class="email">info@ptec.vn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="container nav-bar-inner">
+            <ul class="nav-menu">
+                <li><a href="#" onclick="navigate('home')">Trang chủ</a></li>
+                <li><a href="#" onclick="navigate('about')">Giới thiệu</a></li>
+                <li><a href="#" onclick="navigate('product')">Sản phẩm</a></li>
+                <li><a href="#" onclick="navigate('news')">Tin tức</a></li>
+                <li><a href="#" onclick="navigate('projects')">Dự án</a></li>
+                <li><a href="#" onclick="navigate('career')">Tuyển dụng</a></li>
+                <li><a href="#" onclick="navigate('library')">Tài liệu</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<style>
+    /* Header Container */
+    .header-container {
+        width: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1000;
+    }
+
+    /* Top Bar */
+    .top-bar {
+        background-color: var(--white);
+        padding: 20px 0;
+        border-bottom: 1px solid var(--gray-border);
+    }
+
+    .top-bar-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Logo Styling */
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+        position: relative;
+        color: #333;
+    }
+
+    .logo-p {
+        color: var(--primary-color);
+        font-weight: 900;
+    }
+
+    .logo-tec {
+        color: var(--primary-color);
+    }
+
+    .logo-dot {
+        color: var(--secondary-color);
+        font-weight: 900;
+    }
+
+    /* Search Box */
+    .search-box {
+        display: flex;
+        background: #f0f0f0;
+        border: 1px solid var(--gray-border);
+        border-radius: 4px; /* Bo góc nhẹ */
+        padding: 5px 15px;
+        width: 350px;
+    }
+
+    .search-box input {
+        border: none;
+        background: transparent;
+        padding: 8px 0;
+        flex: 1;
+        outline: none;
+        color: var(--black);
+        font-size: 14px;
+    }
+
+    .search-box button {
+        border: none;
+        background: transparent;
+        color: var(--primary-color);
+        cursor: pointer;
+        padding-left: 10px;
+    }
+
+    /* Language Switcher */
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .language-switcher {
+        font-size: 14px;
+        color: var(--text-primary);
+        cursor: pointer;
+        border-right: 1px solid var(--gray-border);
+        padding-right: 20px;
+    }
+
+    .lang-selected {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .contact-info .phone, .contact-info .email {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+        background-color: var(--primary-color); /* Navy Blue (#000080) replacing Green */
+    }
+
+    .nav-bar-inner {
+        display: flex;
+        justify-content: flex-end; /* Right-aligned */
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu li {
+        position: relative;
+    }
+
+    .nav-menu li:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 25%;
+        height: 50%;
+        width: 1px;
+        background-color: rgba(255,255,255,0.3); /* Divider line */
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px 20px;
+        color: var(--white);
+        font-weight: 500;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+
+    .nav-menu a:hover {
+        background-color: rgba(255,255,255,0.1);
+        color: var(--secondary-color);
+    }
+</style>

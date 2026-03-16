@@ -1,0 +1,38 @@
+<script>
+    function switchAboutTab(sectionId) {
+        // Update URL/Tab Content
+        const panes = document.querySelectorAll('.about-tab-pane');
+        panes.forEach(pane => pane.classList.remove('active'));
+        const targetPane = document.getElementById('section-' + sectionId);
+        if (targetPane) targetPane.classList.add('active');
+
+        // Update Sidebar
+        const menuItems = document.querySelectorAll('.sidebar-nav li');
+        
+        menuItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-section') === sectionId) {
+                item.classList.add('active');
+            }
+        });
+
+        // Update breadcrumb and title
+        const clickedItem = document.querySelector(`.sidebar-nav li[data-section="${sectionId}"] a`);
+        if (clickedItem) {
+            const sectionName = clickedItem.innerText;
+            const breadcrumbEl = document.getElementById('breadcrumb-section');
+            const titleEl = document.getElementById('about-section-title');
+            
+            if (breadcrumbEl) breadcrumbEl.innerText = sectionName.toUpperCase();
+            if (titleEl) titleEl.innerText = sectionName.toUpperCase();
+        }
+
+        const mainContent = document.querySelector('.about-main-content');
+        if (mainContent) {
+            window.scrollTo({
+                top: mainContent.offsetTop - 150,
+                behavior: 'smooth'
+            });
+        }
+    }
+</script>

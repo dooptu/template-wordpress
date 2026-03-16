@@ -1,0 +1,200 @@
+<!-- Library Content -->
+<div class="library-main-content">
+    <nav class="breadcrumb">
+        <a href="#" onclick="navigate('home')">TRANG CHỦ</a> / <a href="#">TÀI LIỆU</a> / <span>DANH MỤC TÀI LIỆU</span>
+    </nav>
+
+    <h2 class="category-title">DANH MỤC TÀI LIỆU</h2>
+
+    <div class="resource-grid">
+        <!-- Profile Section -->
+        <div class="resource-item full-width">
+            <div class="pdf-card horizontal">
+                <div class="pdf-thumb">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=80" alt="Profile PTEC">
+                </div>
+                <div class="pdf-details">
+                    <h3 class="res-title">HỒ SƠ NĂNG LỰC PTEC VIỆT NAM</h3>
+                    <p class="res-desc">Tài liệu giới thiệu chi tiết về năng lực thi công, đội ngũ chuyên gia and các dự án tiêu biểu. Bản cập nhật mới nhất 2026.</p>
+                    <div class="res-actions">
+                        <a href="#" class="btn-res"><i class="fas fa-eye"></i> XEM ONLINE</a>
+                        <a href="#" class="btn-res secondary"><i class="fas fa-download"></i> TẢI XUỐNG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catalogue Grid -->
+        <div class="catalogue-items">
+            <div class="pdf-mini-card">
+                <div class="mini-thumb">
+                    <img src="https://images.unsplash.com/photo-1586075010682-2a443936994c?auto=format&fit=crop&w=400&q=80" alt="Catalogue">
+                </div>
+                <div class="mini-info">
+                    <h4>KẾT CẤU THÉP & NHÀ XƯỞNG</h4>
+                    <a href="#" class="dl-link">Download PDF <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="pdf-mini-card">
+                <div class="mini-thumb">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" alt="Catalogue">
+                </div>
+                <div class="mini-info">
+                    <h4>HỆ THỐNG CƠ ĐIỆN MEP</h4>
+                    <a href="#" class="dl-link">Download PDF <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="pdf-mini-card">
+                <div class="mini-thumb">
+                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=400&q=80" alt="Catalogue">
+                </div>
+                <div class="mini-info">
+                    <h4>PHÒNG CHÁY CHỮA CHÁY</h4>
+                    <a href="#" class="dl-link">Download PDF <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+            <div class="pdf-mini-card">
+                <div class="mini-thumb">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80" alt="Catalogue">
+                </div>
+                <div class="mini-info">
+                    <h4>GIẢI PHÁP PHÒNG SẠCH</h4>
+                    <a href="#" class="dl-link">Download PDF <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .library-main-content .breadcrumb {
+        font-size: 11px;
+        font-weight: 700;
+        color: #999;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    .library-main-content .breadcrumb a {
+        color: #999;
+    }
+
+    .library-main-content .breadcrumb span {
+        color: var(--primary-color);
+    }
+
+    .library-main-content .category-title {
+        color: var(--primary-color);
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--primary-color);
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .resource-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .pdf-card.horizontal {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+        border: 1px solid #eee;
+        padding: 20px;
+        background: #f9f9f9;
+        align-items: center;
+    }
+
+    .pdf-thumb img {
+        width: 100%;
+        border-radius: 4px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .res-title {
+        color: var(--primary-color);
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .res-desc {
+        color: #666;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .res-actions {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn-res {
+        padding: 10px 20px;
+        background: var(--primary-color);
+        color: white;
+        font-weight: 700;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+
+    .btn-res.secondary {
+        background: var(--brand-green);
+    }
+
+    .catalogue-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .pdf-mini-card {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #eee;
+        transition: all 0.3s ease;
+    }
+
+    .pdf-mini-card:hover {
+        border-color: var(--primary-color);
+        transform: translateY(-3px);
+    }
+
+    .mini-thumb {
+        width: 80px;
+        flex-shrink: 0;
+    }
+
+    .mini-thumb img {
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    .mini-info h4 {
+        font-size: 14px;
+        color: var(--primary-color);
+        margin-bottom: 8px;
+    }
+
+    .dl-link {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--brand-green);
+        text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+        .pdf-card.horizontal {
+            grid-template-columns: 1fr;
+        }
+        .catalogue-items {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,125 @@
+<!-- Career Sidebar -->
+<aside class="sidebar career-sidebar">
+    <div class="sidebar-widget">
+        <h3 class="widget-title">TẠI SAO CHỌN PTEC?</h3>
+        <div class="sidebar-benefit-list">
+            <div class="benefit-item">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                    <h4>Cơ hội thăng tiến</h4>
+                    <p>Lộ trình phát triển nghề nghiệp rõ ràng cho mọi vị trí.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-heartbeat"></i>
+                <div>
+                    <h4>Chế độ đãi ngộ</h4>
+                    <p>Bảo hiểm đầy đủ, thưởng lễ tết and du lịch hàng năm.</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <h4>Đào tạo chuyên sâu</h4>
+                    <p>Hỗ trợ học phí các khóa học nâng cao nghiệp vụ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact/CTA widget like news -->
+    <div class="sidebar-widget cta-widget">
+        <div class="cta-inner">
+            <h4>ỨNG TUYỂN NHANH</h4>
+            <p>Gửi CV của bạn về bộ phận Nhân sự để được phản hồi trong vòng 48h.</p>
+            <a href="mailto:hr@ptec.vn" class="btn-sidebar-cta">hr@ptec.vn</a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    .career-sidebar .sidebar-widget {
+        margin-bottom: 40px;
+    }
+
+    .career-sidebar .widget-title {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    .career-sidebar .widget-title::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--brand-green);
+    }
+
+    .benefit-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .benefit-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .benefit-item i {
+        font-size: 20px;
+        color: var(--brand-green);
+        margin-top: 3px;
+    }
+
+    .benefit-item h4 {
+        font-size: 14px;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    .benefit-item p {
+        font-size: 13px;
+        color: #777;
+        line-height: 1.4;
+    }
+
+    /* CTA Widget styling match news-sidebar */
+    .cta-widget {
+        background-color: var(--primary-color);
+        padding: 30px;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .cta-inner h4 {
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: var(--secondary-color);
+    }
+
+    .cta-inner p {
+        font-size: 13px;
+        margin-bottom: 20px;
+        opacity: 0.9;
+    }
+
+    .btn-sidebar-cta {
+        display: block;
+        background-color: var(--white);
+        color: var(--primary-color);
+        padding: 12px;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: lowercase;
+    }
+</style>

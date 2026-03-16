@@ -1,0 +1,43 @@
+<div class="library-page-wrapper">
+    <div id="library-banner-component"></div>
+
+    <!-- Main Content Layout -->
+    <div class="container main-layout">
+        <div id="library-content-component"></div>
+        <div id="library-sidebar-component"></div>
+    </div>
+</div>
+
+<div id="library-script-component"></div>
+
+<style>
+    .library-page-wrapper {
+        background-color: var(--white);
+        padding-bottom: 80px;
+    }
+    
+    .library-page-wrapper .main-layout {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 50px;
+        padding: 60px 0;
+        align-items: flex-start;
+    }
+    
+    @media (max-width: 991px) {
+        .library-page-wrapper .main-layout {
+            grid-template-columns: 1fr;
+            padding: 40px 15px;
+        }
+    }
+</style>
+
+<script>
+    (function() {
+        const basePath = 'pages/library/components/';
+        loadComponent('library-banner-component', basePath + 'library-banner.html');
+        loadComponent('library-sidebar-component', basePath + 'library-sidebar.html');
+        loadComponent('library-content-component', basePath + 'library-content.html');
+        loadComponent('library-script-component', basePath + 'library-script.html');
+    })();
+</script>

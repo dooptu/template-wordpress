@@ -1,0 +1,183 @@
+<footer class="main-footer">
+    <div class="container footer-top">
+        <div class="footer-grid">
+            <!-- Column 1: Identity -->
+            <div class="footer-column identity-col">
+                <div class="footer-logo">
+                    <span class="logo-p">P</span><span class="logo-tec">TEC</span><span class="logo-dot">.</span>
+                </div>
+                <p class="footer-motto">Mang đến giải pháp xây dựng công nghiệp thông minh, bền vững và hiệu quả cao.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="social-icon"><i class="fas fa-comment"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="dmca-badge">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=8e0019dd-8f43-41c3-a3d1-fb6d27ca5432" alt="DMCA.com Protection Status">
+                </div>
+            </div>
+
+            <!-- Column 2: Hanoi HQ -->
+            <div class="footer-column address-col">
+                <h3 class="col-title">THÔNG TIN LIÊN HỆ</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Lô F6, KCN Rạch Bắp, Bến Cát, Bình Dương</li>
+                    <li><i class="fas fa-phone"></i> 0909 123 456</li>
+                    <li><i class="fas fa-envelope"></i> info@ptec.vn</li>
+                </ul>
+            </div>
+
+            <div class="footer-column address-col divider-left">
+                <h3 class="col-title">DỊCH VỤ</h3>
+                <ul class="contact-list">
+                    <li><a href="#" style="color: inherit;" onclick="navigate('library')">Hồ sơ năng lực</a></li>
+                    <li><a href="#" style="color: inherit;" onclick="navigate('projects')">Dự án tiêu biểu</a></li>
+                    <li><a href="#" style="color: inherit;" onclick="navigate('news')">Tin tức & sự kiện</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column address-col divider-left">
+                <h3 class="col-title">VỀ PTEC</h3>
+                <ul class="contact-list">
+                    <li><a href="#" style="color: inherit;" onclick="navigate('about')">Giới thiệu chung</a></li>
+                    <li><a href="#" style="color: inherit;">Tầm nhìn - Sứ mệnh</a></li>
+                    <li><a href="#" style="color: inherit;">Giá trị cốt lõi</a></li>
+                    <li><a href="#" style="color: inherit;" onclick="navigate('career')">Tuyển dụng</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>Copyright 2026 © by PTEC VIỆT NAM</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .main-footer {
+        background-color: var(--footer-bg);
+        color: var(--footer-text);
+        padding: 80px 0 0;
+        font-size: 14px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 60px;
+    }
+
+    .col-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .footer-logo {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .footer-logo .logo-p { color: var(--white); }
+    .footer-logo .logo-tec { color: var(--secondary-color); }
+    .footer-logo .logo-dot { color: var(--secondary-color); }
+
+    .footer-motto {
+        color: #aaa;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        background: var(--secondary-color);
+        color: var(--black);
+    }
+
+    .contact-list li {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 15px;
+        color: #ddd;
+        line-height: 1.5;
+    }
+
+    .contact-list li i {
+        color: var(--secondary-color);
+        margin-top: 3px;
+        width: 15px;
+    }
+
+    .divider-left {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .divider-left::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 80%;
+        width: 1px;
+        background: rgba(255,255,255,0.1);
+    }
+
+    .footer-bottom {
+        background-color: var(--footer-bottom-bg);
+        padding: 20px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-bottom p {
+        color: #777;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    @media (max-width: 1199px) {
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        .divider-left {
+            padding-left: 0;
+        }
+        .divider-left::before {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTEC Việt Nam | Kiến tạo hạ tầng - Nâng tầm công nghiệp</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+        <!-- Content will be loaded here -->
+    </main>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script>
+        async function loadComponent(id, path) {
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                const container = document.getElementById(id);
+                if (container) {
+                    container.innerHTML = html;
+                    const scripts = container.querySelectorAll('script');
+                    scripts.forEach(script => {
+                        const newScript = document.createElement('script');
+                        if (script.src) {
+                            newScript.src = script.src;
+                        } else {
+                            newScript.textContent = script.textContent;
+                        }
+                        document.body.appendChild(newScript);
+                    });
+                }
+            } catch (error) {
+                console.error('System Error Loading Component:', path, error);
+            }
+        }
+
+        async function navigate(page) {
+            const main = document.getElementById('main-content');
+            main.style.opacity = '0';
+
+            setTimeout(async () => {
+                const path = `pages/${page}/${page}.html`;
+                await loadComponent('main-content', path);
+                main.style.opacity = '1';
+                window.scrollTo(0, 0);
+            }, 300);
+        }
+
+        window.viewNewsDetail = function(title, date, cat, img, excerpt) {
+            sessionStorage.setItem('newsDetail', JSON.stringify({ title, date, cat, img, excerpt }));
+            navigate('news-detail');
+        };
+
+        // Global Image Fallback Handler
+        window.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.target.src = 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80';
+            }
+        }, true);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'components/header.html');
+            loadComponent('footer-placeholder', 'components/footer.html'); 
+            navigate('home');
+        });
+    </script>
+    <style>
+        #main-content {
+            transition: opacity 0.3s ease;
+            min-height: 100vh;
+        }
+    </style>
+</body>
+
+</html>

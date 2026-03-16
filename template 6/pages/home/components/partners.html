@@ -1,0 +1,118 @@
+<section class="partners-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">ĐỐI TÁC</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="partners-wrapper">
+            <div class="partners-track">
+                <!-- Partner Names (Looping) -->
+                <div class="partner-logo"><span>EVN</span></div>
+                <div class="partner-logo"><span>SYNOPEX</span></div>
+                <div class="partner-logo"><span>FOSTER</span></div>
+                <div class="partner-logo"><span>HONDA</span></div>
+                <div class="partner-logo"><span>TECHON</span></div>
+                <div class="partner-logo"><span>SAMSUNG</span></div>
+                <div class="partner-logo"><span>VINGROUP</span></div>
+                <div class="partner-logo"><span>LG ELECTRONICS</span></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="partner-logo"><span>EVN</span></div>
+                <div class="partner-logo"><span>SYNOPEX</span></div>
+                <div class="partner-logo"><span>FOSTER</span></div>
+                <div class="partner-logo"><span>HONDA</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .partners-section {
+        padding: 60px 0;
+        background-color: var(--white);
+        border-top: 1px solid var(--gray-border);
+    }
+
+    .partners-section .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .partners-section .section-title {
+        color: var(--primary-color);
+        font-size: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .partners-section .title-underline {
+        width: 60px;
+        height: 3px;
+        background-color: var(--secondary-color);
+        margin: 0 auto;
+    }
+
+    .partners-wrapper {
+        overflow: hidden;
+        padding: 10px 0;
+    }
+
+    .partners-track {
+        display: flex;
+        gap: 20px;
+        animation: scroll 30s linear infinite;
+        width: max-content;
+    }
+
+    .partner-logo {
+        width: 200px;
+        height: 80px;
+        background: var(--white);
+        border: 1px solid var(--gray-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        transition: all 0.3s ease;
+        user-select: none;
+    }
+
+    .partner-logo span {
+        font-size: 18px;
+        font-weight: 700;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .partner-logo:hover {
+        border-color: var(--primary-color);
+        background-color: var(--primary-color);
+    }
+
+    .partner-logo:hover span {
+        color: var(--secondary-color);
+        transform: scale(1.1);
+    }
+
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-200px * 8 - 20px * 8)); }
+    }
+
+    @media (max-width: 768px) {
+        .partner-logo {
+            width: 160px;
+            height: 60px;
+        }
+        .partner-logo span {
+            font-size: 14px;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-160px * 8 - 20px * 8)); }
+        }
+    }
+</style>
