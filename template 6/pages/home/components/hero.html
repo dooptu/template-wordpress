@@ -69,42 +69,51 @@
 </section>
 
 <script>
-    if (typeof moveSlide !== 'function') {
+    (function() {
+        // Clear old interval if it exists to avoid memory leaks on SPA navigation
+        if (window.heroAutoPlayInterval) {
+            clearInterval(window.heroAutoPlayInterval);
+        }
+
         let currentSlide = 0;
-        const slides = document.querySelectorAll('#main-slider .slide');
-        const dots = document.querySelectorAll('#main-slider .dot');
-        const totalSlides = slides.length;
-        let autoPlayInterval;
+        const sliderWrapper = document.getElementById('main-slider');
+        if (!sliderWrapper) return;
 
         window.showSlide = function (n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
+            // Fetch fresh DOM elements in case the component was reloaded
+            const freshSlides = document.querySelectorAll('#main-slider .slide');
+            const freshDots = document.querySelectorAll('#main-slider .dot');
+            if (freshSlides.length === 0) return;
 
-            currentSlide = (n + totalSlides) % totalSlides;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
+            freshSlides.forEach(slide => slide.classList.remove('active'));
+            freshDots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlide = (n + freshSlides.length) % freshSlides.length;
+            freshSlides[currentSlide].classList.add('active');
+            freshDots[currentSlide].classList.add('active');
         };
 
         window.moveSlide = function (n) {
-            clearInterval(autoPlayInterval);
-            showSlide(currentSlide + n);
-            startAutoPlay();
+            if (window.heroAutoPlayInterval) clearInterval(window.heroAutoPlayInterval);
+            window.showSlide(currentSlide + n);
+            window.startAutoPlay();
         };
 
         window.gotoSlide = function (n) {
-            clearInterval(autoPlayInterval);
-            showSlide(n);
-            startAutoPlay();
+            if (window.heroAutoPlayInterval) clearInterval(window.heroAutoPlayInterval);
+            window.showSlide(n);
+            window.startAutoPlay();
         };
 
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(() => {
-                showSlide(currentSlide + 1);
+        window.startAutoPlay = function() {
+            if (window.heroAutoPlayInterval) clearInterval(window.heroAutoPlayInterval);
+            window.heroAutoPlayInterval = setInterval(() => {
+                window.showSlide(currentSlide + 1);
             }, 6000);
         }
 
-        startAutoPlay();
-    }
+        window.startAutoPlay();
+    })();
 </script>
 
 <style>

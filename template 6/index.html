@@ -55,13 +55,17 @@
             if (page === 'career-detail') activeMenu = 'career';
 
             // Set active class in Header Nav
-            const navLinks = document.querySelectorAll('#mainNav .nav-list a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(`navigate('${activeMenu}')`)) {
-                    link.classList.add('active');
-                }
-            });
+            const nav = document.getElementById('mainNav');
+            if (nav) {
+                nav.classList.remove('open'); // Close mobile menu if open
+                const navLinks = nav.querySelectorAll('.nav-list a');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(`navigate('${activeMenu}')`)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
 
             setTimeout(async () => {
                 const path = `pages/${page}/${page}.html`;
