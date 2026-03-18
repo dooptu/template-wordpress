@@ -4,6 +4,10 @@
         <div class="about-image-grid">
             <div class="grid-item red-box">
                 <span class="about-label">ABOUT US</span>
+                <div class="exp-badge">
+                    <span class="exp-num">15+</span>
+                    <span class="exp-text">Năm kinh nghiệm</span>
+                </div>
             </div>
             <div class="grid-item globe-top">
                 <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=600&q=80" alt="Tech Network">
@@ -16,9 +20,15 @@
         <!-- Right: Content Area (60%) -->
         <div class="about-content">
             <div class="about-tab-nav">
-                <button class="home-tab-btn active" data-home-tab="overview">TỔNG QUAN</button>
-                <button class="home-tab-btn" data-home-tab="mission">TẦM NHÌN</button>
-                <button class="home-tab-btn" data-home-tab="values">GIÁ TRỊ</button>
+                <button class="home-tab-btn active" data-home-tab="overview">
+                    <i class="fas fa-info-circle"></i> TỔNG QUAN
+                </button>
+                <button class="home-tab-btn" data-home-tab="mission">
+                    <i class="fas fa-bullseye"></i> TẦM NHÌN
+                </button>
+                <button class="home-tab-btn" data-home-tab="values">
+                    <i class="fas fa-gem"></i> GIÁ TRỊ
+                </button>
             </div>
 
             <div class="home-tab-content">
@@ -49,6 +59,22 @@
                     </p>
                 </div>
             </div>
+
+            <!-- Stats Counter Section -->
+            <div class="about-stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Dự án hoàn thành</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Đối tác chiến lược</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Hỗ trợ kỹ thuật</span>
+                </div>
+            </div>
             
             <!-- More Button Link -->
             <div class="more-container">
@@ -63,10 +89,24 @@
 
 <style>
     .about-section {
-        padding: 100px 0;
+        padding: 120px 0;
         background-color: var(--white);
         position: relative;
         overflow: hidden;
+    }
+
+    /* Decorative Watermark */
+    .about-section::before {
+        content: 'PTEC';
+        position: absolute;
+        top: 10%;
+        right: -5%;
+        font-size: 200px;
+        font-weight: 900;
+        color: rgba(0,0,0,0.03);
+        z-index: 0;
+        pointer-events: none;
+        user-select: none;
     }
 
     .about-grid-container {
@@ -113,6 +153,35 @@
         font-size: 24px;
         font-weight: 800;
         letter-spacing: 2px;
+        opacity: 0.5;
+    }
+
+    .exp-badge {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: var(--secondary-color);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+        z-index: 5;
+    }
+
+    .exp-num {
+        font-size: 36px;
+        font-weight: 900;
+        color: var(--primary-color);
+        line-height: 1;
+    }
+
+    .exp-text {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-transform: uppercase;
+        margin-top: 5px;
     }
 
     .globe-bottom {
@@ -160,7 +229,36 @@
         color: #555;
         font-size: 16px;
         line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    /* Stats Grid */
+    .about-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
         margin-bottom: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stat-number {
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+        color: #777;
+        font-weight: 600;
+        text-transform: uppercase;
     }
 
     /* Custom More Button */
@@ -224,8 +322,13 @@
         color: var(--primary-color);
     }
 
+    .home-tab-btn i {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+
     .home-tab-btn.active {
-        color: var(--brand-green);
+        color: var(--primary-color);
     }
 
     .home-tab-btn.active::after {
@@ -235,7 +338,7 @@
         left: 0;
         width: 100%;
         height: 3px;
-        background-color: var(--brand-green);
+        background-color: var(--primary-color);
     }
 
     .home-tab-content {

@@ -4,7 +4,7 @@
         <div class="container top-bar-inner">
             <div class="header-left">
                 <a href="/" class="logo" onclick="event.preventDefault(); navigate('home')">
-                    <span class="logo-p">P</span><span class="logo-tec">TEC</span><span class="logo-dot">.</span>
+                    <img src="assets/img/logo.png" alt="PTEC Logo">
                 </a>
             </div>
 
@@ -29,21 +29,27 @@
                     <p class="email">info@ptec.vn</p>
                 </div>
             </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </div>
 
     <!-- Navigation Bar -->
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="mainNav">
         <div class="container nav-bar-inner">
             <ul class="nav-menu">
                 <li><a href="#" onclick="navigate('home')">Trang chủ</a></li>
                 <li><a href="#" onclick="navigate('about')">Giới thiệu</a></li>
+                <li><a href="#" onclick="navigate('sector')">Lĩnh vực</a></li>
                 <li><a href="#" onclick="navigate('product')">Sản phẩm</a></li>
                 <li><a href="#" onclick="navigate('news')">Tin tức</a></li>
                 <li><a href="#" onclick="navigate('projects')">Dự án</a></li>
                 <li><a href="#" onclick="navigate('career')">Tuyển dụng</a></li>
                 <li><a href="#" onclick="navigate('library')">Tài liệu</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#" onclick="navigate('contact')">Liên hệ</a></li>
             </ul>
         </div>
     </nav>
@@ -53,7 +59,7 @@
     /* Header Container */
     .header-container {
         width: 100%;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: relative;
         z-index: 1000;
     }
@@ -75,35 +81,31 @@
     .logo {
         display: flex;
         align-items: center;
-        font-size: 28px;
-        font-weight: 800;
-        text-transform: uppercase;
-        position: relative;
-        color: #333;
     }
 
-    .logo-p {
-        color: var(--primary-color);
-        font-weight: 900;
-    }
-
-    .logo-tec {
-        color: var(--primary-color);
-    }
-
-    .logo-dot {
-        color: var(--secondary-color);
-        font-weight: 900;
+    .logo img {
+        height: 44px;
+        width: auto;
+        max-width: 80px;
+        object-fit: contain;
+        display: block;
     }
 
     /* Search Box */
     .search-box {
         display: flex;
-        background: #f0f0f0;
-        border: 1px solid var(--gray-border);
-        border-radius: 4px; /* Bo góc nhẹ */
-        padding: 5px 15px;
+        background: #f8f9fa;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        padding: 5px 16px;
         width: 350px;
+        transition: all 0.3s ease;
+    }
+
+    .search-box:focus-within {
+        background: var(--white);
+        border-color: var(--primary-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
     .search-box input {
@@ -112,16 +114,29 @@
         padding: 8px 0;
         flex: 1;
         outline: none;
-        color: var(--black);
+        color: var(--text-dark);
         font-size: 14px;
+        font-weight: 500;
+    }
+
+    .search-box input::placeholder {
+        color: #94a3b8;
+        font-weight: 400;
     }
 
     .search-box button {
         border: none;
         background: transparent;
-        color: var(--primary-color);
+        color: #64748b;
         cursor: pointer;
-        padding-left: 10px;
+        padding-left: 12px;
+        font-size: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .search-box button:hover,
+    .search-box:focus-within button {
+        color: var(--primary-color);
     }
 
     /* Language Switcher */
@@ -153,7 +168,8 @@
         line-height: 1.2;
     }
 
-    .contact-info .phone, .contact-info .email {
+    .contact-info .phone,
+    .contact-info .email {
         font-size: 15px;
         font-weight: 700;
         color: var(--primary-color);
@@ -161,12 +177,14 @@
 
     /* Navigation Bar */
     .nav-bar {
-        background-color: var(--primary-color); /* Navy Blue (#000080) replacing Green */
+        background-color: var(--primary-color);
+        /* Navy Blue (#000080) replacing Green */
     }
 
     .nav-bar-inner {
         display: flex;
-        justify-content: flex-end; /* Right-aligned */
+        justify-content: center;
+        /* Centered nav */
     }
 
     .nav-menu {
@@ -184,7 +202,8 @@
         top: 25%;
         height: 50%;
         width: 1px;
-        background-color: rgba(255,255,255,0.3); /* Divider line */
+        background-color: rgba(255, 255, 255, 0.3);
+        /* Divider line */
     }
 
     .nav-menu a {
@@ -197,7 +216,139 @@
     }
 
     .nav-menu a:hover {
-        background-color: rgba(255,255,255,0.1);
+        background-color: rgba(255, 255, 255, 0.1);
         color: var(--secondary-color);
     }
+
+    /* Hamburger Button */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    /* Tablet (768px - 991px) */
+    @media (max-width: 991px) {
+        .top-bar {
+            padding: 14px 0;
+        }
+
+        .header-center {
+            flex: 1;
+            margin: 0 15px;
+        }
+
+        .search-box {
+            width: 100%;
+        }
+
+        .contact-info {
+            display: none;
+        }
+
+        .language-switcher {
+            border-right: none;
+            padding-right: 0;
+        }
+
+        .logo img {
+            height: 38px;
+        }
+
+        .nav-menu a {
+            padding: 12px 14px;
+            font-size: 13px;
+        }
+    }
+
+    /* Mobile (< 768px) */
+    @media (max-width: 767px) {
+        .top-bar-inner {
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative;
+        }
+
+        .header-left {
+            order: 1;
+        }
+
+        .hamburger {
+            display: flex;
+            order: 2;
+            margin-left: auto;
+        }
+
+        .header-center {
+            order: 3;
+            width: 100%;
+            margin: 0;
+        }
+
+        .header-right {
+            display: none;
+        }
+
+        .search-box {
+            width: 100%;
+        }
+
+        .logo img {
+            height: 34px;
+        }
+
+        /* Mobile nav - collapsed by default */
+        .nav-bar {
+            display: none;
+        }
+
+        .nav-bar.open {
+            display: block;
+        }
+
+        .nav-bar-inner {
+            justify-content: flex-start;
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .nav-menu li::after {
+            display: none;
+        }
+
+        .nav-menu a {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+    }
 </style>
+
+<script>
+    (function () {
+        var btn = document.getElementById('hamburgerBtn');
+        var nav = document.getElementById('mainNav');
+        if (btn && nav) {
+            btn.addEventListener('click', function () {
+                nav.classList.toggle('open');
+            });
+        }
+    })();
+</script>

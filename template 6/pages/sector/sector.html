@@ -1,0 +1,18 @@
+<div class="sector-page">
+    <div id="sector-banner-component"></div>
+    <div id="sector-grid-component"></div>
+</div>
+
+<script>
+    (function() {
+        const basePath = 'pages/sector/components/';
+        loadComponent('sector-banner-component', basePath + 'sector-banner.html');
+        loadComponent('sector-grid-component', basePath + 'sector-grid.html');
+    })();
+</script>
+
+<style>
+    .sector-page {
+        background-color: var(--white);
+    }
+</style>

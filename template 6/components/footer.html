@@ -4,9 +4,10 @@
             <!-- Column 1: Identity -->
             <div class="footer-column identity-col">
                 <div class="footer-logo">
-                    <span class="logo-p">P</span><span class="logo-tec">TEC</span><span class="logo-dot">.</span>
+                    <img src="assets/img/logo.png" alt="PTEC Logo">
                 </div>
-                <p class="footer-motto">Mang đến giải pháp xây dựng công nghiệp thông minh, bền vững và hiệu quả cao.</p>
+                <p class="footer-motto">Mang đến giải pháp xây dựng công nghiệp thông minh, bền vững và hiệu quả cao.
+                </p>
                 <div class="social-icons">
                     <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
@@ -15,7 +16,8 @@
                     <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                 </div>
                 <div class="dmca-badge">
-                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=8e0019dd-8f43-41c3-a3d1-fb6d27ca5432" alt="DMCA.com Protection Status">
+                    <img src="https://images.dmca.com/Badges/dmca_protected_sml_120n.png?ID=8e0019dd-8f43-41c3-a3d1-fb6d27ca5432"
+                        alt="DMCA.com Protection Status">
                 </div>
             </div>
 
@@ -81,15 +83,17 @@
     }
 
     .footer-logo {
-        font-size: 24px;
-        font-weight: 800;
-        margin-bottom: 20px;
-        text-transform: uppercase;
+        margin-bottom: 25px;
+        height: 50px;
+        max-width: 90px;
     }
 
-    .footer-logo .logo-p { color: var(--white); }
-    .footer-logo .logo-tec { color: var(--secondary-color); }
-    .footer-logo .logo-dot { color: var(--secondary-color); }
+    .footer-logo img {
+        height: 50px;
+        max-width: 90px;
+        object-fit: contain;
+        display: block;
+    }
 
     .footer-motto {
         color: #aaa;
@@ -107,7 +111,7 @@
         width: 36px;
         height: 36px;
         border-radius: 50%;
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -146,14 +150,14 @@
         top: 0;
         height: 80%;
         width: 1px;
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .footer-bottom {
         background-color: var(--footer-bottom-bg);
         padding: 20px 0;
         text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.05);
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .footer-bottom p {
@@ -167,9 +171,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 50px;
         }
+
         .divider-left {
             padding-left: 0;
         }
+
         .divider-left::before {
             display: none;
         }

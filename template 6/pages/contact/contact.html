@@ -1,0 +1,40 @@
+<div class="contact-page-wrapper">
+    <div id="contact-banner-component"></div>
+
+    <!-- Main Content Layout -->
+    <div class="container contact-main-layout">
+        <div id="contact-content-component"></div>
+        <div id="contact-sidebar-component"></div>
+    </div>
+</div>
+
+<style>
+    .contact-page-wrapper {
+        background-color: var(--white);
+        padding-bottom: 80px;
+    }
+
+    .contact-main-layout {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 50px;
+        padding: 60px 0;
+        align-items: flex-start;
+    }
+
+    @media (max-width: 991px) {
+        .contact-main-layout {
+            grid-template-columns: 1fr;
+            padding: 40px 15px;
+        }
+    }
+</style>
+
+<script>
+    (function() {
+        const basePath = 'pages/contact/components/';
+        loadComponent('contact-banner-component', basePath + 'contact-banner.html');
+        loadComponent('contact-content-component', basePath + 'contact-content.html');
+        loadComponent('contact-sidebar-component', basePath + 'contact-sidebar.html');
+    })();
+</script>
