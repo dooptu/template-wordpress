@@ -61,6 +61,11 @@
             navigate('news-detail');
         };
 
+        window.viewJobDetail = function (title, loc, type, salary) {
+            sessionStorage.setItem('currentJob', JSON.stringify({ title, loc, type, salary }));
+            navigate('career-detail');
+        };
+
         // Global Image Fallback Handler — picks a random image from existing URLs
         const _fallbackImgs = [
             'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',

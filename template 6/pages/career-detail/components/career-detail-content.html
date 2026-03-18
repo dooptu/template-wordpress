@@ -1,0 +1,153 @@
+<!-- Career Detail Content -->
+<div class="career-detail-main">
+    <nav class="breadcrumb">
+        <a href="#" onclick="navigate('home')">TRANG CHỦ</a> / 
+        <a href="#" onclick="navigate('career')">TUYỂN DỤNG</a> / 
+        <span id="career-job-title-bread">KỸ SƯ GIÁM SÁT CƠ ĐIỆN (MEP)</span>
+    </nav>
+
+    <h2 class="job-title-main" id="career-job-title">KỸ SƯ GIÁM SÁT CƠ ĐIỆN (MEP)</h2>
+    
+    <div class="job-header-meta">
+        <span><i class="fas fa-map-marker-alt"></i> <strong id="career-job-loc">Bình Dương</strong></span>
+        <span><i class="fas fa-briefcase"></i> <strong id="career-job-type">Toàn thời gian</strong></span>
+        <span><i class="fas fa-money-bill-wave"></i> <strong id="career-job-salary">Thỏa thuận</strong></span>
+        <span><i class="fas fa-users"></i> <strong>Số lượng: 02</strong></span>
+    </div>
+
+    <div class="job-description-content">
+        <h3>Mô Tả Công Việc</h3>
+        <ul>
+            <li>Tổ chức thi công, giám sát chất lượng, khối lượng, tiến độ công tác MEP (Điện, Nước, ĐHKK) tại công trường.</li>
+            <li>Bóc tách khối lượng, kiểm tra bản vẽ thiết kế, shop drawing and đề xuất phương án thi công.</li>
+            <li>Phối hợp với các nhà thầu phụ, xử lý bản vẽ and nghiệm thu công trình thực tế.</li>
+            <li>Lập hồ sơ chất lượng, hồ sơ thanh quyết toán and nhật ký công trình.</li>
+            <li>Báo cáo tiến độ hàng ngày/tuần cho Chỉ huy trưởng and Ban Giám đốc.</li>
+        </ul>
+
+        <h3>Yêu Cầu Ứng Viên</h3>
+        <ul>
+            <li>Tốt nghiệp Đại học/Cao đẳng chuyên ngành Nhiệt Lạnh, Điện, Cấp Thoát Nước hoặc các ngành liên quan.</li>
+            <li>Thành thạo AutoCAD (2D, 3D), Revit (ưu tiên), MS Project and các phần mềm văn phòng.</li>
+            <li>Có ít nhất 2 năm kinh nghiệm ở vị trí tương đương tại các dự án nhà xưởng công nghiệp.</li>
+            <li>Khả năng làm việc dưới áp lực cao, kỹ năng giao tiếp and giải quyết vấn đề tốt.</li>
+            <li>Chấp nhận đi công tác theo yêu cầu dự án.</li>
+        </ul>
+
+        <h3>Quyền Lợi</h3>
+        <ul>
+            <li>Mức lương cạnh tranh, tương xứng với năng lực and hiệu quả công việc.</li>
+            <li>Thưởng dự án, thưởng năng suất and lương tháng 13.</li>
+            <li>Đóng BHXH, BHYT, BHTN theo đúng quy định của Nhà nước.</li>
+            <li>Môi trường làm việc chuyên nghiệp, năng động and cơ hội thăng tiến rõ ràng.</li>
+            <li>Chế độ nghỉ mát, khám sức khỏe định kỳ hàng năm.</li>
+        </ul>
+
+        <div class="job-apply-section">
+            <p><strong>Thời hạn nộp hồ sơ:</strong> 30/12/2026</p>
+            <p><strong>Email nhận CV:</strong> <a href="mailto:tuyendung@ptecvietnam.com">tuyendung@ptecvietnam.com</a></p>
+            <button class="btn btn-primary mt-3" onclick="navigate('contact')">ỨNG TUYỂN NGAY</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .job-title-main {
+        color: var(--primary-color);
+        font-size: 36px;
+        font-weight: 800;
+        margin: 20px 0;
+        text-transform: uppercase;
+    }
+
+    .job-header-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        background: var(--gray-bg);
+        border: 1px solid var(--gray-border);
+        border-radius: 4px;
+        margin-bottom: 40px;
+    }
+
+    .job-header-meta span {
+        font-size: 15px;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .job-header-meta i {
+        color: var(--primary-color);
+        font-size: 18px;
+    }
+
+    .job-header-meta strong {
+        color: var(--text-primary);
+    }
+
+    .job-description-content h3 {
+        color: var(--primary-color);
+        font-size: 22px;
+        margin: 30px 0 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .job-description-content ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .job-description-content li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 12px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+    }
+
+    .job-description-content li::before {
+        content: '\f111';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        top: 6px;
+        font-size: 8px;
+        color: var(--primary-color);
+    }
+
+    .job-apply-section {
+        margin-top: 40px;
+        padding: 30px;
+        background: rgba(0,0,128,0.05);
+        border-left: 4px solid var(--primary-color);
+        border-radius: 0 4px 4px 0;
+    }
+
+    .job-apply-section p {
+        margin-bottom: 10px;
+    }
+
+    .job-apply-section a {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+    .job-apply-section .btn {
+        margin-top: 15px;
+    }
+</style>
+
+<script>
+    const jobData = JSON.parse(sessionStorage.getItem('currentJob') || 'null');
+    if (jobData) {
+        document.getElementById('career-job-title').textContent = jobData.title;
+        document.getElementById('career-job-title-bread').textContent = jobData.title;
+        document.getElementById('career-job-loc').textContent = jobData.loc;
+        document.getElementById('career-job-type').textContent = jobData.type;
+        document.getElementById('career-job-salary').textContent = jobData.salary;
+    }
+</script>

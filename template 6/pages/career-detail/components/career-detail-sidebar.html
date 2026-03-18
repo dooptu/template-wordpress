@@ -1,0 +1,156 @@
+<div class="sidebar">
+    <div class="sidebar-widget">
+        <h3 class="widget-title">TÓM TẮT CÔNG VIỆC</h3>
+        <ul class="job-summary-list">
+            <li>
+                <i class="fas fa-calendar-alt"></i>
+                <div class="summary-info">
+                    <strong>Ngày đăng</strong>
+                    <span>Hôm nay</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-level-up-alt"></i>
+                <div class="summary-info">
+                    <strong>Kinh nghiệm</strong>
+                    <span>2 - 5 năm</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-graduation-cap"></i>
+                <div class="summary-info">
+                    <strong>Học vấn</strong>
+                    <span>Đại học/Cao đẳng</span>
+                </div>
+            </li>
+            <li>
+                <i class="fas fa-venus-mars"></i>
+                <div class="summary-info">
+                    <strong>Giới tính</strong>
+                    <span>Không yêu cầu</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sidebar-widget mt-4">
+        <h3 class="widget-title">VỊ TRÍ LIÊN QUAN</h3>
+        <ul class="related-jobs-list">
+            <li>
+                <a href="#" onclick="viewJobDetail('CHỈ HUY TRƯỞNG CÔNG TRÌNH', 'Toàn quốc', 'Toàn thời gian', '20 - 35 triệu')">
+                    <h4>CHỈ HUY TRƯỞNG CÔNG TRÌNH</h4>
+                    <span>Toàn quốc • Toàn thời gian</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="viewJobDetail('NHÂN VIÊN KINH DOANH DỰ ÁN', 'TP.HCM', 'Toàn thời gian', 'Hoa hồng')">
+                    <h4>NHÂN VIÊN KINH DOANH DỰ ÁN</h4>
+                    <span>TP.HCM • Toàn thời gian</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="viewJobDetail('KỸ SƯ DỰ TOÁN (QS)', 'Bình Dương', 'Toàn thời gian', 'Thỏa thuận')">
+                    <h4>KỸ SƯ DỰ TOÁN (QS)</h4>
+                    <span>Bình Dương • Toàn thời gian</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .sidebar-widget {
+        background: var(--white);
+        padding: 30px;
+        border: 1px solid var(--gray-border);
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    }
+
+    .mt-4 {
+        margin-top: 30px;
+    }
+
+    .widget-title {
+        color: var(--primary-color);
+        font-size: 18px;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--secondary-color);
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    .job-summary-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .job-summary-list li {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .job-summary-list li:last-child {
+        margin-bottom: 0;
+    }
+
+    .job-summary-list i {
+        font-size: 24px;
+        color: var(--primary-color);
+        opacity: 0.2;
+    }
+
+    .summary-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .summary-info strong {
+        font-size: 13px;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+    }
+
+    .summary-info span {
+        font-size: 15px;
+        color: var(--text-primary);
+        font-weight: 600;
+    }
+
+    .related-jobs-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .related-jobs-list li {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed var(--gray-border);
+    }
+
+    .related-jobs-list li:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .related-jobs-list h4 {
+        font-size: 14px;
+        color: var(--text-primary);
+        margin-bottom: 5px;
+        line-height: 1.4;
+        transition: color 0.3s ease;
+    }
+
+    .related-jobs-list span {
+        font-size: 12px;
+        color: var(--text-secondary);
+    }
+
+    .related-jobs-list a:hover h4 {
+        color: var(--primary-color);
+    }
+</style>
