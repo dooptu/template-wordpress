@@ -45,58 +45,59 @@
     }
 
     .about-sidebar .widget-title {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 16px 20px;
         font-size: 18px;
         font-weight: 800;
-        color: var(--primary-color);
-        margin-bottom: 25px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #eee;
-        position: relative;
+        margin: 0;
         text-transform: uppercase;
+        letter-spacing: 1px;
     }
 
-    .about-sidebar .widget-title::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        background-color: var(--primary-color);
+    .about-sidebar .sidebar-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none; /* Connect seamlessly to header */
     }
 
     .about-sidebar .sidebar-nav li {
-        border-bottom: 1px solid #f5f5f5;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .about-sidebar .sidebar-nav li:last-child {
+        border-bottom: none;
     }
 
     .about-sidebar .sidebar-nav a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 0;
+        padding: 15px 20px;
         font-size: 14px;
         font-weight: 600;
-        color: #555;
+        color: #444;
         transition: all 0.3s ease;
+        background-color: #fcfcfc;
     }
 
     .about-sidebar .sidebar-nav a i {
-        font-size: 10px;
-        opacity: 0.3;
+        font-size: 11px;
+        color: #aaa;
         transition: transform 0.3s ease;
     }
 
     .about-sidebar .sidebar-nav li.active a,
     .about-sidebar .sidebar-nav a:hover {
         color: var(--primary-color);
+        background-color: var(--white);
     }
 
     .about-sidebar .sidebar-nav li.active a i {
-        opacity: 1;
-        transform: translateX(5px);
+        color: var(--secondary-color);
     }
-
-    /* CTA Widget styling match news-sidebar */
     .cta-widget {
         background-color: var(--primary-color);
         padding: 30px;

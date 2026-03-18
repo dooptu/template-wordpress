@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PTEC Việt Nam | Kiến tạo hạ tầng - Nâng tầm công nghiệp</title>
+    <link rel="icon" href="assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -48,6 +49,20 @@
             const main = document.getElementById('main-content');
             main.style.opacity = '0';
 
+            // Determine active menu item (map detail pages to parent items)
+            let activeMenu = page;
+            if (page === 'news-detail') activeMenu = 'news';
+            if (page === 'career-detail') activeMenu = 'career';
+
+            // Set active class in Header Nav
+            const navLinks = document.querySelectorAll('#mainNav .nav-list a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick') && link.getAttribute('onclick').includes(`navigate('${activeMenu}')`)) {
+                    link.classList.add('active');
+                }
+            });
+
             setTimeout(async () => {
                 const path = `pages/${page}/${page}.html`;
                 await loadComponent('main-content', path);
@@ -82,8 +97,8 @@
             }
         }, true);
 
-        document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('header-placeholder', 'components/header.html');
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadComponent('header-placeholder', 'components/header.html');
             loadComponent('footer-placeholder', 'components/footer.html');
             navigate('home');
         });

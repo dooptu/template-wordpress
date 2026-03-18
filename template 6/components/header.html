@@ -141,7 +141,7 @@
     /* Logo */
     .header-brand .brand-logo {
         height: 50px;
-        width: 80px;
+        width: 70px;
         object-fit: contain;
         display: block;
         transition: transform 0.3s ease;
@@ -191,11 +191,13 @@
         transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    .nav-list a:hover {
+    .nav-list a:hover,
+    .nav-list a.active {
         color: var(--primary-color);
     }
 
-    .nav-list a:hover::after {
+    .nav-list a:hover::after,
+    .nav-list a.active::after {
         width: 100%;
     }
 
