@@ -19,44 +19,25 @@
 
         <!-- Right: Content Area (60%) -->
         <div class="about-content">
-            <div class="about-tab-nav">
-                <button class="home-tab-btn active" data-home-tab="overview">
-                    <i class="fas fa-info-circle"></i> TỔNG QUAN
-                </button>
-                <button class="home-tab-btn" data-home-tab="mission">
-                    <i class="fas fa-bullseye"></i> TẦM NHÌN
-                </button>
-                <button class="home-tab-btn" data-home-tab="values">
-                    <i class="fas fa-gem"></i> GIÁ TRỊ
-                </button>
-            </div>
+            <div class="about-content-unified">
+                <span class="welcome-text">WELCOME TO PTEC</span>
+                <h2 class="main-heading">Kiến Tạo Bền Vững<br>Nâng Tầm Công Nghiệp</h2>
+                <p class="body-text">
+                    PTEC Việt Nam là đơn vị tiên phong cung cấp giải pháp hạ tầng khu công nghiệp tổng thể và dịch vụ MEP kỹ thuật cao. Với cam kết về sự xuất sắc và đổi mới, chúng tôi cung cấp hệ thống máy móc và hạ tầng hiện đại, thúc đẩy thế giới tiến lên và đem thịnh vượng cho đối tác.
+                </p>
 
-            <div class="home-tab-content">
-                <!-- Overview Tab -->
-                <div id="home-overview" class="home-tab-panel active">
-                    <span class="welcome-text">WELCOME</span>
-                    <h2 class="main-heading">PTEC VIỆT NAM</h2>
-                    <p class="body-text">
-                        PTEC Việt Nam là đơn vị tiên phong cung cấp giải pháp hạ tầng khu công nghiệp tổng thể and dịch vụ MEP kỹ thuật cao. Với cam kết về sự xuất sắc and đổi mới, chúng tôi cung cấp hệ thống máy móc and hạ tầng hiện đại, thúc đẩy thế giới tiến lên.
-                    </p>
-                </div>
-
-                <!-- Mission Tab -->
-                <div id="home-mission" class="home-tab-panel">
-                    <span class="welcome-text">SỨ MỆNH</span>
-                    <h2 class="main-heading">Kiến Tạo Giá Trị Bền Vững</h2>
-                    <p class="body-text">
-                        Chúng tôi không ngừng sáng tạo để mang đến những giải pháp kỹ thuật an toàn, hiệu quả. Sứ mệnh của PTEC là trở thành đối tác chiến lược, đồng hành cùng sự phát triển của ngành công nghiệp Việt Nam and vươn tầm quốc tế.
-                    </p>
-                </div>
-
-                <!-- Values Tab -->
-                <div id="home-values" class="home-tab-panel">
-                    <span class="welcome-text">GIÁ TRỊ</span>
-                    <h2 class="main-heading">Tâm - Trí - Tín - Nhân</h2>
-                    <p class="body-text">
-                        Giá trị cốt lõi của PTEC Việt Nam nằm ở sự Tận tâm, Trí tuệ sáng tạo, Uy tín tuyệt đối and tinh thần Nhân văn. Chúng tôi coi con người là tài sản quý giá nhất and là chìa khóa cho mọi sự thành công.
-                    </p>
+                <!-- Vision & Values Side by Side Cards -->
+                <div class="vision-values-grid">
+                    <div class="vv-card">
+                        <div class="vv-icon"><i class="fas fa-bullseye"></i></div>
+                        <h4>Sứ Mệnh</h4>
+                        <p>Chúng tôi không ngừng sáng tạo để mang đến giải pháp tối ưu. Trở thành đối tác chiến lược, đồng hành cùng sự phát triển của ngành công nghiệp Việt Nam.</p>
+                    </div>
+                    <div class="vv-card">
+                        <div class="vv-icon"><i class="fas fa-gem"></i></div>
+                        <h4>Giá Trị Cốt Lõi</h4>
+                        <p><strong>Tâm - Trí - Tín - Nhân</strong>. Tận tâm, Trí tuệ sáng tạo, Uy tín tuyệt đối và tinh thần Nhân văn là chìa khóa cho mọi sự thành công.</p>
+                    </div>
                 </div>
             </div>
 
@@ -113,7 +94,7 @@
         display: grid;
         grid-template-columns: 4fr 6fr;
         gap: 60px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     /* Left: Image Grid */
@@ -295,68 +276,66 @@
         background-color: var(--secondary-hover);
     }
     
-    /* Home About Tabs */
-    .about-tab-nav {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 25px;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
+    /* Vision & Values Layout */
+    .vision-values-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 25px;
+        margin-bottom: 30px;
     }
 
-    .home-tab-btn {
-        background: none;
-        border: none;
-        padding: 5px 15px;
-        font-size: 13px;
-        font-weight: 700;
-        color: #999;
-        cursor: pointer;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+    .vv-card {
+        background: #fdfdfd;
+        padding: 25px 20px;
+        border-radius: 6px;
+        border-top: 3px solid var(--primary-color);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         transition: all 0.3s ease;
-        position: relative;
+        border-left: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
     }
 
-    .home-tab-btn:hover {
+    .vv-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        background: #fff;
+        border-top-color: var(--secondary-color);
+    }
+
+    .vv-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 128, 0.05); /* Navy light */
         color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 16px;
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
     }
 
-    .home-tab-btn i {
-        margin-right: 8px;
-        font-size: 14px;
+    .vv-card:hover .vv-icon {
+        background: var(--primary-color);
+        color: var(--white);
     }
 
-    .home-tab-btn.active {
+    .vv-card h4 {
         color: var(--primary-color);
+        font-size: 15px;
+        font-weight: 800;
+        margin-bottom: 8px;
+        text-transform: uppercase;
     }
 
-    .home-tab-btn.active::after {
-        content: '';
-        position: absolute;
-        bottom: -11px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: var(--primary-color);
-    }
-
-    .home-tab-content {
-        min-height: 200px;
-    }
-
-    .home-tab-panel {
-        display: none;
-        animation: homeTabFade 0.5s ease forwards;
-    }
-
-    .home-tab-panel.active {
-        display: block;
-    }
-
-    @keyframes homeTabFade {
-        from { opacity: 0; transform: translateX(10px); }
-        to { opacity: 1; transform: translateX(0); }
+    .vv-card p {
+        color: #666;
+        font-size: 13.5px;
+        line-height: 1.6;
+        margin: 0;
     }
 
     @media (max-width: 991px) {
@@ -366,34 +345,12 @@
         .about-image-grid {
             grid-template-rows: 200px 150px;
         }
-        .about-tab-nav {
-            justify-content: center;
+        .vision-values-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>
 
 <script>
-    (function() {
-        const homeTabs = document.querySelectorAll('.home-tab-btn');
-        const homePanels = document.querySelectorAll('.home-tab-panel');
-
-        homeTabs.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const target = this.getAttribute('data-home-tab');
-
-                // Update Buttons
-                homeTabs.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-
-                // Update Panels
-                homePanels.forEach(p => {
-                    if (p.id === 'home-' + target) {
-                        p.classList.add('active');
-                    } else {
-                        p.classList.remove('active');
-                    }
-                });
-            });
-        });
-    })();
+    // Tab logic removed as it's no longer needed for the unified layout
 </script>
