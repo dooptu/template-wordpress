@@ -145,3 +145,21 @@ ul {
         padding: 40px 0;
     }
 }
+
+/* Machine Blobs - Industrial Silhouette Aesthetics */
+.machine-blob {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.05;
+    filter: blur(40px);
+    animation: machine-float 20s infinite alternate ease-in-out;
+}
+
+@keyframes machine-float {
+    0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    33% { transform: translate(2%, 4%) rotate(2deg) scale(1.05); }
+    66% { transform: translate(-1%, 2%) rotate(-1deg) scale(0.95); }
+    100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+}
