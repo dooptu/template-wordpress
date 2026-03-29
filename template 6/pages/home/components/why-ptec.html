@@ -1,0 +1,159 @@
+<section class="why-ptec-section">
+    <div class="container">
+        <div class="section-title-wrapper-centered">
+            <span class="section-subtitle">TẠI SAO CHỌN PTEC?</span>
+            <h2 class="section-title-main">NĂNG LỰC & SỰ KHÁC BIỆT</h2>
+            <div class="title-underline-yellow"></div>
+        </div>
+
+        <div class="why-grid">
+            <!-- Pillar 1: In-house Production -->
+            <div class="why-card">
+                <div class="why-icon-box">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <div class="why-content">
+                    <h3>Sản xuất & Gia công</h3>
+                    <p>Sở hữu xưởng gia công nội bộ giúp PTEC kiểm soát 100% chất lượng đầu vào và tiến độ bàn giao sản phẩm, không phụ thuộc bên thứ ba.</p>
+                </div>
+            </div>
+
+            <!-- Pillar 2: Advanced Engineering -->
+            <div class="why-card">
+                <div class="why-icon-box">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="why-content">
+                    <h3>Công nghệ tiên tiến</h3>
+                    <p>Ứng dụng dây chuyền Auto Line III và CNC Plasma hiện đại nhất, cùng đội ngũ kỹ sư thiết kế Revit/BIM chuyên nghiệp.</p>
+                </div>
+            </div>
+
+            <!-- Pillar 3: Scale & Coverage -->
+            <div class="why-card">
+                <div class="why-icon-box">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="why-content">
+                    <h3>Quy mô phủ rộng</h3>
+                    <p>Với hệ thống nhà máy và văn phòng tại cả Hưng Yên (Miền Bắc) và Bình Dương (Miền Nam), chúng tôi hỗ trợ khách hàng trên toàn quốc.</p>
+                </div>
+            </div>
+
+            <!-- Pillar 4: FDI Standards -->
+            <div class="why-card">
+                <div class="why-icon-box">
+                    <i class="fas fa-globe-asia"></i>
+                </div>
+                <div class="why-content">
+                    <h3>Tiêu chuẩn quốc tế</h3>
+                    <p>Am hiểu sâu sắc văn hóa làm việc và tiêu chuẩn kỹ thuật khắt khe của các đối tác FDI lớn từ Đài Loan, Nhật Bản và Châu Âu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-ptec-section {
+        padding: 100px 0;
+        background-color: #ffffff;
+    }
+
+    .section-title-wrapper-centered {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    .section-subtitle {
+        color: #666666;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        display: block;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .section-title-main {
+        color: #000080;
+        font-size: 36px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .title-underline-yellow {
+        width: 80px;
+        height: 4px;
+        background-color: #ffff00;
+        margin: 20px auto 0;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .why-card {
+        padding: 40px 30px;
+        background: #f8f9fa;
+        border-bottom: 4px solid #000080;
+        transition: all 0.4s ease;
+        text-align: center;
+    }
+
+    .why-card:hover {
+        transform: translateY(-10px);
+        background: #ffffff;
+        box-shadow: 0 15px 40px rgba(0, 0, 128, 0.08);
+        border-bottom-color: #ffff00;
+    }
+
+    .why-icon-box {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 25px;
+        background: #000080;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        border-radius: 5px;
+        transition: background 0.4s ease;
+    }
+
+    .why-card:hover .why-icon-box {
+        background: #ffff00;
+        color: #000080;
+    }
+
+    .why-content h3 {
+        color: #000080;
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .why-content p {
+        color: #555555;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    @media (max-width: 991px) {
+        .why-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 575px) {
+        .why-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

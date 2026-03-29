@@ -1,0 +1,187 @@
+<section class="infra-section">
+    <div class="container-full">
+        <div class="infra-grid">
+            <!-- Factory 1: Hưng Yên -->
+            <div class="infra-item">
+                <div class="infra-bg">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Hưng Yên Factory">
+                </div>
+                <div class="infra-overlay">
+                    <span class="infra-tag">MIỀN BẮC</span>
+                    <h2 class="infra-name">Trụ sở & Nhà máy Hưng Yên</h2>
+                    <div class="infra-stats">
+                        <div class="i-stat"><span class="i-val">3,000 m²</span><span class="i-lab">Diện tích</span></div>
+                        <div class="i-stat"><span class="i-val">50+</span><span class="i-lab">Nhân sự</span></div>
+                    </div>
+                    <p class="infra-address"><i class="fas fa-map-marker-alt"></i> Xã Trưng Trắc, Văn Lâm, Hưng Yên</p>
+                </div>
+            </div>
+
+            <!-- Factory 2: Bình Dương -->
+            <div class="infra-item">
+                <div class="infra-bg">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="Bình Dương Factory">
+                </div>
+                <div class="infra-overlay highlight">
+                    <span class="infra-tag">MIỀN NAM</span>
+                    <h2 class="infra-name">Chi Nhánh & Nhà máy Bình Dương</h2>
+                    <div class="infra-stats">
+                        <div class="i-stat"><span class="i-val">1,800 m²</span><span class="i-lab">Diện tích</span></div>
+                        <div class="i-stat"><span class="i-val">30+</span><span class="i-lab">Nhân sự</span></div>
+                    </div>
+                    <p class="infra-address"><i class="fas fa-map-marker-alt"></i> KCN Rạch Bắp, Bến Cát, Bình Dương</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .infra-section {
+        background-color: #000000;
+        overflow: hidden;
+    }
+
+    .container-full {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .infra-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 550px;
+    }
+
+    .infra-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .infra-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .infra-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+        transition: transform 0.8s ease, opacity 0.5s ease;
+    }
+
+    .infra-item:hover .infra-bg img {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+
+    .infra-overlay {
+        position: relative;
+        z-index: 2;
+        padding: 60px 80px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(90deg, rgba(0, 0, 128, 0.4) 0%, transparent 100%);
+        transition: background 0.5s ease;
+    }
+
+    .infra-overlay.highlight {
+        background: linear-gradient(-90deg, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .infra-tag {
+        display: inline-block;
+        background-color: #ffff00;
+        color: #000080;
+        padding: 5px 15px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+        width: fit-content;
+    }
+
+    .infra-name {
+        color: #ffffff;
+        font-size: 32px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        line-height: 1.2;
+        max-width: 400px;
+    }
+
+    .infra-stats {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 30px;
+    }
+
+    .i-stat {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .i-val {
+        color: #ffff00;
+        font-size: 28px;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+
+    .i-lab {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .infra-address {
+        color: #ffffff;
+        font-size: 14px;
+        margin: 0;
+        opacity: 0.8;
+    }
+
+    .infra-address i {
+        color: #ffff00;
+        margin-right: 8px;
+    }
+
+    @media (max-width: 991px) {
+        .infra-grid {
+            grid-template-columns: 1fr;
+            height: auto;
+        }
+        .infra-item {
+            height: 400px;
+        }
+        .infra-overlay {
+            padding: 40px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .infra-name {
+            font-size: 24px;
+        }
+        .infra-stats {
+            gap: 20px;
+        }
+        .i-val {
+            font-size: 22px;
+        }
+    }
+</style>

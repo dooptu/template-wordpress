@@ -1,21 +1,37 @@
 <section class="about-section">
     <div class="container about-grid-container">
-        <!-- Left: Image Grid (40%) -->
-        <div class="about-image-grid">
-            <div class="grid-item red-box">
-                <span class="about-label">XƯỞNG<br>GIA CÔNG</span>
-                <div class="exp-badge">
-                    <span class="exp-num">100%</span>
-                    <span class="exp-text">In-house</span>
+        <!-- Left: Image & Deco Column (45%) -->
+        <div class="about-left-column">
+            <div class="about-image-grid">
+                <div class="grid-item red-box">
+                    <span class="about-label">XƯỞNG<br>GIA CÔNG</span>
+                    <div class="exp-badge">
+                        <span class="exp-num">100%</span>
+                        <span class="exp-text">In-house</span>
+                    </div>
+                </div>
+                <div class="grid-item globe-top">
+                    <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=600&q=80"
+                        alt="Plasma Cutting Machine">
+                </div>
+                <div class="grid-item globe-bottom">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=80"
+                        alt="Duct Fabrication Workshop">
                 </div>
             </div>
-            <div class="grid-item globe-top">
-                <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=600&q=80"
-                    alt="Plasma Cutting Machine">
-            </div>
-            <div class="grid-item globe-bottom">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=80"
-                    alt="Duct Fabrication Workshop">
+
+            <!-- New Decorative Banner -->
+            <div class="about-decorative-banner">
+                <div class="deco-content">
+                    <div class="deco-line"></div>
+                    <div class="deco-text-group">
+                        <span class="deco-title">PTEC ENGINEERING</span>
+                        <p class="deco-desc">Cam kết chất lượng đạt chuẩn quốc tế trong từng sản phẩm gia công.</p>
+                    </div>
+                    <div class="deco-stamp">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -104,18 +120,25 @@
 
     .about-grid-container {
         display: grid;
-        grid-template-columns: 4fr 6fr;
+        grid-template-columns: 4.5fr 7.5fr;
         gap: 60px;
         align-items: flex-start;
     }
 
+
+    /* Left Column Layout */
+    .about-left-column {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
     /* Left: Image Grid */
     .about-image-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 250px 200px;
-        gap: 15px;
+        gap: 20px;
     }
 
     .grid-item {
@@ -180,6 +203,65 @@
 
     .globe-bottom {
         grid-column: span 2;
+    }
+
+    /* Decorative Banner Styles */
+    .about-decorative-banner {
+        background-color: #000080;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        border-left: 5px solid #ffff00;
+    }
+
+    .about-decorative-banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(45deg, transparent 50%, rgba(255, 255, 255, 0.05) 50%);
+        background-size: 10px 10px;
+    }
+
+    .deco-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .deco-line {
+        width: 2px;
+        height: 50px;
+        background-color: #ffff00;
+    }
+
+    .deco-text-group {
+        flex: 1;
+    }
+
+    .deco-title {
+        display: block;
+        color: #ffff00;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+
+    .deco-desc {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 13px;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .deco-stamp {
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.1);
     }
 
     /* Right: Content Area */
@@ -355,10 +437,13 @@
     @media (max-width: 991px) {
         .about-grid-container {
             grid-template-columns: 1fr;
+            align-items: flex-start;
         }
 
         .about-image-grid {
-            grid-template-rows: 200px 150px;
+            grid-template-rows: 350px 250px;
+            height: auto;
+            min-height: auto;
         }
 
         .vision-values-grid {
