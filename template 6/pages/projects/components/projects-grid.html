@@ -3,105 +3,81 @@
     <!-- Filter Bar -->
     <div class="project-filters">
         <button class="filter-btn active" data-filter="all">TẤT CẢ</button>
-        <button class="filter-btn" data-filter="ha-tang">HẠ TẦNG KCN</button>
-        <button class="filter-btn" data-filter="co-dien">CƠ ĐIỆN MEP</button>
+        <button class="filter-btn" data-filter="tong-thau">TỔNG THẦU MEP</button>
         <button class="filter-btn" data-filter="phong-sach">PHÒNG SẠCH</button>
-        <button class="filter-btn" data-filter="nha-xuong">NHÀ XƯỞNG</button>
+        <button class="filter-btn" data-filter="hvac">HỆ THỐNG HVAC</button>
+        <button class="filter-btn" data-filter="vat-tu">VẬT TƯ & PHỤ TÙNG</button>
     </div>
 
     <!-- Projects Grid (4 Columns) -->
     <div class="projects-gallery-grid" id="projects-grid">
         <!-- Project 1 -->
-        <div class="project-gallery-item" data-category="ha-tang" onclick="openProjectDetail('HẠ TẦNG KCN RẠCH BẮP', 'HẠ TẦNG', 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80', 'Thi công hệ thống thoát nước and đường nội bộ cho toàn khu công nghiệp Rạch Bắp.')">
+        <div class="project-gallery-item" data-category="tong-thau" onclick="openProjectDetail('TRIPOD PCBA 1 & 2', 'TỔNG THẦU MEP', 'assets/img/z7669059453253_1a102408a555f738419281142fa68f10.jpg', 'Toàn bộ hệ thống AC, HVAC, Exhaust cho nhà xưởng.')">
             <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=600&q=80" alt="Project 1">
+                <img src="assets/img/z7669059453253_1a102408a555f738419281142fa68f10.jpg" alt="TRIPOD">
                 <div class="gallery-overlay">
-                    <span class="gallery-cat">HẠ TẦNG</span>
-                    <h3 class="gallery-title">HẠ TẦNG KCN RẠCH BẮP</h3>
+                    <span class="gallery-cat">TỔNG THẦU MEP</span>
+                    <h3 class="gallery-title">TRIPOD PCBA 1 & 2</h3>
                     <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
                 </div>
             </div>
         </div>
 
         <!-- Project 2 -->
-        <div class="project-gallery-item" data-category="co-dien" onclick="openProjectDetail('HỆ THỐNG TRẠM BIẾN ÁP VSIP', 'CƠ ĐIỆN', 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80', 'Thiết kế and lắp đặt hệ thống trạm biến áp 110kV cho khu vực VSIP II.')">
+        <div class="project-gallery-item" data-category="phong-sach" onclick="openProjectDetail('USI HẢI PHÒNG', 'PHÒNG SẠCH', 'assets/img/z7669059453308_fa04f35a2af5d41e15741db70d2b8c26.jpg', 'Lắp đặt ống gió phòng sạch đạt chuẩn Class 1,000.')">
             <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Project 2">
+                <img src="assets/img/z7669059453308_fa04f35a2af5d41e15741db70d2b8c26.jpg" alt="USI">
                 <div class="gallery-overlay">
-                    <span class="gallery-cat">CƠ ĐIỆN</span>
-                    <h3 class="gallery-title">HỆ THỐNG TRẠM BIẾN ÁP VSIP</h3>
+                    <span class="gallery-cat">PHÒNG SẠCH</span>
+                    <h3 class="gallery-title">USI HẢI PHÒNG</h3>
                     <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
                 </div>
             </div>
         </div>
 
         <!-- Project 3 -->
-        <div class="project-gallery-item" data-category="nha-xuong" onclick="openProjectDetail('NHÀ XƯỞNG THÉP TIỀN CHẾ BÌNH DƯƠNG', 'NHÀ XƯỞNG', 'https://images.unsplash.com/photo-1581094271901-755a75b2c213?auto=format&fit=crop&w=800&q=80', 'Xây dựng trọn gói nhà xưởng sản xuất cơ khí rộng 10.000m2.')">
+        <div class="project-gallery-item" data-category="hvac" onclick="openProjectDetail('DAN ON FOODS (MP3)', 'HVAC', 'assets/img/z7669059453359_bca1bf923b6bee5e4eb418357a81feb9.jpg', 'Hệ thống AC tầng 1-4 và khu vực đóng gói thực phẩm.')">
             <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1581094271901-755a75b2c213?auto=format&fit=crop&w=600&q=80" alt="Project 3">
+                <img src="assets/img/z7669059453359_bca1bf923b6bee5e4eb418357a81feb9.jpg" alt="DAN ON">
                 <div class="gallery-overlay">
-                    <span class="gallery-cat">NHÀ XƯỞNG</span>
-                    <h3 class="gallery-title">NHÀ XƯỞNG THÉP TIỀN CHẾ</h3>
+                    <span class="gallery-cat">HỆ THỐNG HVAC</span>
+                    <h3 class="gallery-title">DAN ON FOODS (MP3)</h3>
                     <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
                 </div>
             </div>
         </div>
 
         <!-- Project 4 -->
-        <div class="project-gallery-item" data-category="phong-sach" onclick="openProjectDetail('PHÒNG SẠCH DƯỢC PHẨM PTEC', 'PHÒNG SẠCH', 'https://images.unsplash.com/photo-1503387762-592cd58cd47f?auto=format&fit=crop&w=800&q=80', 'Thi công phòng sạch đạt chuẩn GMP-WHO cho dây chuyền dược phẩm.')">
+        <div class="project-gallery-item" data-category="hvac" onclick="openProjectDetail('COMPAL (THÁI BÌNH)', 'HVAC', 'assets/img/z7669059453418_784fe99f85865a51bc674fc4d2761e4b.jpg', 'Thi công hệ thống HVAC cho xưởng sản xuất thiết bị thông minh (Tổng thầu Acter).')">
             <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1503387762-592cd58cd47f?auto=format&fit=crop&w=600&q=80" alt="Project 4">
+                <img src="assets/img/z7669059453418_784fe99f85865a51bc674fc4d2761e4b.jpg" alt="COMPAL">
                 <div class="gallery-overlay">
-                    <span class="gallery-cat">PHÒNG SẠCH</span>
-                    <h3 class="gallery-title">PHÒNG SẠCH GMP</h3>
+                    <span class="gallery-cat">HỆ THỐNG HVAC</span>
+                    <h3 class="gallery-title">COMPAL (THÁI BÌNH)</h3>
                     <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
                 </div>
             </div>
         </div>
 
         <!-- Project 5 -->
-        <div class="project-gallery-item" data-category="ha-tang" onclick="openProjectDetail('KHU CÔNG NGHIỆP BÀU BÀNG', 'HẠ TẦNG', 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80', 'San lấp mặt bằng and thi công hạ tầng giao thông KCN Bàu Bàng.')">
+        <div class="project-gallery-item" data-category="phong-sach" onclick="openProjectDetail('NITTO DENKO P6', 'PHÒNG SẠCH', 'assets/img/z7669059499441_77fb3afae5f7c18be7996f428b22775b.jpg', 'Thi công ống Inox 304 (SUS Duct) hàn kín hoàn toàn cho phòng thí nghiệm y tế.')">
             <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=600&q=80" alt="Project 5">
+                <img src="assets/img/z7669059499441_77fb3afae5f7c18be7996f428b22775b.jpg" alt="NITTO">
                 <div class="gallery-overlay">
-                    <span class="gallery-cat">HẠ TẦNG</span>
-                    <h3 class="gallery-title">KCN BÀU BÀNG</h3>
+                    <span class="gallery-cat">PHÒNG SẠCH</span>
+                    <h3 class="gallery-title">NITTO DENKO P6</h3>
                     <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
                 </div>
             </div>
         </div>
 
         <!-- Project 6 -->
-        <div class="project-gallery-item" data-category="co-dien" onclick="openProjectDetail('HỆ THỐNG PCCC NHÀ MÁY MAY', 'CƠ ĐIỆN', 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80', 'Cung cấp and lắp đặt hệ thống PCCC tự động and báo cháy trung tâm.')">
+        <div class="project-gallery-item" data-category="vat-tu" onclick="openProjectDetail('LUXSHARE-ICT', 'VẬT TƯ', 'assets/img/z7669059499517_f0a1c17c0aa34e66851c7db375bcfc8f.jpg', 'Gia công và cung cấp hệ thống ống gió & phụ kiện cho nhà xưởng mới (Tổng thầu Kandenko).')">
             <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Project 6">
+                <img src="assets/img/z7669059499517_f0a1c17c0aa34e66851c7db375bcfc8f.jpg" alt="LUXSHARE">
                 <div class="gallery-overlay">
-                    <span class="gallery-cat">CƠ ĐIỆN</span>
-                    <h3 class="gallery-title">HỆ THỐNG PCCC</h3>
-                    <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 7 -->
-        <div class="project-gallery-item" data-category="nha-xuong" onclick="openProjectDetail('NHÀ KHO LOGISTICS', 'NHÀ XƯỞNG', 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80', 'Xây dựng hệ thống nhà kho logistics hiện đại với kệ cao tầng.')">
-            <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Project 7">
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">NHÀ XƯỞNG</span>
-                    <h3 class="gallery-title">KHO LOGISTICS</h3>
-                    <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 8 -->
-        <div class="project-gallery-item" data-category="phong-sach" onclick="openProjectDetail('PHÒNG THÍ NGHIỆM ĐẠI HỌC', 'PHÒNG SẠCH', 'https://images.unsplash.com/photo-1586528116311-ad86d3063f2d?auto=format&fit=crop&w=800&q=80', 'Thi công phòng thí nghiệm lý hóa đạt chuẩn quốc tế.')">
-            <div class="gallery-image">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad86d3063f2d?auto=format&fit=crop&w=600&q=80" alt="Project 8">
-                <div class="gallery-overlay">
-                    <span class="gallery-cat">PHÒNG SẠCH</span>
-                    <h3 class="gallery-title">PHÒNG THÍ NGHIỆM</h3>
+                    <span class="gallery-cat">VẬT TƯ & PHỤ KIỆN</span>
+                    <h3 class="gallery-title">LUXSHARE-ICT</h3>
                     <div class="btn-gallery-more">CHI TIẾT <i class="fas fa-plus"></i></div>
                 </div>
             </div>

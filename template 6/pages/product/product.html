@@ -26,24 +26,15 @@
                 </div>
                 <nav class="sidebar-nav">
                     <ul id="category-menu">
-                        <li class="active" data-cat="chiller">
-                            <a href="javascript:void(0)">CHILLER units</a>
+                        <li class="active" data-cat="hvac">
+                            <a href="javascript:void(0)">HVAC WORK (HỆ THỐNG ĐIỀU HÒA)</a>
                             <span class="active-arrow"><i class="fas fa-chevron-right"></i></span>
                         </li>
-                        <li data-cat="ahu">
-                            <a href="javascript:void(0)">AIR HANDLING UNITS (AHU)</a>
+                        <li data-cat="duct">
+                            <a href="javascript:void(0)">DUCT WORK (HỆ THỐNG ỐNG GIÓ)</a>
                         </li>
-                        <li data-cat="fcu">
-                            <a href="javascript:void(0)">FAN COIL UNITS (FCU)</a>
-                        </li>
-                        <li data-cat="cleanroom">
-                            <a href="javascript:void(0)">THIẾT BỊ PHÒNG SẠCH</a>
-                        </li>
-                        <li data-cat="electrical">
-                            <a href="javascript:void(0)">TỦ BẢNG ĐIỆN</a>
-                        </li>
-                        <li data-cat="automation">
-                            <a href="javascript:void(0)">HỆ THỐNG TỰ ĐỘNG HÓA</a>
+                        <li data-cat="material">
+                            <a href="javascript:void(0)">SẢN PHẨM SẢN XUẤT (FABRICATED PRODUCTS)</a>
                         </li>
                     </ul>
                 </nav>
@@ -52,139 +43,249 @@
             <!-- Product Display -->
             <div class="product-display">
                 <nav class="breadcrumb">
-                    <a href="#" onclick="navigate('home')">TRANG CHỦ</a> / <a href="#">SẢN PHẨM</a> / <span id="breadcrumb-cat">CHILLER UNITS</span>
+                    <a href="#" onclick="navigate('home')">TRANG CHỦ</a> / <a href="#">LĨNH VỰC & SẢN PHẨM</a> / <span id="breadcrumb-cat">HVAC WORK (HỆ THỐNG ĐIỀU HÒA)</span>
                 </nav>
 
-                <h2 class="category-title" id="display-cat-title">CHILLER UNITS</h2>
+                <h2 class="category-title" id="display-cat-title">HVAC WORK (HỆ THỐNG ĐIỀU HÒA)</h2>
 
-                <div class="product-grid" id="product-grid">
-                    <!-- Products for Chiller -->
-                    <div class="product-item" data-category="chiller">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" alt="Chiller 1">
-                        </div>
-                        <h4 class="product-name">HỆ THỐNG CHILLER TRANE SERIES R</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-item" data-category="chiller">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1558444479-0c4c3acd3789?auto=format&fit=crop&w=400&q=80" alt="Chiller 2">
-                        </div>
-                        <h4 class="product-name">MÁY LÀM LẠNH NƯỚC GIẢI NHIỆT GIÓ</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-item" data-category="chiller">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=400&q=80" alt="Chiller 3">
-                        </div>
-                        <h4 class="product-name">HỆ THỐNG ĐIỀU HÒA CHÍNH XÁC AHU</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Products for AHU -->
-                    <div class="product-item" data-category="ahu" style="display: none;">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" alt="AHU 1">
-                        </div>
-                        <h4 class="product-name">KHỐI XỬ LÝ KHÔNG KHÍ CHUYÊN DỤNG</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-item" data-category="ahu" style="display: none;">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c32226a23?auto=format&fit=crop&w=400&q=80" alt="AHU 2">
-                        </div>
-                        <h4 class="product-name">HỆ THỐNG AHU CHO BỆNH VIỆN</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Products for Cleanroom -->
-                    <div class="product-item" data-category="cleanroom" style="display: none;">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=400&q=80" alt="Cleanroom 1">
-                        </div>
-                        <h4 class="product-name">HỘP TRUYỀN HÀNG PASS BOX</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product-item" data-category="cleanroom" style="display: none;">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1581092162384-8987c179c717?auto=format&fit=crop&w=400&q=80" alt="Cleanroom 2">
-                        </div>
-                        <h4 class="product-name">BUỒNG TẮM KHÍ AIR SHOWER</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Products for Electrical -->
-                    <div class="product-item" data-category="electrical" style="display: none;">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=400&q=80" alt="Electrical 1">
-                        </div>
-                        <h4 class="product-name">TỦ ĐIỆN PHÂN PHỐI TỔNG MSB</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Products for Automation -->
-                    <div class="product-item" data-category="automation" style="display: none;">
-                        <div class="product-thumb">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="Automation 1">
-                        </div>
-                        <h4 class="product-name">HỆ THỐNG ĐIỀU KHIỂN SCADA</h4>
-                        <div class="product-footer">
-                            <a href="#" class="btn-more">
-                                <span class="btn-text">CHI TIẾT</span>
-                                <span class="btn-icon"><i class="fas fa-plus"></i></span>
-                            </a>
-                        </div>
-                    </div>
+                <div class="reference-tables-container" id="reference-tables-container">
+                    <!-- Javascript will inject tables here -->
                 </div>
             </div>
         </div>
     </section>
 </div>
 
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button id="modal-close" class="modal-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content-layout">
+                <div class="modal-image-side">
+                    <img id="modal-img" src="" alt="Product Detail">
+                </div>
+                <div class="modal-info-side">
+                    <h2 id="modal-title" class="modal-product-title">PROD TITLE</h2>
+                    <div class="modal-meta">
+                        <span class="meta-label">Danh mục:</span>
+                        <span id="modal-cat" class="meta-value">CATEGORY</span>
+                    </div>
+                    <div class="modal-description" id="modal-details">
+                        <!-- Content goes here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <script>
     (function() {
+        const hvacData = [
+            ["TRIPOD", "PCBA-1 Renovation step-1", "台灣 TW", "2023", "TRIPOD", "HVAC Work (w/ Design)", "空調工程", "Dong Nai"],
+            ["DAN ON FOODS", "OA SUPPLY For Factory Area DAN ON FOODs - Phase 2", "越南 VN", "2023", "DANON Food", "HVAC Work (w/ Design)", "空調工程", "Binh Duong"],
+            ["TRIPOD", "HVAC & UTILITY Works for new Plasma machine", "台灣 TW", "2023", "TRIPOD", "HVAC Work (w/ Design)", "空調工程", "Dong Nai"],
+            ["DAN ON FOODS", "Finished warehouse- Phase 1 - Dehumidifier works", "越南 VN", "2023", "DANON Food", "HVAC Work (w/ Design)", "空調工程", "Binh Duong"],
+            ["TRIPOD", "NEW UTILITY FOR PIN LAMI CLEAN ROOM", "台灣 TW", "2023", "TRIPOD", "HVAC Work (w/ Design)", "空調工程", "Dong Nai"],
+            ["TRIPOD", "Installation main chilled water system for PCBA2 factory", "台灣 TW", "2023", "TRIPOD", "HVAC Work (w/ Design)", "空調工程", "Dong Nai"],
+            ["HONGFU", "Dehumidification WEILINA Fab#7-2ndFloor", "台灣 TW", "2023", "Hong Fu 宏福", "HVAC Work (w/ Design)", "空調工程", "Thanh Hoa"],
+            ["TRIPOD", "Clean Rm and Non Clean RM for PCBA2 factory", "台灣 TW", "2024", "TRIPOD", "Clean Room class 10k-HVAC Work (w/ Design)", "空調工程", "Dong Nai"],
+            ["TRIPOD", "MECHANICAL SYSTEM FOR PCBA 2 FACTORY - STAGE 2", "台灣 TW", "2024", "TRIPOD", "HVAC Work (w/ Design)", "空調工程", "Dong Nai"],
+            ["TRIPOD", "UTILITY FOR NEW SEMI AUTO EXPOSURE MACHINE AT CR-400A", "台灣 TW", "2024", "TRIPOD", "HVAC Work (w/ Design)", "空調工程", "Dong Nai"],
+            ["DAN ON FOODS", "Finished warehouse- Ventilation for inshell Nut line", "越南 VN", "2024", "DANON Food", "HVAC Work (w/ Design)", "空調工程", "Binh Duong"],
+            ["VENUS APPAREL", "Central HVAC System for 2FL+3FL", "台灣 TW", "2024", "TAN NGHIEP", "HVAC Work (w/ Design)", "空調工程", "Tay Ninh"],
+            ["TRIPOD", "Installation utilities for OSP and JIG warehouse", "台灣 TW", "2025", "TRIPOD", "HVAC Work (w/ Design) Utilities supply for machines", "空調工程", "Dong Nai"],
+            ["TRIPOD", "INSTALL NEW LDI MACHINE NO.7-8 AT PCBA2 CLEAN ROOM", "台灣 TW", "2025", "TRIPOD", "HVAC Work (w/ Design) Utilities supply for machines", "空調工程", "Dong Nai"],
+            ["TRIPOD", "UTILITY FOR NEW OSP MACHINE - MECHANICAL WORK", "台灣 TW", "2025", "TRIPOD", "HVAC Work (w/ Design) Utilities supply for machines", "空調工程", "Dong Nai"],
+            ["TRIPOD", "RELOCATION ARTWORK PROCESS- MECHANICAL WORK", "台灣 TW", "2025", "TRIPOD", "HVAC Work (w/ Design) Utilities supply for machines", "空調工程", "Dong Nai"],
+            ["TRIPOD", "Office AC Work of Binh Vinh Food New Factory-3", "台灣 TW", "2025", "Binh Vinh food", "HVAC Work (w/ Design)", "空調工程", "HCM"],
+            ["DAN ON FOODS", "AC works for Packing RM Phase 1", "越南 VN", "2025", "DANON Food", "HVAC Work (w/ Design)", "空調工程", "Binh Duong"],
+            ["GEM", "HVAC work for production room-GEM factory", "台灣 TW", "2025", "TECTIIKO", "HVAC Work (w/ Design)", "空調工程", "Binh Duong"]
+        ];
+
+        const ductData = [
+            ["Young-Fast 綠點光電", "台灣 TW", "2010", "ACTER CO (聖暉)", "V", "V", "Class 1000", "HA TAY"],
+            ["FLEXCOM Corp. Vietnam", "韓國 Korea", "2010", "DONG YEON Co.,", "V", "V", "Class 1000", "Yen Phong"],
+            ["SRI-TECH Corporation", "韓國 Korea", "2010", "DONG YEON Co.,", "V", "V", "NA", "Yen Phong"],
+            ["P&TEL Corp. Vietnam", "韓國 Korea", "2010", "DONG YEON Co.,", "V", "V", "NA", "Yen Phong"],
+            ["FOXCONN Bac Ninh", "台灣 TW", "2010", "GWAN HSIAN", "V", "V", "NA", "Bac Ninh"],
+            ["NEO NEON Vietnam.", "日本 JP", "2010", "CTL 巨鷹隆", "V", "V", "NA", "Thai Binh"],
+            ["HOYA-3 Vietnam", "日本 JP", "2010", "TAIKISHA VN", "V", "V", "Class 1000", "TLIP-2"],
+            ["BROTHER Vietnam", "日本 JP", "2010", "YURTEC VN", "V", "V", "Class 1000", "Hai Duong"],
+            ["Young-Fast 綠點光電", "台灣 TW", "2011", "ACTER CO (聖暉)", "V", "V", "Class 1000", "HA TAY"],
+            ["P&TEL Corp. Vietnam", "韓國 Korea", "2011", "DONG YEON Co.,", "V", "V", "NA", "Yen Phong"],
+            ["LUMINOUS Optical", "台灣 TW", "2011", "Chi Mau Engineering", "V", "V", "Class 10k", "HA TAY"],
+            ["YAMAHA Corp. Vietnam", "日本 JP", "2011", "TRAN DA JSC", "V", "V", "NA", "TLIP_1"],
+            ["Young-Fast 綠點光電", "台灣 TW", "2012", "ACTER CO (聖暉)", "V", "V", "Class 1000", "HA TAY"],
+            ["PANASONIC", "日本 JP", "2012", "PANASONIC", "V", "V", "Class 1000", "TLIP-1"],
+            ["UNIDEN VN", "日本 JP", "2012", "TOKENVINA", "V", "V", "NA", "Hai Duong"],
+            ["CANNON-13A Bac Ninh", "日本 JP", "2013", "TAIKISHA VN", "V", "V", "Class 1000", "Tien Son"],
+            ["T.RAD", "日本 JP", "2013", "T.RAD", "V", "V", "NA", "Dong Van"],
+            ["FLEXCOM-2", "韓國 Korea", "2013", "DONG YEON Co.,", "V", "V", "Class 1000", "Yen Phong"],
+            ["SAMSUNG Thai Nguyen", "韓國 Korea", "2013", "DONG YEON Co.,", "V", "V", "NA", "Thai Nguyen"],
+            ["WINTEK Corp", "台灣 TW", "2013", "ACTER CO., LTD.", "V", "V", "Class 1000", "Bac Giang"],
+            ["NAMUGA #1", "日本 JP", "2014", "DONG YEON Co.,", "V", "V", "Class 100", "Phu Tho"],
+            ["HONG CHUAN", "台灣 TW", "2014", "ACTER CO (聖暉)", "V", "V", "NA", "Cambodia"],
+            ["SHINSUNG C&T VINA", "韓國 Korea", "2015", "DONG YEON Co.,", "V", "V", "Class 100", "Thai Nguyen"],
+            ["KYUNG IL OPTICS VINA", "韓國 Korea", "2015", "DONG YEON Co.,", "V", "V", "Class 1,000", "Thai Nguyen"],
+            ["NSRP Refinery", "台灣 TW", "2015", "EM-TEK", "V", "V", "NA", "Thanh Hoa"],
+            ["TAI ENERGY", "台灣 TW", "2015", "ACTER CO (聖暉)", "V", "V", "NA", "Ha Tay"],
+            ["NAMUGA #2", "韓國 Korea", "2016", "DONG YEON Co.,", "V", "V", "Class 100", "Phu Tho"],
+            ["UILCII VINA", "韓國 Korea", "2016", "DONG YEON Co.,", "V", "V", "Class 1,000", "Bac Giang"],
+            ["JMI VINA", "韓國 Korea", "2016", "DONG YEON Co.,", "V", "V", "Class 1,000", "Bac Ninh"],
+            ["CHII ISIN", "台灣 TW", "2016", "ACTER CO (聖暉)", "V", "V", "NA", "Hai Phong"],
+            ["SEASONS AVENUE", "新加坡 SG", "2016", "China Construction", "V", "V", "NA", "Ha Noi"],
+            ["VINA CIRCUITS #2 & #3", "韓國 Korea", "2017", "DONG YEON Co.,", "V", "V", "Class 1,000", "Bac Giang"],
+            ["MRT Cat Linh/Ha Dong", "越南 VN", "2017", "China Railway #6", "V", "V", "NA", "Ha Noi"],
+            ["CHII ISIN #2", "台灣 TW", "2017", "ACTER CO (聖暉)", "V", "V", "NA", "Hai Phong"],
+            ["CHII ISIN - Process", "台灣 TW", "2017", "ACTER CO (聖暉)", "V", "V", "NA", "Hai Phong"],
+            ["PAIHONG", "台灣 TW", "2017", "ACTER CO (聖暉)", "V", "V", "NA", "Binh Duong"],
+            ["PIONEER", "韓國 Korea", "2017", "DONG YEON Co.,", "V", "V", "NA", "Bac Giang"],
+            ["Office H.O2", "Thailand", "2022", "ECMEC", "V", "V", "NA", "Dong Nai"],
+            ["ACCREDO", "Canada", "2022", "Viet Nhat", "V", "V", "NA", "Binh Duong"],
+            ["SHENGHUEI", "台灣 TW", "2022", "Acter 聖暉", "V", "V", "NA", "Ha Nam"],
+            ["SHENGHUEI", "台灣 TW", "2022", "Acter 聖暉", "V", "V", "NA", "Vinh Phuc"],
+            ["NITTO DENKO P5", "日本 JP", "2023", "KANDENKO VN", "V", "V", "Class 10,000", "Binh Duong"],
+            ["NITTO DENKO P6", "日本 JP", "2023", "KANDENKO VN", "V", "V", "Class 1,000", "Binh Duong"],
+            ["Dust collector for QingDao", "越南 VN", "2023", "DANON Food", "V", "V", "NA", "Binh Duong"],
+            ["PAIHONG A6", "台灣 TW", "2023", "Acter 聖暉", "V", "V", "NA", "Binh Duong"],
+            ["Duct Works for Bau Bang", "台灣 TW", "2023", "Acter 聖暉", "V", "V", "NA", "Binh Duong"],
+            ["Fan Filter unit", "越南 VN", "2023", "DANON Food", "V", "V", "NA", "Binh Duong"],
+            ["Dust collector Phase 2", "越南 VN", "2023", "DANON Food", "V", "V", "NA", "Binh Duong"],
+            ["Exhaust air for Cashew", "越南 VN", "2023", "DANON Food", "V", "V", "NA", "Binh Duong"],
+            ["Ducting works Kitchen", "台灣 TW", "2023", "TTK", "V", "V", "NA", "Binh Duong"],
+            ["Duct work of Neweb", "台灣 TW", "2023", "Acter 聖暉", "V", "V", "NA", "Ha Nam"],
+            ["Duct work of Pegatron", "台灣 TW", "2023", "HAWSIN", "V", "V", "NA", "Ha Nam"],
+            ["Duct work USI Vietnam", "台灣 TW", "2023", "TECTIKO", "V", "V", "NA", "Hai Phong"],
+            ["Duct work Neweb #FAB2", "台灣 TW", "2023", "Acter 聖暉", "V", "V", "NA", "Hai Phong"],
+            ["Duct work of Gorotek", "台灣 TW", "2023", "Acter 聖暉", "V", "V", "NA", "Ha Nam"],
+            ["PAIHO LÊ MINH XUÂN", "台灣 TW", "2024", "Acter 聖暉", "V", "V", "NA", "HCM"],
+            ["Spot cooling Candy room", "越南 VN", "2024", "DANON Food", "V", "V", "NA", "Binh Duong"],
+            ["EI ducting HANYALE", "台灣 TW", "2024", "Trường An", "V", "V", "NA", "Vũng Tàu"],
+            ["PAIHONG A4", "台灣 TW", "2025", "Acter 聖暉", "V", "V", "NA", "Binh Duong"],
+            ["PAIHONG A5", "台灣 TW", "2025", "TECTIKO", "V", "V", "NA", "Binh Duong"],
+            ["NITTO DENKO P5+", "日本 JP", "2025", "TAKASAGO VN", "V", "V", "Class 10,000", "Binh Duong"],
+            ["BOSTON PHARMACY", "越南 VN", "2025", "NHẬT PHƯƠNG", "V", "V", "Class 10,000", "Binh Duong"],
+            ["YAZAKI", "日本 JP", "2025", "TAKASAGO VN", "V", "V", "NA", "HCM"],
+        ];
+
+        const materialData = [
+            ["Ống gió vuông (Rectangular Duct)", "Sản xuất bằng tôn mạ kẽm (GI) hoặc Inox (SUS), kiểu kết nối bích liền TDF, bích rời TDC hoặc bích thép hình V3/V4.", "Tôn mạ kẽm Hoa Sen, Inox 304/316", "0.48mm - 1.15mm"],
+            ["Ống gió tròn (Round Duct)", "Bao gồm ống gió xoắn (Spiral duct) và ống trơn (Plain duct), đáp ứng thẩm mỹ và giảm tổn thất áp suất.", "Tôn GI, Inox SUS", "Theo tiêu chuẩn"],
+            ["Phụ kiện ống gió (Fittings)", "Gia công đồng bộ các loại Cút (Elbow), Tê (Tee), Cổ trích (Take-off), Giảm khẩu, Hộp gió (Plenum box).", "Tôn GI, Inox SUS", "Theo ống ghép nối"],
+            ["Van gió & Cửa gió (Dampers/Louvers)", "Cung cấp Van VCD, FD, OBD, Cửa gió khuếch tán, Cửa gió nan chữ T/A, Louver chắn mưa.", "Nhôm định hình, Tôn GI", "Sơn tĩnh điện"],
+            ["Đường ống Inox hàn kín (Full-welding SUS)", "Hệ thống ống xả khí hóa chất chuyên dụng, hàn TIG/Argon kín 100%, dùng cho phòng thí nghiệm, xưởng acid.", "Inox 304, Inox 316L", "1.0mm - 2.0mm"],
+            ["Hệ thống treo & Giá đỡ (Supports)", "Cung cấp thanh Unistrut 41x41mm (sơn tĩnh điện/mạ kẽm nhúng nóng), Ty ren, kẹp xà gồ, cao su giảm chấn.", "Thép mạ kẽm", "Tiêu chuẩn MEP"],
+            ["Cơ khí tùy chỉnh (Custom Mechanical)", "Gia công Chụp hút mùi bếp công nghiệp, buồng tiêu âm, chụp hút nhiệt cục bộ cho máy móc M&E.", "Đa dạng vật liệu", "Tùy chỉnh"]
+        ];
+
+        const container = document.getElementById('reference-tables-container');
+        
+        let html = '';
+        
+        // Random image helper
+        const getImg = (id) => `https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80&sig=${id}`;
+
+        // Render HVAC
+        html += `<div class="product-grid" id="cat-hvac">`;
+        hvacData.forEach((row, i) => {
+            const projectStr = JSON.stringify({
+                cat: 'HVAC Work (Hệ thống điều hòa)',
+                owner: row[0],
+                name: row[1],
+                country: row[2],
+                year: row[3],
+                client: row[4],
+                scopeEn: row[5],
+                scopeZh: row[6],
+                location: row[7],
+                img: getImg(`hvac${i}`)
+            }).replace(/"/g, '&quot;');
+
+            html += `
+                <div class="product-item" data-info="${projectStr}">
+                    <div class="product-thumb">
+                        <img src="${getImg(`hvac${i}`)}" alt="${row[0]}">
+                    </div>
+                    <h4 class="product-name">${row[0]}${row[1] ? ' - ' + row[1] : ''}</h4>
+                    <div class="product-footer">
+                        <a href="javascript:void(0)" class="btn-more">
+                            <span class="btn-text">CHI TIẾT</span>
+                            <span class="btn-icon"><i class="fas fa-plus"></i></span>
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+        html += `</div>`;
+
+        // Render DUCT
+        html += `<div class="product-grid" id="cat-duct" style="display: none;">`;
+        ductData.forEach((row, i) => {
+            const projectStr = JSON.stringify({
+                cat: 'Duct Work (Hệ thống ống gió)',
+                owner: row[0],
+                country: row[1],
+                year: row[2],
+                client: row[3],
+                supply: row[4],
+                install: row[5],
+                crRank: row[6],
+                location: row[7],
+                img: getImg(`duct${i}`)
+            }).replace(/"/g, '&quot;');
+
+            html += `
+                <div class="product-item" data-info="${projectStr}">
+                    <div class="product-thumb">
+                        <img src="${getImg(`duct${i}`)}" alt="${row[0]}">
+                    </div>
+                    <h4 class="product-name">${row[0]}</h4>
+                    <div class="product-footer">
+                        <a href="javascript:void(0)" class="btn-more">
+                            <span class="btn-text">CHI TIẾT</span>
+                            <span class="btn-icon"><i class="fas fa-plus"></i></span>
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+        html += `</div>`;
+
+        // Render MATERIAL
+        html += `<div class="product-grid" id="cat-material" style="display: none;">`;
+        materialData.forEach((row, i) => {
+            const projectStr = JSON.stringify({
+                cat: 'SẢN PHẨM SẢN XUẤT (Products)',
+                name: row[0],
+                desc: row[1],
+                material: row[2],
+                thickness: row[3],
+                img: getImg(`mat${i}`)
+            }).replace(/"/g, '&quot;');
+
+            html += `
+                <div class="product-item" data-info="${projectStr}">
+                    <div class="product-thumb">
+                        <img src="${getImg(`mat${i}`)}" alt="${row[0]}">
+                    </div>
+                    <h4 class="product-name">${row[0]}</h4>
+                    <div class="product-footer">
+                        <a href="javascript:void(0)" class="btn-more">
+                            <span class="btn-text">CHI TIẾT</span>
+                            <span class="btn-icon"><i class="fas fa-plus"></i></span>
+                        </a>
+                    </div>
+                </div>
+            `;
+        });
+        html += `</div>`;
+
+        container.innerHTML = html;
+
+        // Menu logic
         const menuItems = document.querySelectorAll('#category-menu li');
-        const productItems = document.querySelectorAll('.product-item');
         const breadcrumbCat = document.getElementById('breadcrumb-cat');
         const displayCatTitle = document.getElementById('display-cat-title');
         const arrowHtml = '<span class="active-arrow"><i class="fas fa-chevron-right"></i></span>';
@@ -207,20 +308,10 @@
                 breadcrumbCat.innerText = catName;
                 displayCatTitle.innerText = catName;
 
-                // Filter Products
-                productItems.forEach(product => {
-                    if (product.getAttribute('data-category') === category) {
-                        product.style.display = 'flex';
-                        // Add fade in effect
-                        product.style.opacity = '0';
-                        setTimeout(() => {
-                            product.style.transition = 'opacity 0.5s ease';
-                            product.style.opacity = '1';
-                        }, 10);
-                    } else {
-                        product.style.display = 'none';
-                    }
-                });
+                // Filter Grids
+                document.getElementById('cat-hvac').style.display = (category === 'hvac') ? 'grid' : 'none';
+                document.getElementById('cat-duct').style.display = (category === 'duct') ? 'grid' : 'none';
+                document.getElementById('cat-material').style.display = (category === 'material') ? 'grid' : 'none';
             });
         });
 
@@ -230,74 +321,70 @@
         const modalImg = document.getElementById('modal-img');
         const modalTitle = document.getElementById('modal-title');
         const modalCatDisplay = document.getElementById('modal-cat');
+        const modalDetails = document.getElementById('modal-details');
 
         function openModal(event) {
             event.preventDefault();
             const productCard = this.closest('.product-item');
-            const title = productCard.querySelector('.product-name').innerText;
-            const imgSrc = productCard.querySelector('.product-thumb img').src;
-            const category = breadcrumbCat.innerText;
+            if (!productCard) return;
 
-            modalTitle.innerText = title;
-            modalImg.src = imgSrc;
-            modalCatDisplay.innerText = category;
+            const dataStr = productCard.getAttribute('data-info');
+            if (!dataStr) return;
+
+            const data = JSON.parse(dataStr);
+
+            modalTitle.innerText = data.name ? `${data.owner} - ${data.name}` : data.owner;
+            modalImg.src = data.img;
+            modalCatDisplay.innerText = data.cat;
+
+            let detailHtml = '<ul class="spec-list">';
+            if (data.cat.includes('HVAC')) {
+                detailHtml += `<li><strong>Chủ đầu tư (Owner):</strong> ${data.owner}</li>`;
+                detailHtml += `<li><strong>Dự án (Project Name):</strong> ${data.name}</li>`;
+                detailHtml += `<li><strong>Quốc gia (Country):</strong> ${data.country}</li>`;
+                detailHtml += `<li><strong>Năm (Year):</strong> ${data.year}</li>`;
+                detailHtml += `<li><strong>Khách hàng (Client):</strong> ${data.client}</li>`;
+                detailHtml += `<li><strong>Hạng mục:</strong> ${data.scopeEn} <br> <small>${data.scopeZh}</small></li>`;
+                detailHtml += `<li><strong>Địa điểm (Location):</strong> ${data.location}</li>`;
+            } else if (data.cat.includes('SẢN PHẨM')) {
+                // Different modal structure for Products
+                modalTitle.innerText = data.name;
+                detailHtml += `<li><strong>Chi tiết cấu tạo:</strong> <br><br> ${data.desc}</li>`;
+                detailHtml += `<li><strong>Vật liệu:</strong> ${data.material}</li>`;
+                detailHtml += `<li><strong>Độ dày/Kích thước:</strong> ${data.thickness}</li>`;
+            } else {
+                detailHtml += `<li><strong>Chủ đầu tư (Owner):</strong> ${data.owner}</li>`;
+                detailHtml += `<li><strong>Quốc gia (Country):</strong> ${data.country}</li>`;
+                detailHtml += `<li><strong>Năm (Year):</strong> ${data.year}</li>`;
+                detailHtml += `<li><strong>Khách hàng (Client):</strong> ${data.client}</li>`;
+                detailHtml += `<li><strong>Supply:</strong> ${data.supply}</li>`;
+                detailHtml += `<li><strong>Install:</strong> ${data.install}</li>`;
+                detailHtml += `<li><strong>C/R Rank:</strong> ${data.crRank}</li>`;
+                detailHtml += `<li><strong>Địa điểm (Location):</strong> ${data.location}</li>`;
+            }
+            detailHtml += '</ul>';
+
+            modalDetails.innerHTML = detailHtml;
             
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scroll
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             modal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scroll
+            document.body.style.overflow = '';
         }
 
-        // Add listener to current and future detail buttons
         document.addEventListener('click', function(e) {
             const btnMore = e.target.closest('.btn-more');
-            if (btnMore && document.getElementById('product-grid').contains(btnMore)) {
+            if (btnMore && document.getElementById('reference-tables-container').contains(btnMore)) {
                 openModal.call(btnMore, e);
             }
         });
 
         modalClose.addEventListener('click', closeModal);
-
-        // Explicitly NOT adding a listener to the overlay to close it, 
-        // as per user request "chỉ tắt khi nhấn icon close góc phải trên"
     })();
 </script>
-    <!-- Product Detail Modal -->
-    <div id="product-modal" class="modal-overlay">
-        <div class="modal-container">
-            <button id="modal-close" class="modal-close-btn">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="modal-content-layout">
-                <div class="modal-image-side">
-                    <img id="modal-img" src="" alt="Product Detail">
-                </div>
-                <div class="modal-info-side">
-                    <h2 id="modal-title" class="modal-product-title">PROD TITLE</h2>
-                    <div class="modal-meta">
-                        <span class="meta-label">Danh mục:</span>
-                        <span id="modal-cat" class="meta-value">CATEGORY</span>
-                    </div>
-                    <div class="modal-description">
-                        <p>Thông tin kỹ thuật chi tiết của sản phẩm bao gồm các thông số vận hành, tiêu chuẩn chất lượng and ứng dụng trong công nghiệp. PTEC Việt Nam cam kết cung cấp giải pháp tối ưu nhất cho hệ thống của bạn.</p>
-                        <ul class="spec-list">
-                            <li><i class="fas fa-check"></i> Hiệu suất vận hành cao, tiết kiệm năng lượng.</li>
-                            <li><i class="fas fa-check"></i> Thiết kế bền bỉ, chịu được môi trường khắc nghiệt.</li>
-                            <li><i class="fas fa-check"></i> Dễ dàng bảo trì và vận hành hệ thống.</li>
-                            <li><i class="fas fa-check"></i> Đạt tiêu chuẩn quốc tế ISO/CE.</li>
-                        </ul>
-                    </div>
-                    <div class="modal-actions">
-                        <button class="btn-primary-action">LIÊN HỆ BÁO GIÁ</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 <style>
     /* Banner Section */
     .product-banner {
@@ -496,7 +583,7 @@
     .product-thumb img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         transition: transform 0.5s ease;
     }
 
@@ -571,6 +658,7 @@
             max-width: 100%;
         }
     }
+    
     /* Modal Styles */
     .modal-overlay {
         position: fixed;
@@ -638,17 +726,19 @@
     .modal-image-side img {
         max-width: 100%;
         max-height: 400px;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .modal-info-side {
         padding: 50px;
         background-color: var(--white);
+        max-height: 80vh;
+        overflow-y: auto;
     }
 
     .modal-product-title {
         color: var(--primary-color);
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 800;
         margin-bottom: 20px;
         line-height: 1.3;
@@ -681,42 +771,24 @@
 
     .spec-list {
         margin-top: 20px;
+        padding-left: 0;
+        list-style: none;
     }
 
     .spec-list li {
-        margin-bottom: 10px;
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        color: var(--text-primary);
-        font-weight: 500;
-    }
-
-    .spec-list li i {
-        color: var(--primary-color);
-        font-size: 12px;
-    }
-
-    .modal-actions {
-        margin-top: 40px;
-    }
-
-    .btn-primary-action {
-        background-color: var(--primary-color);
-        color: var(--white);
-        border: none;
-        padding: 15px 35px;
-        font-weight: 800;
+        margin-bottom: 12px;
         font-size: 14px;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s ease;
+        color: #333;
+        border-bottom: 1px dashed #eee;
+        padding-bottom: 8px;
     }
-
-    .btn-primary-action:hover {
-        background-color: var(--secondary-color);
-        color: var(--black);
-        transform: translateY(-3px);
+    
+    .spec-list li strong {
+        color: var(--primary-color);
+        display: inline-block;
+        min-width: 150px;
+        font-weight: 700;
+        vertical-align: top;
     }
 
     @media (max-width: 850px) {
@@ -737,4 +809,5 @@
             color: #333;
         }
     }
+
 </style>
