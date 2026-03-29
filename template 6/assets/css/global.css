@@ -25,8 +25,8 @@
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    color: #333333;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -34,11 +34,11 @@ body {
 /* Enforce font across ALL elements — browsers override font for form elements */
 input, textarea, select, button,
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-main);
+    font-family: 'Inter', sans-serif;
 }
 
 .container {
-    max-width: var(--container-max-width);
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -65,7 +65,7 @@ ul {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: var(--black);
+    background-color: #000000;
 }
 
 .banner-bg {
@@ -101,7 +101,7 @@ ul {
 }
 
 .banner-title {
-    color: var(--white);
+    color: #ffffff;
     font-size: 56px;
     font-weight: 900;
     text-transform: uppercase;
@@ -119,11 +119,11 @@ ul {
 }
 
 .breadcrumb a {
-    color: var(--secondary-color);
+    color: #ffff00;
 }
 
 .breadcrumb a:hover {
-    color: var(--white);
+    color: #ffffff;
 }
 
 .breadcrumb span {
